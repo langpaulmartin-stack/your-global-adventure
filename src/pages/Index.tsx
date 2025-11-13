@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight, Quote } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { z } from "zod";
 import logo from "@/assets/logo.png";
 import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
@@ -12,6 +18,12 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
+  email: z.string().trim().email({ message: "Neplatná emailová adresa" }).max(255, { message: "Email musí mít maximálně 255 znaků" }),
+  message: z.string().trim().min(1, { message: "Zpráva je povinná" }).max(1000, { message: "Zpráva musí mít maximálně 1000 znaků" })
+});
 
 const countries = [
   { 
@@ -103,6 +115,54 @@ const testimonials = [
 
 const Index = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+    
+    try {
+      const validatedData = contactSchema.parse(formData);
+      setIsSubmitting(true);
+      
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Zpráva odeslána",
+        description: "Děkujeme za váš zájem. Brzy se vám ozveme.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -315,6 +375,85 @@ const Index = () => {
               Přihlaste se dnes
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Zeptejte se nás
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Máte otázky? Rádi vám pomůžeme s čímkoli, co potřebujete vědět
+              </p>
+            </div>
+
+            <Card className="border-primary/20 shadow-card">
+              <CardContent className="pt-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Jméno</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Vaše jméno"
+                      className={errors.name ? "border-destructive" : ""}
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-destructive">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="vas@email.cz"
+                      className={errors.email ? "border-destructive" : ""}
+                    />
+                    {errors.email && (
+                      <p className="text-sm text-destructive">{errors.email}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Zpráva</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Napište nám vaši zprávu..."
+                      rows={5}
+                      className={errors.message ? "border-destructive" : ""}
+                    />
+                    {errors.message && (
+                      <p className="text-sm text-destructive">{errors.message}</p>
+                    )}
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Odesílání..." : "Odeslat zprávu"}
+                    <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
