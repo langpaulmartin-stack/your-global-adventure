@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
@@ -9,6 +9,9 @@ import switzerlandImage from "@/assets/switzerland.jpg";
 import germanyImage from "@/assets/germany.jpg";
 import australiaImage from "@/assets/australia.jpg";
 import estoniaImage from "@/assets/estonia.jpg";
+import japanImage from "@/assets/japan.jpg";
+import newZealandImage from "@/assets/new-zealand.jpg";
+import argentinaImage from "@/assets/argentina.jpg";
 
 const countries = [
   { name: "USA", flag: "🇺🇸", description: "Zažijte americký sen", image: usaImage },
@@ -16,6 +19,30 @@ const countries = [
   { name: "Německo", flag: "🇩🇪", description: "Prozkoumejte bohatou historii a kulturu", image: germanyImage },
   { name: "Austrálie", flag: "🇦🇺", description: "Dobrodružství na opačné straně světa", image: australiaImage },
   { name: "Estonsko", flag: "🇪🇪", description: "Centrum digitálních inovací", image: estoniaImage },
+  { name: "Japonsko", flag: "🇯🇵", description: "Fascinující spojení tradice a modernosti", image: japanImage },
+  { name: "Nový Zéland", flag: "🇳🇿", description: "Dechberoucí příroda a dobrodružství", image: newZealandImage },
+  { name: "Argentina", flag: "🇦🇷", description: "Vášeň, kultura a přírodní diverzita", image: argentinaImage },
+];
+
+const testimonials = [
+  {
+    name: "Petra Novotná",
+    country: "USA",
+    text: "Rok v USA byl nejlepší rok mého života! Získala jsem neuvěřitelné přátele, zlepšila jsem angličtinu a zažila jsem americkou kulturu na vlastní kůži.",
+    image: "👩"
+  },
+  {
+    name: "Jan Svoboda",
+    country: "Japonsko",
+    text: "Japonsko mě úplně pohltilo. Kombinace starobylých tradic a moderní technologie je fascinující. Doporučuji každému!",
+    image: "👨"
+  },
+  {
+    name: "Marie Dvořáková",
+    country: "Austrálie",
+    text: "Austrálie mi otevřela oči. Úžasní lidé, krásná příroda a nezapomenutelné zážitky. Nikdy nezapomenu na čas strávený v Sydney.",
+    image: "👩"
+  }
 ];
 
 const Index = () => {
@@ -132,11 +159,11 @@ const Index = () => {
               Vyberte si destinaci
             </h2>
             <p className="text-xl text-muted-foreground">
-              Pět úžasných zemí na vás čeká
+              Osm úžasných zemí na vás čeká
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {countries.map((country, index) => (
               <Card 
                 key={country.name}
@@ -159,6 +186,44 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">
                     {country.description}
                   </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Co říkají naši studenti
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Přečtěte si zkušenosti těch, kteří již zažili dobrodružství svého života
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card 
+                key={testimonial.name}
+                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="pt-6 space-y-4">
+                  <Quote className="w-10 h-10 text-primary/40" />
+                  <p className="text-muted-foreground italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border">
+                    <div className="text-3xl">{testimonial.image}</div>
+                    <div>
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.country}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
