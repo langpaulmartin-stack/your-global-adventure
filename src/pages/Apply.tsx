@@ -10,10 +10,10 @@ import logo from "@/assets/logo.png";
 
 const countries = [
   { value: "usa", label: "USA 🇺🇸", flag: "🇺🇸" },
-  { value: "switzerland", label: "Switzerland 🇨🇭", flag: "🇨🇭" },
-  { value: "germany", label: "Germany 🇩🇪", flag: "🇩🇪" },
-  { value: "australia", label: "Australia 🇦🇺", flag: "🇦🇺" },
-  { value: "estonia", label: "Estonia 🇪🇪", flag: "🇪🇪" },
+  { value: "switzerland", label: "Švýcarsko 🇨🇭", flag: "🇨🇭" },
+  { value: "germany", label: "Německo 🇩🇪", flag: "🇩🇪" },
+  { value: "australia", label: "Austrálie 🇦🇺", flag: "🇦🇺" },
+  { value: "estonia", label: "Estonsko 🇪🇪", flag: "🇪🇪" },
 ];
 
 const Apply = () => {
@@ -32,7 +32,7 @@ const Apply = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Application submitted successfully! We'll be in touch soon.");
+    toast.success("Přihláška úspěšně odeslána! Brzy se vám ozveme.");
     setTimeout(() => navigate("/"), 2000);
   };
 
@@ -47,7 +47,7 @@ const Apply = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => navigate("/")} className="gap-2">
             <ArrowLeft className="h-4 w-4" />
-            Back
+            Zpět
           </Button>
           <div className="flex items-center gap-3">
             <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
@@ -60,65 +60,65 @@ const Apply = () => {
       <div className="container mx-auto px-4 py-12 max-w-2xl">
         <div className="mb-8 text-center animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            Apply Today
+            Přihlaste se dnes
           </h1>
           <p className="text-muted-foreground text-lg">
-            Start your journey to an unforgettable experience abroad
+            Začněte svou cestu k nezapomenutelným zážitkům v zahraničí
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-2xl shadow-card animate-scale-in">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+              <Label htmlFor="firstName">Jméno</Label>
               <Input
                 id="firstName"
                 required
                 value={formData.firstName}
                 onChange={(e) => handleChange("firstName", e.target.value)}
-                placeholder="John"
+                placeholder="Jan"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
+              <Label htmlFor="lastName">Příjmení</Label>
               <Input
                 id="lastName"
                 required
                 value={formData.lastName}
                 onChange={(e) => handleChange("lastName", e.target.value)}
-                placeholder="Doe"
+                placeholder="Novák"
               />
             </div>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={(e) => handleChange("email", e.target.value)}
-              placeholder="john.doe@example.com"
-            />
+              <Input
+                id="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => handleChange("email", e.target.value)}
+                placeholder="jan.novak@example.com"
+              />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone Number</Label>
+              <Label htmlFor="phone">Telefonní číslo</Label>
               <Input
                 id="phone"
                 type="tel"
                 required
                 value={formData.phone}
                 onChange={(e) => handleChange("phone", e.target.value)}
-                placeholder="+1 234 567 8900"
+                placeholder="+420 123 456 789"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="dateOfBirth">Date of Birth</Label>
+              <Label htmlFor="dateOfBirth">Datum narození</Label>
               <Input
                 id="dateOfBirth"
                 type="date"
@@ -130,45 +130,45 @@ const Apply = () => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="address">Address</Label>
+            <Label htmlFor="address">Adresa</Label>
             <Input
               id="address"
               required
               value={formData.address}
               onChange={(e) => handleChange("address", e.target.value)}
-              placeholder="123 Main Street"
+              placeholder="Hlavní 123"
             />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="city">City</Label>
+              <Label htmlFor="city">Město</Label>
               <Input
                 id="city"
                 required
                 value={formData.city}
                 onChange={(e) => handleChange("city", e.target.value)}
-                placeholder="New York"
+                placeholder="Praha"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="zipCode">Zip Code</Label>
+              <Label htmlFor="zipCode">PSČ</Label>
               <Input
                 id="zipCode"
                 required
                 value={formData.zipCode}
                 onChange={(e) => handleChange("zipCode", e.target.value)}
-                placeholder="10001"
+                placeholder="11000"
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="country">Destination Country</Label>
+            <Label htmlFor="country">Země určení</Label>
             <Select value={formData.country} onValueChange={(value) => handleChange("country", value)} required>
               <SelectTrigger id="country">
-                <SelectValue placeholder="Select a country" />
+                <SelectValue placeholder="Vyberte zemi" />
               </SelectTrigger>
               <SelectContent>
                 {countries.map((country) => (
@@ -181,7 +181,7 @@ const Apply = () => {
           </div>
 
           <Button type="submit" size="lg" className="w-full text-lg">
-            Submit Application
+            Odeslat přihlášku
           </Button>
         </form>
       </div>

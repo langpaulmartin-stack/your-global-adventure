@@ -11,11 +11,11 @@ import australiaImage from "@/assets/australia.jpg";
 import estoniaImage from "@/assets/estonia.jpg";
 
 const countries = [
-  { name: "USA", flag: "🇺🇸", description: "Experience the American dream", image: usaImage },
-  { name: "Switzerland", flag: "🇨🇭", description: "Discover Alpine beauty", image: switzerlandImage },
-  { name: "Germany", flag: "🇩🇪", description: "Explore rich history & culture", image: germanyImage },
-  { name: "Australia", flag: "🇦🇺", description: "Adventure down under", image: australiaImage },
-  { name: "Estonia", flag: "🇪🇪", description: "Digital innovation hub", image: estoniaImage },
+  { name: "USA", flag: "🇺🇸", description: "Zažijte americký sen", image: usaImage },
+  { name: "Švýcarsko", flag: "🇨🇭", description: "Objevte alpskou krásu", image: switzerlandImage },
+  { name: "Německo", flag: "🇩🇪", description: "Prozkoumejte bohatou historii a kulturu", image: germanyImage },
+  { name: "Austrálie", flag: "🇦🇺", description: "Dobrodružství na opačné straně světa", image: australiaImage },
+  { name: "Estonsko", flag: "🇪🇪", description: "Centrum digitálních inovací", image: estoniaImage },
 ];
 
 const Index = () => {
@@ -30,7 +30,7 @@ const Index = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
           </div>
           <Button onClick={() => navigate("/apply")} size="sm">
-            Apply Now
+            Přihlásit se
           </Button>
         </div>
       </header>
@@ -44,13 +44,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
           <div className="max-w-3xl space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Your Adventure
+              Vaše dobrodružství
               <span className="bg-gradient-primary bg-clip-text text-transparent block mt-2">
-                Starts Here
+                začíná zde
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              Join thousands of young explorers discovering the world through cultural exchange programs
+              Připojte se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
@@ -58,7 +58,7 @@ const Index = () => {
                 size="lg" 
                 className="text-lg px-8 shadow-glow hover:shadow-glow transition-all duration-300"
               >
-                Apply Today
+                Přihlaste se dnes
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
@@ -66,7 +66,7 @@ const Index = () => {
                 size="lg"
                 className="text-lg px-8 bg-background/50 backdrop-blur-sm hover:bg-background/80"
               >
-                Learn More
+                Zjistit více
               </Button>
             </div>
           </div>
@@ -82,9 +82,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold">Cultural Immersion</h3>
+                <h3 className="text-2xl font-bold">Kulturní ponor</h3>
                 <p className="text-muted-foreground">
-                  Live with host families and experience authentic local culture
+                  Žijte s hostitelskými rodinami a zažijte autentickou místní kulturu
                 </p>
               </CardContent>
             </Card>
@@ -94,9 +94,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-accent rounded-2xl mx-auto flex items-center justify-center">
                   <Plane className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold">Global Network</h3>
+                <h3 className="text-2xl font-bold">Globální síť</h3>
                 <p className="text-muted-foreground">
-                  Build friendships and connections that last a lifetime
+                  Budujte přátelství a spojení, která vydrží celý život
                 </p>
               </CardContent>
             </Card>
@@ -106,9 +106,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-secondary rounded-2xl mx-auto flex items-center justify-center">
                   <Heart className="h-8 w-8 text-secondary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold">Personal Growth</h3>
+                <h3 className="text-2xl font-bold">Osobní růst</h3>
                 <p className="text-muted-foreground">
-                  Develop independence, confidence, and new perspectives
+                  Rozvíjejte nezávislost, sebevědomí a nové perspektivy
                 </p>
               </CardContent>
             </Card>
@@ -121,10 +121,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Choose Your Destination
+              Vyberte si destinaci
             </h2>
             <p className="text-xl text-muted-foreground">
-              Five amazing countries waiting for you
+              Pět úžasných zemí na vás čeká
             </p>
           </div>
 
@@ -164,10 +164,10 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center relative">
           <div className="max-w-3xl mx-auto space-y-6 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground">
-              Ready to Start Your Journey?
+              Jste připraveni začít svou cestu?
             </h2>
             <p className="text-xl text-primary-foreground/90">
-              Don't miss this opportunity to explore the world and create memories that last forever
+              Nenechte si ujít tuto příležitost prozkoumat svět a vytvořit vzpomínky, které vydrží navždy
             </p>
             <Button 
               onClick={() => navigate("/apply")}
@@ -175,7 +175,7 @@ const Index = () => {
               variant="secondary"
               className="text-lg px-8 mt-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Apply Today
+              Přihlaste se dnes
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
@@ -185,7 +185,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 bg-card/50">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2024 Let's Go Abroad. Connecting cultures, creating futures.</p>
+          <p>© 2024 Let's Go Abroad. Propojujeme kultury, vytváříme budoucnost.</p>
         </div>
       </footer>
     </div>
