@@ -173,8 +173,12 @@ const Index = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#programs" className="text-foreground hover:text-primary transition-colors font-medium">Nabídka programů</a>
-            <a href="#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQ</a>
+            <Button variant="ghost" onClick={() => navigate("/programs")}>
+              Nabídka programů
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/faq")}>
+              FAQ
+            </Button>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">O nás</a>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
               Přihlásit se
