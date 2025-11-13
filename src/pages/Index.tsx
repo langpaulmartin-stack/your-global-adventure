@@ -29,7 +29,15 @@ const Index = () => {
           <div className="flex items-center gap-3">
             <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
           </div>
-          <Button onClick={() => navigate("/apply")} size="sm">
+          <nav className="hidden md:flex items-center gap-6">
+            <a href="#programs" className="text-foreground hover:text-primary transition-colors font-medium">Nabídka programů</a>
+            <a href="#faq" className="text-foreground hover:text-primary transition-colors font-medium">FAQ</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">O nás</a>
+            <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
+              Přihlásit se
+            </Button>
+          </nav>
+          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
             Přihlásit se
           </Button>
         </div>
@@ -77,36 +85,36 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in">
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in border-primary/20">
               <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-primary rounded-2xl mx-auto flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Kulturní ponor</h3>
+                <h3 className="text-2xl font-bold text-primary">Kulturní ponor</h3>
                 <p className="text-muted-foreground">
                   Žijte s hostitelskými rodinami a zažijte autentickou místní kulturu
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:100ms]">
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:100ms] border-primary/20">
               <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-accent rounded-2xl mx-auto flex items-center justify-center">
-                  <Plane className="h-8 w-8 text-accent-foreground" />
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Plane className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Globální síť</h3>
+                <h3 className="text-2xl font-bold text-primary">Globální síť</h3>
                 <p className="text-muted-foreground">
                   Budujte přátelství a spojení, která vydrží celý život
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:200ms]">
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:200ms] border-primary/20">
               <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-secondary rounded-2xl mx-auto flex items-center justify-center">
-                  <Heart className="h-8 w-8 text-secondary-foreground" />
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Heart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Osobní růst</h3>
+                <h3 className="text-2xl font-bold text-primary">Osobní růst</h3>
                 <p className="text-muted-foreground">
                   Rozvíjejte nezávislost, sebevědomí a nové perspektivy
                 </p>
