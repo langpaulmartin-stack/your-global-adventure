@@ -1,14 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Globe2, Plane, Users, Heart, ArrowRight } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.png";
+import heroImage from "@/assets/hero-travel.jpg";
+import usaImage from "@/assets/usa.jpg";
+import switzerlandImage from "@/assets/switzerland.jpg";
+import germanyImage from "@/assets/germany.jpg";
+import australiaImage from "@/assets/australia.jpg";
+import estoniaImage from "@/assets/estonia.jpg";
 
 const countries = [
-  { name: "USA", flag: "🇺🇸", description: "Experience the American dream" },
-  { name: "Switzerland", flag: "🇨🇭", description: "Discover Alpine beauty" },
-  { name: "Germany", flag: "🇩🇪", description: "Explore rich history & culture" },
-  { name: "Australia", flag: "🇦🇺", description: "Adventure down under" },
-  { name: "Estonia", flag: "🇪🇪", description: "Digital innovation hub" },
+  { name: "USA", flag: "🇺🇸", description: "Experience the American dream", image: usaImage },
+  { name: "Switzerland", flag: "🇨🇭", description: "Discover Alpine beauty", image: switzerlandImage },
+  { name: "Germany", flag: "🇩🇪", description: "Explore rich history & culture", image: germanyImage },
+  { name: "Australia", flag: "🇦🇺", description: "Adventure down under", image: australiaImage },
+  { name: "Estonia", flag: "🇪🇪", description: "Digital innovation hub", image: estoniaImage },
 ];
 
 const Index = () => {
@@ -18,10 +25,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Globe2 className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">Youth Exchange</span>
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
           </div>
           <Button onClick={() => navigate("/apply")} size="sm">
             Apply Now
@@ -31,19 +37,22 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-60" />
-        <div className="container mx-auto px-4 py-20 md:py-32 relative">
-          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Young travelers" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+        </div>
+        <div className="container mx-auto px-4 py-24 md:py-40 relative">
+          <div className="max-w-3xl space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Your Adventure
               <span className="bg-gradient-primary bg-clip-text text-transparent block mt-2">
                 Starts Here
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
               Join thousands of young explorers discovering the world through cultural exchange programs
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 onClick={() => navigate("/apply")} 
                 size="lg" 
@@ -55,7 +64,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="text-lg px-8"
+                className="text-lg px-8 bg-background/50 backdrop-blur-sm hover:bg-background/80"
               >
                 Learn More
               </Button>
@@ -126,10 +135,18 @@ const Index = () => {
                 className="border-2 hover:border-primary transition-all duration-300 cursor-pointer group overflow-hidden animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="pt-8 text-center space-y-3">
-                  <div className="text-6xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={country.image} 
+                    alt={country.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                  <div className="absolute top-4 right-4 text-5xl">
                     {country.flag}
                   </div>
+                </div>
+                <CardContent className="pt-4 text-center space-y-2">
                   <h3 className="text-xl font-bold">{country.name}</h3>
                   <p className="text-sm text-muted-foreground">
                     {country.description}
@@ -168,7 +185,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 bg-card/50">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2024 Youth Exchange. Connecting cultures, creating futures.</p>
+          <p>© 2024 Let's Go Abroad. Connecting cultures, creating futures.</p>
         </div>
       </footer>
     </div>

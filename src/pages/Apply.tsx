@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-import { ArrowLeft, Globe2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const countries = [
   { value: "usa", label: "USA 🇺🇸", flag: "🇺🇸" },
@@ -43,14 +44,13 @@ const Apply = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Button variant="ghost" onClick={() => navigate("/")} className="gap-2">
             <ArrowLeft className="h-4 w-4" />
             Back
           </Button>
-          <div className="flex items-center gap-2">
-            <Globe2 className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl">Youth Exchange</span>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Let's Go Abroad" className="h-12 w-auto" />
           </div>
           <div className="w-20" />
         </div>
