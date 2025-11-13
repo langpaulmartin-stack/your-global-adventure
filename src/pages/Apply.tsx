@@ -14,6 +14,9 @@ const countries = [
   { value: "germany", label: "Německo 🇩🇪", flag: "🇩🇪" },
   { value: "australia", label: "Austrálie 🇦🇺", flag: "🇦🇺" },
   { value: "estonia", label: "Estonsko 🇪🇪", flag: "🇪🇪" },
+  { value: "japan", label: "Japonsko 🇯🇵", flag: "🇯🇵" },
+  { value: "new-zealand", label: "Nový Zéland 🇳🇿", flag: "🇳🇿" },
+  { value: "argentina", label: "Argentina 🇦🇷", flag: "🇦🇷" },
 ];
 
 const Apply = () => {
