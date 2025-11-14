@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 import heroAbout from "@/assets/hero-about.jpg";
 
 const contactSchema = z.object({
@@ -116,9 +117,7 @@ const About = () => {
               Přihlásit se
             </Button>
           </nav>
-          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
-            Přihlásit se
-          </Button>
+          <MobileMenu />
         </div>
       </header>
 

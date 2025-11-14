@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { ArrowLeft } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 
 const countries = [
   { value: "usa", label: "USA 🇺🇸", flag: "🇺🇸" },
@@ -55,7 +56,7 @@ const Apply = () => {
           <div className="flex items-center gap-3">
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
-          <div className="w-20" />
+          <MobileMenu />
         </div>
       </header>
 
