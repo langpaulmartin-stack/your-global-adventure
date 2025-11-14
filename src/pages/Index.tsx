@@ -185,6 +185,9 @@ const Index = () => {
             <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/blog")}>
+              Blog
+            </Button>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
               Přihlásit se
             </Button>
@@ -471,9 +474,26 @@ const Index = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
           </div>
-          <p className="text-muted-foreground mb-2">
+          <p className="text-muted-foreground mb-6">
             Propojujeme kultury, tvoříme budoucnost.
           </p>
+          <div className="flex flex-wrap justify-center gap-6 mb-6">
+            <Button variant="ghost" onClick={() => navigate("/programs")}>
+              Nabídka programů
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/work")}>
+              Práce v zahraničí
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/faq")}>
+              FAQ
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/about")}>
+              O nás
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/blog")}>
+              Blog
+            </Button>
+          </div>
           <p className="text-sm text-muted-foreground">
             © 2024 Let's Go Abroad. Všechna práva vyhrazena.
           </p>
