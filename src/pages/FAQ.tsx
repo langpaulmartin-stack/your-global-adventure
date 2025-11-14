@@ -117,12 +117,12 @@ const FAQ = () => {
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-6 bg-background/60 backdrop-blur-sm p-8 rounded-2xl">
-            <MessageCircle className="h-16 w-16 mx-auto text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <MessageCircle className="h-16 w-16 mx-auto text-white" style={{ filter: 'drop-shadow(0 2px 15px rgba(0,0,0,0.8))' }} />
+            <h1 className="text-5xl md:text-6xl font-bold text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
               Často kladené otázky
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-white" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
               Najděte odpovědi na nejčastější dotazy ohledně našich programů
             </p>
           </div>
