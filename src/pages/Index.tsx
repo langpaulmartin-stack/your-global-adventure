@@ -466,9 +466,17 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 bg-card/50">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2024 Let's Go Abroad. Propojujeme kultury, vytváříme budoucnost.</p>
+      <footer className="border-t border-border py-12 bg-card/50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img src={logo} alt="Let's Go Abroad" className="h-10 w-auto" />
+          </div>
+          <p className="text-muted-foreground mb-2">
+            Propojujeme kultury, tvoříme budoucnost.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            © 2024 Let's Go Abroad. Všechna práva vyhrazena.
+          </p>
         </div>
       </footer>
     </div>
