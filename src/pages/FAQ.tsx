@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import heroFaq from "@/assets/hero-faq.jpg";
 
 const faqs = [
   {
@@ -104,8 +105,16 @@ const FAQ = () => {
       </header>
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={heroFaq} 
+            alt="FAQ - Study Abroad Questions" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <MessageCircle className="h-16 w-16 mx-auto text-primary" />
             <h1 className="text-5xl md:text-6xl font-bold">
