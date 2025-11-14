@@ -98,14 +98,13 @@ const Programs = () => {
             alt="Study Abroad Programs" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold">
+          <div className="max-w-3xl mx-auto text-center space-y-6 bg-background/60 backdrop-blur-sm p-8 rounded-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white">
               Naše nabídka programů
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/90">
               Vyberte si destinaci a délku pobytu podle vašich představ
             </p>
           </div>
