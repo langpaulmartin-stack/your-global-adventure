@@ -215,7 +215,7 @@ const Work = () => {
       <footer className="bg-muted/30 py-12 border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img src={logo} alt="Let's Go Abroad" className="h-10 w-auto" />
+            <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
           </div>
           <p className="text-muted-foreground mb-6">
             Propojujeme kultury, tvoříme budoucnost.
