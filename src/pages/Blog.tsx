@@ -16,6 +16,7 @@ import { MobileMenu } from "@/components/MobileMenu";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
+import heroBlog from "@/assets/hero-blog.jpg";
 
 interface BlogPost {
   id: string;
@@ -198,11 +199,17 @@ const Blog = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBlog})` }}
+        >
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-4 text-white">
             <h1 className="text-5xl md:text-6xl font-bold">Blog</h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl">
               Tipy, rady a zkušenosti ze světa studijních a pracovních pobytů v zahraničí
             </p>
           </div>
