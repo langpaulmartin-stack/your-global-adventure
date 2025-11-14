@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -118,11 +119,32 @@ const About = () => {
         </div>
       </header>
 
+      {/* Hero Section */}
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroAbout}
+            alt="Happy young travelers at airport"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
+              O nás
+            </h1>
+            <p className="text-xl text-white" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
+              Pomáháme mladým lidem poznávat svět a získávat nezapomenutelné zkušenosti
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">O nás</h1>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Kdo jsme</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Naše organizace vznikla roku 2025 a poskytuje poradenství a kompletní zajištění práce v zahraničí 
               a studium v zahraničí na střední škole. Jsme tu proto, abychom vám pomohli naplnit vaše sny 
