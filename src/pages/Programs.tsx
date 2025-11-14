@@ -351,7 +351,7 @@ const Programs = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-10 w-auto" />
           </div>
           <p className="text-muted-foreground mb-6">
-            Otevíráme dveře k nezapomenutelným zážitkům po celém světě
+            Propojujeme kultury, tvoříme budoucnost.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-6">
             <Button variant="ghost" onClick={() => navigate("/programs")}>
