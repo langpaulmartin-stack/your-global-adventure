@@ -197,17 +197,16 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Young travelers" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
         </div>
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
-          <div className="max-w-3xl space-y-8 animate-fade-in bg-background/60 backdrop-blur-sm p-8 rounded-2xl">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+          <div className="max-w-3xl space-y-8 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
               Vaše dobrodružství
               <span className="block mt-2">
                 začíná zde
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl">
+            <p className="text-xl md:text-2xl text-white max-w-2xl" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
               Připojte se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
