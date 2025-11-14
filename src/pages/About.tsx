@@ -1,9 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Mail, Phone } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { z } from "zod";
 import logo from "@/assets/logo.png";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
+  email: z.string().trim().email({ message: "Neplatná emailová adresa" }).max(255, { message: "Email musí mít maximálně 255 znaků" }),
+  message: z.string().trim().min(1, { message: "Zpráva je povinná" }).max(1000, { message: "Zpráva musí mít maximálně 1000 znaků" })
+});
 
 const consultants = [
   {
@@ -31,6 +43,49 @@ const consultants = [
 
 const About = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+    
+    try {
+      const validatedData = contactSchema.parse(formData);
+      setIsSubmitting(true);
+      
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Zpráva odeslána",
+        description: "Děkujeme za váš zájem. Brzy se vám ozveme.",
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -62,18 +117,6 @@ const About = () => {
           </Button>
         </div>
       </header>
-
-      {/* Back Button */}
-      <div className="container mx-auto px-4 pt-8">
-        <Button
-          variant="ghost"
-          onClick={() => navigate("/")}
-          className="mb-4"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Zpět na hlavní stránku
-        </Button>
-      </div>
 
       {/* About Section */}
       <section className="py-16">
@@ -111,25 +154,96 @@ const About = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-center mb-6">Kontaktujte nás</h2>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <a href="mailto:info@letsgoabroad.cz" className="text-foreground hover:text-primary transition-colors">
-                      info@letsgoabroad.cz
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <a href="tel:+420777888999" className="text-foreground hover:text-primary transition-colors">
-                      +420 777 888 999
-                    </a>
-                  </div>
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Zeptejte se nás
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6">
+                Máte otázky? Rádi vám pomůžeme s čímkoli, co potřebujete vědět
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex items-center gap-2">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <a href="mailto:info@letsgoabroad.cz" className="text-foreground hover:text-primary transition-colors">
+                    info@letsgoabroad.cz
+                  </a>
                 </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <a href="tel:+420777888999" className="text-foreground hover:text-primary transition-colors">
+                    +420 777 888 999
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <Card className="border-primary/20 shadow-card">
+              <CardContent className="pt-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Jméno</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Vaše jméno"
+                      className={errors.name ? "border-destructive" : ""}
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-destructive">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="vas@email.cz"
+                      className={errors.email ? "border-destructive" : ""}
+                    />
+                    {errors.email && (
+                      <p className="text-sm text-destructive">{errors.email}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Zpráva</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Napište nám vaši zprávu..."
+                      rows={5}
+                      className={errors.message ? "border-destructive" : ""}
+                    />
+                    {errors.message && (
+                      <p className="text-sm text-destructive">{errors.message}</p>
+                    )}
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Odesílání..." : "Odeslat zprávu"}
+                    <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
@@ -137,16 +251,31 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card/50 backdrop-blur-sm border-t border-border py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Let's Go Abroad" className="h-10 w-auto" />
-            </div>
-            <p className="text-sm text-muted-foreground">
-              © 2025 Let's Go Abroad. Všechna práva vyhrazena.
-            </p>
+      <footer className="border-t border-border py-12 bg-card/50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
           </div>
+          <p className="text-muted-foreground mb-6">
+            Propojujeme kultury, tvoříme budoucnost.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 mb-6">
+            <Button variant="ghost" onClick={() => navigate("/programs")}>
+              Nabídka programů
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/work")}>
+              Práce v zahraničí
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/faq")}>
+              FAQ
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/about")}>
+              O nás
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            © 2024 Let's Go Abroad. Všechna práva vyhrazena.
+          </p>
         </div>
       </footer>
     </div>
