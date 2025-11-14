@@ -1,10 +1,47 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useNavigate, useParams } from "react-router-dom";
-import { Calendar, User, ArrowLeft } from "lucide-react";
+import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.png";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
+
+interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  author: string;
+  perex: string;
+  image: string;
+}
+
+const blogPosts: BlogPost[] = [
+  {
+    id: "jak-se-pripravit-na-studium",
+    title: "Jak se připravit na studium v zahraničí",
+    date: "15. 1. 2025",
+    author: "Martin Langpaul",
+    perex: "Studium v zahraničí je jedinečná příležitost. Zjistěte, jak se na něj správně připravit a co vše budete potřebovat.",
+    image: blog1
+  },
+  {
+    id: "prace-v-usa-zkusenosti",
+    title: "Práce v USA: Zkušenosti našich účastníků",
+    date: "12. 1. 2025",
+    author: "Aneta Juránková",
+    perex: "Přečtěte si skutečné příběhy mladých lidí, kteří absolvovali pracovní program v USA a získali cenné zkušenosti.",
+    image: blog2
+  },
+  {
+    id: "priprava-na-odlet",
+    title: "Příprava na odlet: Co si zabalit",
+    date: "10. 1. 2025",
+    author: "Ondřej Chmelíř",
+    perex: "Balení na delší pobyt v zahraničí může být výzva. Podívejte se na náš seznam nezbytností, které by vám neměly chybět.",
+    image: blog3
+  }
+];
 
 const blogPostsData: Record<string, any> = {
   "jak-se-pripravit-na-studium": {
@@ -87,6 +124,76 @@ const blogPostsData: Record<string, any> = {
       <h2>Závěr</h2>
       <p>Práce v USA není jen o vydělávání peněz. Je to životní zkušenost, která vám pomůže růst, poznávat nové kultury a budovat si mezinárodní síť kontaktů. Pokud přemýšlíte o účasti v programu, neváhejte nás kontaktovat!</p>
     `
+  },
+  "priprava-na-odlet": {
+    title: "Příprava na odlet: Co si zabalit",
+    date: "10. 1. 2025",
+    author: "Ondřej Chmelíř",
+    image: blog3,
+    content: `
+      <p>Balení na delší pobyt v zahraničí je umění. Chcete si vzít vše potřebné, ale zároveň nechcete být přetíženi zavazadly. V tomto článku vám poradíme, jak se připravit na odlet.</p>
+      
+      <h2>Základní strategie balení</h2>
+      <p>Než začnete balit, je důležité si uvědomit několik základních pravidel:</p>
+      <ul>
+        <li>Zjistěte si klimatické podmínky vaší destinace</li>
+        <li>Informujte se o místních zvyklostech v oblékání</li>
+        <li>Zkontrolujte pravidla letecké společnosti pro zavazadla</li>
+        <li>Nechte si prostor pro suvenýry</li>
+      </ul>
+
+      <h2>Co určitě vzít s sebou</h2>
+      
+      <h3>Dokumenty a důležité položky</h3>
+      <ul>
+        <li>Pas a víza (včetně kopií)</li>
+        <li>Zdravotní pojištění a pojistná smlouva</li>
+        <li>Kontaktní informace na ambasádu</li>
+        <li>Lékařské předpisy (v originálním obalu)</li>
+        <li>Očkovací průkaz</li>
+        <li>Bankovní karty (nejlépe více druhů)</li>
+      </ul>
+
+      <h3>Oblečení</h3>
+      <p>Pravidlo je jednoduché - méně je více. Zaměřte se na:</p>
+      <ul>
+        <li>Základní kousky, které lze kombinovat</li>
+        <li>Vrstvení oblečení pro různé teploty</li>
+        <li>Pohodlná obuv pro chůzi</li>
+        <li>Jedny elegantnější věci na speciální příležitosti</li>
+        <li>Plavky (i když nejedete k moři!)</li>
+      </ul>
+
+      <h3>Technologie</h3>
+      <ul>
+        <li>Nabíječky a adaptéry na zásuvky</li>
+        <li>Power banka</li>
+        <li>Sluchátka</li>
+        <li>Záložní paměťová karta</li>
+      </ul>
+
+      <h2>Co nechat doma</h2>
+      <p>Stejně důležité jako vědět, co si vzít, je vědět, co nechat doma:</p>
+      <ul>
+        <li>Cennosti, které nepotřebujete</li>
+        <li>Příliš mnoho oblečení stejného typu</li>
+        <li>Velké knihy (použijte e-reader)</li>
+        <li>Fén (většina ubytování jej má)</li>
+        <li>Příliš mnoho toaletních potřeb (můžete koupit na místě)</li>
+      </ul>
+
+      <h2>Tipy zkušených cestovatelů</h2>
+      <ul>
+        <li>Sbalte si malou lékárničku se základními léky</li>
+        <li>Použijte barevné pruhy na zavazadla - snáze je najdete</li>
+        <li>Mějte přebalení v příručním zavazadle pro případ ztráty kufru</li>
+        <li>Udělejte si seznam a zaškrtávejte, co už máte sbaleno</li>
+        <li>Vyfotografujte obsah zavazadel pro případ pojistné události</li>
+      </ul>
+
+      <h2>Závěr</h2>
+      <p>Dobře připravená zavazadla vám pomohou začít váš zahraniční pobyt bez stresu. Pamatujte, že většinu věcí můžete koupit i na místě, takže se nemusíte bát, že něco zapomenete. Hlavní je nezapomenout důležité dokumenty a léky!</p>
+    `
   }
 };
 
@@ -94,6 +201,11 @@ const BlogPost = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const post = id ? blogPostsData[id] : null;
+  
+  // Get other articles by the same author
+  const otherAuthorPosts = post 
+    ? blogPosts.filter(p => p.author === post.author && p.id !== id).slice(0, 3)
+    : [];
 
   if (!post) {
     return (
@@ -191,6 +303,82 @@ const BlogPost = () => {
           </div>
         </div>
       </article>
+
+      {/* Other Articles by Author */}
+      {otherAuthorPosts.length > 0 && (
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8">Další články od {post.author}</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {otherAuthorPosts.map((authorPost) => (
+                  <Card 
+                    key={authorPost.id} 
+                    className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
+                    onClick={() => navigate(`/blog/${authorPost.id}`)}
+                  >
+                    <div className="relative h-40 overflow-hidden">
+                      <img
+                        src={authorPost.image}
+                        alt={authorPost.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardHeader>
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {authorPost.title}
+                      </h3>
+                      <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                        <Calendar className="h-3 w-3" />
+                        <span>{authorPost.date}</span>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Call to Action */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4">Zaujal vás tento článek?</h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Prozkoumejte naše programy nebo se rovnou přihlaste!
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  onClick={() => navigate("/")}
+                  variant="outline"
+                  size="lg"
+                >
+                  Zpět na homepage
+                </Button>
+                <Button 
+                  onClick={() => navigate("/programs")}
+                  variant="outline"
+                  size="lg"
+                >
+                  Nabídka programů
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button 
+                  onClick={() => navigate("/apply")}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  Přihlásit se
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-border py-12 bg-card/50">
