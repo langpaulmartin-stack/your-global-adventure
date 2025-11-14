@@ -293,13 +293,12 @@ const Index = () => {
                 className="border-2 hover:border-primary transition-all duration-300 cursor-pointer group overflow-hidden animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden rounded-t-lg">
                   <img 
                     src={country.image} 
                     alt={country.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-transparent" />
                 </div>
                 <CardContent className="pt-4 space-y-3">
                   <h3 className="text-xl font-bold text-center">{country.name}</h3>

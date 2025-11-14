@@ -124,7 +124,14 @@ const Programs = () => {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {countryPrograms.map((program) => (
-                    <Card key={program.id} className="hover:shadow-glow transition-shadow duration-300">
+                    <Card key={program.id} className="hover:shadow-glow transition-shadow duration-300 overflow-hidden">
+                      <div className="relative h-48 overflow-hidden">
+                        <img 
+                          src={program.image} 
+                          alt={`${program.country} - ${program.type}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <CardHeader>
                         <div className="flex items-start justify-between">
                           <div>
