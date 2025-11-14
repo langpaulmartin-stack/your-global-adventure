@@ -4,6 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
 import heroPrograms from "@/assets/hero-programs.jpg";
+import usaImage from "@/assets/usa.jpg";
+import switzerlandImage from "@/assets/switzerland.jpg";
+import germanyImage from "@/assets/germany.jpg";
+import australiaImage from "@/assets/australia.jpg";
+import estoniaImage from "@/assets/estonia.jpg";
+import japanImage from "@/assets/japan.jpg";
+import newZealandImage from "@/assets/new-zealand.jpg";
+import argentinaImage from "@/assets/argentina.jpg";
 
 interface Program {
   id: string;
@@ -14,217 +22,30 @@ interface Program {
   price: string;
   age: string;
   description: string;
+  image: string;
 }
 
 const programs: Program[] = [
-  // USA
-  {
-    id: "usa-semester",
-    country: "USA",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "150 000 Kč",
-    age: "15 let",
-    description: "Prožijte nezapomenutelný semestr na americké škole"
-  },
-  {
-    id: "usa-year",
-    country: "USA",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "280 000 Kč",
-    age: "15 let",
-    description: "Celý školní rok v USA s plnou integrací do místní kultury"
-  },
-  {
-    id: "usa-semester-jan",
-    country: "USA",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Leden 2027",
-    price: "150 000 Kč",
-    age: "15 let",
-    description: "Jarní semestr na americké střední škole"
-  },
-  // Švýcarsko
-  {
-    id: "switzerland-semester",
-    country: "Švýcarsko",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "180 000 Kč",
-    age: "15 let",
-    description: "Studium v srdci Evropy s výukou v němčině nebo francouzštině"
-  },
-  {
-    id: "switzerland-year",
-    country: "Švýcarsko",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "320 000 Kč",
-    age: "15 let",
-    description: "Kompletní rok na švýcarské škole s alpským životním stylem"
-  },
-  // Německo
-  {
-    id: "germany-semester",
-    country: "Německo",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "145 000 Kč",
-    age: "15 let",
-    description: "Zlepšete němčinu a poznejte německou kulturu"
-  },
-  {
-    id: "germany-year",
-    country: "Německo",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "270 000 Kč",
-    age: "15 let",
-    description: "Celý rok v německé rodině s pravidelnou školní docházkou"
-  },
-  {
-    id: "germany-semester-jan",
-    country: "Německo",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Leden 2027",
-    price: "145 000 Kč",
-    age: "15 let",
-    description: "Jarní semestr v Německu"
-  },
-  // Austrálie
-  {
-    id: "australia-semester",
-    country: "Austrálie",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Leden 2027",
-    price: "220 000 Kč",
-    age: "15 let",
-    description: "Australský semestr plný dobrodružství a nových přátel"
-  },
-  {
-    id: "australia-year",
-    country: "Austrálie",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Leden 2027",
-    price: "400 000 Kč",
-    age: "15 let",
-    description: "Rok na australské škole s unikátní kulturní zkušeností"
-  },
-  // Estonsko
-  {
-    id: "estonia-semester",
-    country: "Estonsko",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "120 000 Kč",
-    age: "15 let",
-    description: "Poznejte digitální velmoc severní Evropy"
-  },
-  {
-    id: "estonia-year",
-    country: "Estonsko",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "220 000 Kč",
-    age: "15 let",
-    description: "Rok v nejdigitálnější zemi Evropy"
-  },
-  // Japonsko
-  {
-    id: "japan-short",
-    country: "Japonsko",
-    type: "Short term",
-    duration: "3 měsíce",
-    departure: "Srpen 2026",
-    price: "195 000 Kč",
-    age: "15 let",
-    description: "Krátký, ale intenzivní program v Japonsku"
-  },
-  {
-    id: "japan-semester",
-    country: "Japonsko",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "265 000 Kč",
-    age: "15 let",
-    description: "Semestr plný japonské kultury a tradic"
-  },
-  {
-    id: "japan-year",
-    country: "Japonsko",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "480 000 Kč",
-    age: "15 let",
-    description: "Kompletní rok v zemi vycházejícího slunce"
-  },
-  // Nový Zéland
-  {
-    id: "newzealand-semester",
-    country: "Nový Zéland",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Leden 2027",
-    price: "210 000 Kč",
-    age: "15 let",
-    description: "Semestr v zemi plné přírodních krás"
-  },
-  {
-    id: "newzealand-year",
-    country: "Nový Zéland",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Leden 2027",
-    price: "380 000 Kč",
-    age: "15 let",
-    description: "Rok na Novém Zélandu s aktivním životním stylem"
-  },
-  // Argentina
-  {
-    id: "argentina-semester",
-    country: "Argentina",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Srpen 2026",
-    price: "175 000 Kč",
-    age: "15 let",
-    description: "Objevte latinskou Ameriku a naučte se španělsky"
-  },
-  {
-    id: "argentina-year",
-    country: "Argentina",
-    type: "Školní rok",
-    duration: "10 měsíců",
-    departure: "Srpen 2026",
-    price: "320 000 Kč",
-    age: "15 let",
-    description: "Kompletní rok v Buenos Aires nebo venkovské Argentině"
-  },
-  {
-    id: "argentina-semester-jan",
-    country: "Argentina",
-    type: "Semestr",
-    duration: "5 měsíců",
-    departure: "Leden 2027",
-    price: "175 000 Kč",
-    age: "15 let",
-    description: "Argentinský semestr s tango a gauchem"
-  },
+  { id: "usa-semester", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "150 000 Kč", age: "15 let", description: "Prožijte nezapomenutelný semestr na americké škole", image: usaImage },
+  { id: "usa-year", country: "USA", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "280 000 Kč", age: "15 let", description: "Celý školní rok v USA s plnou integrací do místní kultury", image: usaImage },
+  { id: "usa-semester-jan", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "150 000 Kč", age: "15 let", description: "Jarní semestr na americké střední škole", image: usaImage },
+  { id: "switzerland-semester", country: "Švýcarsko", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "180 000 Kč", age: "15 let", description: "Studium v srdci Evropy s výukou v němčině nebo francouzštině", image: switzerlandImage },
+  { id: "switzerland-year", country: "Švýcarsko", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "320 000 Kč", age: "15 let", description: "Kompletní rok na švýcarské škole s alpským životním stylem", image: switzerlandImage },
+  { id: "germany-semester", country: "Německo", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "145 000 Kč", age: "15 let", description: "Zlepšete němčinu a poznejte německou kulturu", image: germanyImage },
+  { id: "germany-year", country: "Německo", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "270 000 Kč", age: "15 let", description: "Celý rok v německé rodině s pravidelnou školní docházkou", image: germanyImage },
+  { id: "germany-semester-jan", country: "Německo", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "145 000 Kč", age: "15 let", description: "Jarní semestr v Německu", image: germanyImage },
+  { id: "australia-semester", country: "Austrálie", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "220 000 Kč", age: "15 let", description: "Australský semestr plný dobrodružství a nových přátel", image: australiaImage },
+  { id: "australia-year", country: "Austrálie", type: "Školní rok", duration: "10 měsíců", departure: "Leden 2027", price: "400 000 Kč", age: "15 let", description: "Rok na australské škole s unikátní kulturní zkušeností", image: australiaImage },
+  { id: "estonia-semester", country: "Estonsko", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "120 000 Kč", age: "15 let", description: "Poznejte digitální velmoc severní Evropy", image: estoniaImage },
+  { id: "estonia-year", country: "Estonsko", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "220 000 Kč", age: "15 let", description: "Rok v nejdigitálnější zemi Evropy", image: estoniaImage },
+  { id: "japan-short", country: "Japonsko", type: "Short term", duration: "3 měsíce", departure: "Srpen 2026", price: "195 000 Kč", age: "15 let", description: "Krátký, ale intenzivní program v Japonsku", image: japanImage },
+  { id: "japan-semester", country: "Japonsko", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "265 000 Kč", age: "15 let", description: "Semestr plný japonské kultury a tradic", image: japanImage },
+  { id: "japan-year", country: "Japonsko", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "480 000 Kč", age: "15 let", description: "Kompletní rok v zemi vycházejícího slunce", image: japanImage },
+  { id: "newzealand-semester", country: "Nový Zéland", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "210 000 Kč", age: "15 let", description: "Semestr v zemi plné přírodních krás", image: newZealandImage },
+  { id: "newzealand-year", country: "Nový Zéland", type: "Školní rok", duration: "10 měsíců", departure: "Leden 2027", price: "380 000 Kč", age: "15 let", description: "Rok na Novém Zélandu s aktivním životním stylem", image: newZealandImage },
+  { id: "argentina-semester", country: "Argentina", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "175 000 Kč", age: "15 let", description: "Objevte latinskou Ameriku a naučte se španělsky", image: argentinaImage },
+  { id: "argentina-year", country: "Argentina", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "320 000 Kč", age: "15 let", description: "Kompletní rok v Buenos Aires nebo venkovské Argentině", image: argentinaImage },
+  { id: "argentina-semester-jan", country: "Argentina", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "175 000 Kč", age: "15 let", description: "Argentinský semestr s tango a gauchem", image: argentinaImage },
 ];
 
 const Programs = () => {
