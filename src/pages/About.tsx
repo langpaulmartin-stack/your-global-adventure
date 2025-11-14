@@ -109,6 +109,9 @@ const About = () => {
             <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/blog")}>
+              Blog
+            </Button>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
               Přihlásit se
             </Button>

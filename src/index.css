@@ -115,3 +115,37 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .prose {
+    @apply text-foreground;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-bold mt-8 mb-4 text-foreground;
+  }
+  
+  .prose h3 {
+    @apply text-xl font-semibold mt-6 mb-3 text-foreground;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed text-foreground;
+  }
+  
+  .prose ul {
+    @apply list-disc pl-6 mb-4 space-y-2;
+  }
+  
+  .prose li {
+    @apply text-foreground;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-primary-glow transition-colors underline;
+  }
+}

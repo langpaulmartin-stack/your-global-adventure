@@ -77,8 +77,11 @@ const Programs = () => {
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/")}>
+            <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/blog")}>
+              Blog
             </Button>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
               Přihlásit se
@@ -190,8 +193,11 @@ const Programs = () => {
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/")}>
+            <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
+            </Button>
+            <Button variant="ghost" onClick={() => navigate("/blog")}>
+              Blog
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
