@@ -176,6 +176,9 @@ const Index = () => {
             <Button variant="ghost" onClick={() => navigate("/programs")}>
               Nabídka programů
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/work")}>
+              Práce v zahraničí
+            </Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
