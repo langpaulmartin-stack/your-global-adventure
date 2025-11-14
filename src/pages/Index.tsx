@@ -182,7 +182,9 @@ const Index = () => {
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">O nás</a>
+            <Button variant="ghost" onClick={() => navigate("/about")}>
+              O nás
+            </Button>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">
               Přihlásit se
             </Button>
