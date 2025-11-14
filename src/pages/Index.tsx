@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
@@ -192,9 +193,7 @@ const Index = () => {
               Přihlásit se
             </Button>
           </nav>
-          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
-            Přihlásit se
-          </Button>
+          <MobileMenu />
         </div>
       </header>
 

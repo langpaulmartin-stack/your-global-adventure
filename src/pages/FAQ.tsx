@@ -8,6 +8,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 import heroFaq from "@/assets/hero-faq.jpg";
 
 const faqs = [
@@ -104,9 +105,7 @@ const FAQ = () => {
               Přihlásit se
             </Button>
           </nav>
-          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
-            Přihlásit se
-          </Button>
+          <MobileMenu />
         </div>
       </header>
 

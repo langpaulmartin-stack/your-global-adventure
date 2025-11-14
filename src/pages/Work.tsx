@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Calendar, Users, Briefcase, DollarSign } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 import heroWork from "@/assets/hero-work.jpg";
 
 interface WorkProgram {
@@ -96,9 +97,7 @@ const Work = () => {
               Přihlásit se
             </Button>
           </nav>
-          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
-            Přihlásit se
-          </Button>
+          <MobileMenu />
         </div>
       </header>
 

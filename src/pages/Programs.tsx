@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { MobileMenu } from "@/components/MobileMenu";
 import heroPrograms from "@/assets/hero-programs.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
@@ -87,9 +88,7 @@ const Programs = () => {
               Přihlásit se
             </Button>
           </nav>
-          <Button onClick={() => navigate("/apply")} size="sm" className="md:hidden bg-primary hover:bg-primary/90">
-            Přihlásit se
-          </Button>
+          <MobileMenu />
         </div>
       </header>
 
