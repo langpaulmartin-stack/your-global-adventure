@@ -107,15 +107,14 @@ const Work = () => {
             alt="Work Abroad Programs" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/90 to-background/70" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <Briefcase className="h-16 w-16 mx-auto text-primary" />
-            <h1 className="text-5xl md:text-6xl font-bold">
+          <div className="max-w-3xl mx-auto text-center space-y-6 bg-background/60 backdrop-blur-sm p-8 rounded-2xl">
+            <Briefcase className="h-16 w-16 mx-auto text-white" />
+            <h1 className="text-5xl md:text-6xl font-bold text-white">
               Práce v zahraničí
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/90">
               Získejte cenné pracovní zkušenosti a poznejte svět
             </p>
           </div>

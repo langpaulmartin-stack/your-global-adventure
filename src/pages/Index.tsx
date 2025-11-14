@@ -197,17 +197,17 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Young travelers" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
         </div>
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
-          <div className="max-w-3xl space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <div className="max-w-3xl space-y-8 animate-fade-in bg-background/60 backdrop-blur-sm p-8 rounded-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
               Vaše dobrodružství
-              <span className="bg-gradient-primary bg-clip-text text-transparent block mt-2">
+              <span className="block mt-2">
                 začíná zde
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl">
               Připojte se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -222,7 +222,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="text-lg px-8 bg-background/50 backdrop-blur-sm hover:bg-background/80"
+                className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
               >
                 Zjistit více
               </Button>
