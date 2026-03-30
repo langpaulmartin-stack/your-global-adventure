@@ -85,7 +85,7 @@ const FAQ = () => {
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 text-base">
             <Button variant="ghost" onClick={() => navigate("/programs")}>
               Nabídka programů
             </Button>
