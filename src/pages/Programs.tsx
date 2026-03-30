@@ -180,7 +180,7 @@ const Programs = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
           </div>
           <p className="text-muted-foreground mb-6">
-            Propojujeme kultury, tvoříme budoucnost.
+            Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-6">
             <Button variant="ghost" onClick={() => navigate("/programs")}>
