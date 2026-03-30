@@ -494,7 +494,7 @@ const Index = () => {
             </Button>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2024 Let's Go Abroad. Všechna práva vyhrazena.
+            © {new Date().getFullYear()} Studuj v zahraničí. Všechna práva vyhrazena.
           </p>
         </div>
       </footer>
