@@ -70,9 +70,7 @@ const Programs = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")} className="text-primary font-medium">
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown isActive />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>

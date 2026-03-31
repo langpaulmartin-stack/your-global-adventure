@@ -79,10 +79,7 @@ const Work = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
-            <Button variant="ghost" onClick={() => navigate("/work")} className="text-primary font-medium">
+            <ProgramsDropdown />
               Práce v zahraničí
             </Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>
