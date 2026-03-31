@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,19 +14,24 @@ interface ProgramsDropdownProps {
 
 export const ProgramsDropdown = ({ isActive = false }: ProgramsDropdownProps) => {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className={`text-base gap-1 ${isActive ? "text-primary font-medium" : ""}`}
+          className={`text-base ${isActive ? "text-primary font-medium" : ""}`}
+          onMouseEnter={() => setOpen(true)}
         >
           Nabídka programů
-          <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" className="w-56">
+      <DropdownMenuContent
+        align="start"
+        className="w-56"
+        onMouseLeave={() => setOpen(false)}
+      >
         <DropdownMenuItem
           className="cursor-pointer text-sm py-2"
           onClick={() => navigate("/programs?type=short")}
