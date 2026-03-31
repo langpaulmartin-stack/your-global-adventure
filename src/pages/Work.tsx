@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Calendar, Users, Briefcase, DollarSign } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroWork from "@/assets/hero-work.jpg";
 
 interface WorkProgram {
@@ -78,9 +79,7 @@ const Work = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")} className="text-primary font-medium">
               Práce v zahraničí
             </Button>

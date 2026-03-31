@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Calendar, User, ArrowLeft, ArrowRight } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
@@ -231,9 +232,7 @@ const BlogPost = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>

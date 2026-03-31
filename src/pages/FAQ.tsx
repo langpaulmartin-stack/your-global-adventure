@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroFaq from "@/assets/hero-faq.jpg";
 
 const faqs = [
@@ -86,9 +87,7 @@ const FAQ = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>

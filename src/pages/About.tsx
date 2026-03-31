@@ -11,6 +11,7 @@ import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroAbout from "@/assets/hero-about.jpg";
 
 const contactSchema = z.object({
@@ -98,9 +99,7 @@ const About = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>

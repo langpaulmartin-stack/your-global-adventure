@@ -10,6 +10,7 @@ import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
@@ -174,9 +175,7 @@ const Index = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>

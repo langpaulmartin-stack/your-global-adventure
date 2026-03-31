@@ -34,11 +34,34 @@ export const MobileMenu = () => {
         <nav className="flex flex-col gap-4 mt-8">
           <Button
             variant="ghost"
-            className="justify-start text-lg"
+            className="justify-start text-lg font-semibold"
             onClick={() => handleNavigation("/programs")}
           >
             Nabídka programů
           </Button>
+          <div className="pl-4 flex flex-col gap-2">
+            <Button
+              variant="ghost"
+              className="justify-start text-base"
+              onClick={() => handleNavigation("/programs?type=short")}
+            >
+              Krátké programy
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-base"
+              onClick={() => handleNavigation("/programs?type=semester")}
+            >
+              Semestrální programy
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-base"
+              onClick={() => handleNavigation("/programs?type=year")}
+            >
+              Roční programy
+            </Button>
+          </div>
           <Button
             variant="ghost"
             className="justify-start text-lg"

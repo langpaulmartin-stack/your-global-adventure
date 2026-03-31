@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroPrograms from "@/assets/hero-programs.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
@@ -69,9 +70,7 @@ const Programs = () => {
             <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
-            <Button variant="ghost" onClick={() => navigate("/programs")} className="text-primary font-medium">
-              Nabídka programů
-            </Button>
+            <ProgramsDropdown isActive />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>
