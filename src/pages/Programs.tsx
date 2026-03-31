@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
