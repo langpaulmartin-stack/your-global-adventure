@@ -10,6 +10,7 @@ import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
