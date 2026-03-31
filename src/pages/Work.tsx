@@ -80,6 +80,7 @@ const Work = () => {
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
             <ProgramsDropdown />
+            <Button variant="ghost" onClick={() => navigate("/work")} className="text-primary font-medium">
               Práce v zahraničí
             </Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>
