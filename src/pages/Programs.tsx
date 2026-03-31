@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -52,8 +52,23 @@ const programs: Program[] = [
 
 const Programs = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const routeFilter: Record<string, { types: string[]; title: string; subtitle: string }> = {
+    "/kratke-programy": { types: ["Short term"], title: "Krátké programy", subtitle: "Krátkodobé studijní pobyty v zahraničí" },
+    "/semestralni-programy": { types: ["Semestr"], title: "Semestrální programy", subtitle: "Semestrální studijní pobyty v zahraničí" },
+    "/rocni-programy": { types: ["Školní rok"], title: "Roční programy", subtitle: "Celoroční studijní pobyty v zahraničí" },
+  };
+
+  const currentFilter = routeFilter[location.pathname];
+  const filteredPrograms = currentFilter
+    ? programs.filter(p => currentFilter.types.includes(p.type))
+    : programs;
+
+  const pageTitle = currentFilter?.title || "Naše nabídka programů";
+  const pageSubtitle = currentFilter?.subtitle || "Vyberte si destinaci a délku pobytu podle vašich představ";
   
-  const groupedPrograms = programs.reduce((acc, program) => {
+  const groupedPrograms = filteredPrograms.reduce((acc, program) => {
     if (!acc[program.country]) {
       acc[program.country] = [];
     }
@@ -103,10 +118,10 @@ const Programs = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
-              Naše nabídka programů
+              {pageTitle}
             </h1>
             <p className="text-xl text-white" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
-              Vyberte si destinaci a délku pobytu podle vašich představ
+              {pageSubtitle}
             </p>
           </div>
         </div>

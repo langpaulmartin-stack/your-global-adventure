@@ -43,21 +43,21 @@ export const MobileMenu = () => {
             <Button
               variant="ghost"
               className="justify-start text-base"
-              onClick={() => handleNavigation("/programs?type=short")}
+              onClick={() => handleNavigation("/kratke-programy")}
             >
               Krátké programy
             </Button>
             <Button
               variant="ghost"
               className="justify-start text-base"
-              onClick={() => handleNavigation("/programs?type=semester")}
+              onClick={() => handleNavigation("/semestralni-programy")}
             >
               Semestrální programy
             </Button>
             <Button
               variant="ghost"
               className="justify-start text-base"
-              onClick={() => handleNavigation("/programs?type=year")}
+              onClick={() => handleNavigation("/rocni-programy")}
             >
               Roční programy
             </Button>

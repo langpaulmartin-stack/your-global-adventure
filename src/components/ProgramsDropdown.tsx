@@ -34,19 +34,19 @@ export const ProgramsDropdown = ({ isActive = false }: ProgramsDropdownProps) =>
       >
         <DropdownMenuItem
           className="cursor-pointer text-sm py-2"
-          onClick={() => navigate("/programs?type=short")}
+          onClick={() => navigate("/kratke-programy")}
         >
           Krátké programy
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer text-sm py-2"
-          onClick={() => navigate("/programs?type=semester")}
+          onClick={() => navigate("/semestralni-programy")}
         >
           Semestrální programy
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer text-sm py-2"
-          onClick={() => navigate("/programs?type=year")}
+          onClick={() => navigate("/rocni-programy")}
         >
           Roční programy
         </DropdownMenuItem>
