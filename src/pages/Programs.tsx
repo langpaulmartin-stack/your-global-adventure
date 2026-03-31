@@ -118,10 +118,10 @@ const Programs = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
-              Naše nabídka programů
+              {pageTitle}
             </h1>
             <p className="text-xl text-white" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
-              Vyberte si destinaci a délku pobytu podle vašich představ
+              {pageSubtitle}
             </p>
           </div>
         </div>
