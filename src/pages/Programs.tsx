@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroPrograms from "@/assets/hero-programs.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";

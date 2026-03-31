@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroFaq from "@/assets/hero-faq.jpg";
 
 const faqs = [

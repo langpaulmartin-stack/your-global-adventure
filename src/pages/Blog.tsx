@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/pagination";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";

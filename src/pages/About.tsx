@@ -11,6 +11,7 @@ import { useState } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroAbout from "@/assets/hero-about.jpg";
 
 const contactSchema = z.object({

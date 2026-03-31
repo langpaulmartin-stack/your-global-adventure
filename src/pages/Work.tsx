@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Calendar, Users, Briefcase, DollarSign } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroWork from "@/assets/hero-work.jpg";
 
 interface WorkProgram {
