@@ -52,8 +52,23 @@ const programs: Program[] = [
 
 const Programs = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const routeFilter: Record<string, { types: string[]; title: string; subtitle: string }> = {
+    "/kratke-programy": { types: ["Short term"], title: "Krátké programy", subtitle: "Krátkodobé studijní pobyty v zahraničí" },
+    "/semestralni-programy": { types: ["Semestr"], title: "Semestrální programy", subtitle: "Semestrální studijní pobyty v zahraničí" },
+    "/rocni-programy": { types: ["Školní rok"], title: "Roční programy", subtitle: "Celoroční studijní pobyty v zahraničí" },
+  };
+
+  const currentFilter = routeFilter[location.pathname];
+  const filteredPrograms = currentFilter
+    ? programs.filter(p => currentFilter.types.includes(p.type))
+    : programs;
+
+  const pageTitle = currentFilter?.title || "Naše nabídka programů";
+  const pageSubtitle = currentFilter?.subtitle || "Vyberte si destinaci a délku pobytu podle vašich představ";
   
-  const groupedPrograms = programs.reduce((acc, program) => {
+  const groupedPrograms = filteredPrograms.reduce((acc, program) => {
     if (!acc[program.country]) {
       acc[program.country] = [];
     }
