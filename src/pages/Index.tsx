@@ -298,6 +298,12 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
+                  {country.name === "USA" && (
+                    <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
+                      <Flame className="h-3.5 w-3.5" />
+                      <span>Poslední volná místa</span>
+                    </div>
+                  )}
                   <img 
                     src={country.image} 
                     alt={country.name}
@@ -305,14 +311,6 @@ const Index = () => {
                   />
                 </div>
                 <CardContent className="pt-4 space-y-3">
-                  {country.name === "USA" && (
-                    <div className="flex justify-center">
-                      <div className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
-                        <Flame className="h-3.5 w-3.5" />
-                        <span>Poslední volná místa</span>
-                      </div>
-                    </div>
-                  )}
                   <h3 className="text-xl font-bold text-center">{country.name}</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
