@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Calendar, Users, Briefcase, DollarSign } from "lucide-react";
+import { ArrowRight, Calendar, Users, Briefcase, DollarSign, Flame } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -128,8 +128,16 @@ const Work = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {workPrograms.map((program) => (
-              <Card key={program.id} className="hover:shadow-glow transition-shadow duration-300 flex flex-col">
+              <Card key={program.id} className={`hover:shadow-glow transition-shadow duration-300 flex flex-col ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}>
                 <CardHeader>
+                  {program.country === "USA" && (
+                    <div className="mb-2">
+                      <div className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                        <Flame className="h-3.5 w-3.5" />
+                        <span>Poslední volná místa</span>
+                      </div>
+                    </div>
+                  )}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <CardTitle className="text-2xl mb-2">{program.country}</CardTitle>
