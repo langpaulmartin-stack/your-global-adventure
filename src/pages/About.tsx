@@ -52,15 +52,15 @@ const consultants = [
   },
   {
     name: "Samra Muhić",
-    role: "Konzultantka",
-    description: "Studium a pobyty v zahraničí",
+    role: "Konzultantka pro Japonsko a Dálný východ",
+    description: "Pobyty v Japonsku a na Dálném východě",
     initials: "SM",
     image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop"
   },
   {
     name: "Kateřina Labusová",
-    role: "Konzultantka",
-    description: "Studium a pobyty v zahraničí",
+    role: "Konzultantka pro Velkou Británii",
+    description: "Pobyty ve Velké Británii",
     initials: "KL",
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop"
   }
