@@ -147,11 +147,15 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Kdo jsme</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Naše organizace vznikla roku 2025 a poskytuje poradenství a kompletní zajištění práce v zahraničí 
-              a studium v zahraničí na střední škole. Jsme tu proto, abychom vám pomohli naplnit vaše sny 
-              o poznávání světa a získání cenných zkušeností v zahraničí.
-            </p>
+            <div className="text-lg text-muted-foreground leading-relaxed space-y-4 text-center">
+              <p>
+                Naše organizace vznikla roku 2025 a poskytuje poradenství a kompletní zajištění práce v zahraničí 
+                a studium v zahraničí na střední škole. Jame tým zkušených konzultantů a konzultantek - všichni máme za sebou nejednu zkušenost se studiem, nebo prací v zahraničí. Tuhle práci vnímáme jako životní poslání. Věříme tomu, že mezikulturní porozumění rozvíjí nejen jednotlivce, ale celé společnosti.
+              </p>
+              <p>
+                Studuj v zahrničí s námi: jsme tu pro tebe, abychom ti pomohli naplnit tvé sny o poznávání světa a získání cenných zkušeností v zahraničí.
+              </p>
+            </div>
           </div>
 
           {/* Consultants Section */}
