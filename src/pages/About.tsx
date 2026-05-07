@@ -42,6 +42,27 @@ const consultants = [
     description: "Práce na Novém Zélandu a v Kanadě",
     initials: "OC",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+  },
+  {
+    name: "Kamila Saadatian",
+    role: "Konzultantka",
+    description: "Studium a pobyty v zahraničí",
+    initials: "KS",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+  },
+  {
+    name: "Samra Muhić",
+    role: "Konzultantka",
+    description: "Studium a pobyty v zahraničí",
+    initials: "SM",
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop"
+  },
+  {
+    name: "Kateřina Labusová",
+    role: "Konzultantka",
+    description: "Studium a pobyty v zahraničí",
+    initials: "KL",
+    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop"
   }
 ];
 
