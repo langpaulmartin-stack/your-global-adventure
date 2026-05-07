@@ -7,12 +7,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const MobileMenu = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
 
   const handleNavigation = (path: string) => {
     navigate(path);
@@ -34,12 +35,21 @@ export const MobileMenu = () => {
         <nav className="flex flex-col gap-4 mt-8">
           <Button
             variant="ghost"
-            className="justify-start text-2xl font-semibold py-7"
-            onClick={() => handleNavigation("/programs")}
+            className="justify-between text-2xl font-semibold py-7"
+            onClick={() => setProgramsOpen((v) => !v)}
           >
-            Nabídka programů
+            <span>Nabídka programů</span>
+            <ChevronDown className={`h-6 w-6 transition-transform ${programsOpen ? "rotate-180" : ""}`} />
           </Button>
+          {programsOpen && (
           <div className="pl-4 flex flex-col gap-2">
+            <Button
+              variant="ghost"
+              className="justify-start text-xl py-6"
+              onClick={() => handleNavigation("/programs")}
+            >
+              Všechny programy
+            </Button>
             <Button
               variant="ghost"
               className="justify-start text-xl py-6"
@@ -62,6 +72,7 @@ export const MobileMenu = () => {
               Roční programy
             </Button>
           </div>
+          )}
           <Button
             variant="ghost"
             className="justify-start text-2xl py-7"
