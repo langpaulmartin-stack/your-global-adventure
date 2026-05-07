@@ -19,7 +19,7 @@ import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
 import heroBlog from "@/assets/hero-blog.jpg";
 
-interface BlogPost {
+export interface BlogPost {
   id: string;
   title: string;
   date: string;
@@ -28,7 +28,7 @@ interface BlogPost {
   image: string;
 }
 
-const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = [
   {
     id: "jak-se-pripravit-na-studium",
     title: "Jak se připravit na studium v zahraničí",
