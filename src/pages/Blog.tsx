@@ -12,6 +12,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import blog1 from "@/assets/blog-1.jpg";
@@ -297,7 +298,7 @@ const Blog = () => {
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
+            <img src={logoWhite} alt="Let's Go Abroad" className="h-40 w-auto" />
           </div>
           <p className="text-primary-foreground/80 mb-6">
             Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3
