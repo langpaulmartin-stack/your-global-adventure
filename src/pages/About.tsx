@@ -149,8 +149,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Kdo jsme</h2>
             <div className="text-lg text-muted-foreground leading-relaxed space-y-4 text-center">
               <p>
-                Naše organizace vznikla roku 2025 a poskytuje poradenství a kompletní zajištění práce v zahraničí 
-                a studium v zahraničí na střední škole. Jame tým zkušených konzultantů a konzultantek - všichni máme za sebou nejednu zkušenost se studiem, nebo prací v zahraničí. Tuhle práci vnímáme jako životní poslání. Věříme tomu, že mezikulturní porozumění rozvíjí nejen jednotlivce, ale celé společnosti.
+                Jsme tým expertů na studijní pobyt v zahraničí. Studiem v zahraničí se zabýváme přes 20 let a nabízíme v novém projektu "Studuj v zahraničí" naše letité zkušenosti. Pracujeme s prověřenými zahraničními partnery z oboru, nabízíme komplexní a profesionální zajištění studia v zahraničí. Jsme tým zkušených konzultantů a konzultantek - všichni máme za sebou nejednu zkušenost se studiem v zahraničí. Tuhle práci vnímáme jako své životní poslání. Věříme tomu, že mezikulturní porozumění rozvíjí nejen jednotlivce, ale celé společnosti.
               </p>
               <p>
                 Studuj v zahrničí s námi: jsme tu pro tebe, abychom ti pomohli naplnit tvé sny o poznávání světa a získání cenných zkušeností v zahraničí.
