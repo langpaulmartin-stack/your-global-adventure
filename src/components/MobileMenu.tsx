@@ -22,8 +22,8 @@ export const MobileMenu = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
-          <Menu className="h-6 w-6" />
+        <Button variant="ghost" size="icon" className="md:hidden h-15 w-15 [&_svg]:size-9">
+          <Menu className="h-9 w-9" />
           <span className="sr-only">Otevřít menu</span>
         </Button>
       </SheetTrigger>
@@ -34,7 +34,7 @@ export const MobileMenu = () => {
         <nav className="flex flex-col gap-4 mt-8">
           <Button
             variant="ghost"
-            className="justify-start text-lg font-semibold"
+            className="justify-start text-2xl font-semibold py-7"
             onClick={() => handleNavigation("/programs")}
           >
             Nabídka programů
@@ -42,21 +42,21 @@ export const MobileMenu = () => {
           <div className="pl-4 flex flex-col gap-2">
             <Button
               variant="ghost"
-              className="justify-start text-base"
+              className="justify-start text-xl py-6"
               onClick={() => handleNavigation("/kratke-programy")}
             >
               Krátké programy
             </Button>
             <Button
               variant="ghost"
-              className="justify-start text-base"
+              className="justify-start text-xl py-6"
               onClick={() => handleNavigation("/semestralni-programy")}
             >
               Semestrální programy
             </Button>
             <Button
               variant="ghost"
-              className="justify-start text-base"
+              className="justify-start text-xl py-6"
               onClick={() => handleNavigation("/rocni-programy")}
             >
               Roční programy
@@ -64,34 +64,34 @@ export const MobileMenu = () => {
           </div>
           <Button
             variant="ghost"
-            className="justify-start text-lg"
+            className="justify-start text-2xl py-7"
             onClick={() => handleNavigation("/work")}
           >
             Práce v zahraničí
           </Button>
           <Button
             variant="ghost"
-            className="justify-start text-lg"
+            className="justify-start text-2xl py-7"
             onClick={() => handleNavigation("/faq")}
           >
             Časté dotazy
           </Button>
           <Button
             variant="ghost"
-            className="justify-start text-lg"
+            className="justify-start text-2xl py-7"
             onClick={() => handleNavigation("/about")}
           >
             O nás
           </Button>
           <Button
             variant="ghost"
-            className="justify-start text-lg"
+            className="justify-start text-2xl py-7"
             onClick={() => handleNavigation("/blog")}
           >
             Blog
           </Button>
           <Button
-            className="justify-start text-lg mt-4"
+            className="justify-start text-2xl py-7 mt-4"
             onClick={() => handleNavigation("/apply")}
           >
             Přihláška
