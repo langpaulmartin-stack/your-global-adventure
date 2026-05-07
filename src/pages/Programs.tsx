@@ -188,32 +188,32 @@ const Programs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted/30 py-12 border-t border-border">
+      <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src={logo} alt="Let's Go Abroad" className="h-20 w-auto" />
           </div>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-primary-foreground/80 mb-6">
             Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-6">
-            <Button variant="ghost" onClick={() => navigate("/programs")}>
+            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/programs")}>
               Nabídka programů
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/work")}>
+            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/faq")}>
+            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/about")}>
+            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/about")}>
               O nás
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/blog")}>
+            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/blog")}>
               Blog
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-primary-foreground/80">
             © {new Date().getFullYear()} Studuj v zahraničí. Všechna práva vyhrazena.
           </p>
         </div>
