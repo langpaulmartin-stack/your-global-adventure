@@ -294,9 +294,22 @@ const Index = () => {
             {countries.map((country, index) => (
               <Card 
                 key={country.name}
-                className="border-2 hover:border-primary transition-all duration-300 cursor-pointer group overflow-hidden animate-scale-in"
+                className={`border-2 hover:border-primary transition-all duration-300 cursor-pointer group animate-scale-in relative ${country.name === "Švýcarsko" ? "" : "overflow-hidden"}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                {country.name === "Švýcarsko" && (
+                  <div
+                    className="absolute -right-4 z-20 pointer-events-none"
+                    style={{ top: "calc(12rem - 3rem)" }}
+                  >
+                    <div
+                      className="w-24 h-24 rounded-full border-4 border-primary bg-background/95 flex items-center justify-center text-primary font-bold uppercase tracking-wider text-sm shadow-xl"
+                      style={{ transform: "rotate(-12deg)" }}
+                    >
+                      Doporučujeme
+                    </div>
+                  </div>
+                )}
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
                   {country.name === "USA" && (
                     <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
