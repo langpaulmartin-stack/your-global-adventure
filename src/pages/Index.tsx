@@ -256,7 +256,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
                   <Plane className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Globální síť</h3>
+                <h3 className="text-2xl font-bold text-primary">Prověření partneři</h3>
                 <p className="text-muted-foreground">
                   Budujte přátelství a spojení, která vydrží celý život
                 </p>
@@ -268,7 +268,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
                   <Heart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Osobní růst</h3>
+                <h3 className="text-2xl font-bold text-primary">Životní zkušenost</h3>
                 <p className="text-muted-foreground">
                   Rozvíjejte nezávislost, sebevědomí a nové perspektivy
                 </p>
