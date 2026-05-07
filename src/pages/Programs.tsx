@@ -194,6 +194,7 @@ const Programs = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src={logoWhite} alt="Let's Go Abroad" className="h-56 w-auto invert brightness-0" style={{ filter: "brightness(0) invert(1)" }} />
           </div>
+          <p className="italic text-primary-foreground/90 mb-6">Vydej se neprošlapanou cestou...</p>
 <div className="flex flex-wrap justify-center gap-6 mb-6">
             <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" onClick={() => navigate("/programs")}>
               Nabídka programů
