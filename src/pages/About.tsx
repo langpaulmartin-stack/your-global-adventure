@@ -152,7 +152,7 @@ const About = () => {
                 Jsme tým expertů na studijní pobyt v zahraničí. Studiem v zahraničí se zabýváme přes 20 let a nabízíme v novém projektu "Studuj v zahraničí" naše letité zkušenosti. Pracujeme s prověřenými zahraničními partnery z oboru, nabízíme komplexní a profesionální zajištění studia v zahraničí. Jsme tým zkušených konzultantů a konzultantek - všichni máme za sebou nejednu zkušenost se studiem v zahraničí. Tuhle práci vnímáme jako své životní poslání. Věříme tomu, že mezikulturní porozumění rozvíjí nejen jednotlivce, ale celé společnosti.
               </p>
               <p>
-                Studuj v zahrničí s námi: jsme tu pro tebe, abychom ti pomohli naplnit tvé sny o poznávání světa a získání cenných zkušeností v zahraničí.
+                Studuj v zahraničí: jsme tu pro tebe, abychom ti pomohli naplnit tvé sny o poznávání světa a získání cenných zkušeností v zahraničí.
               </p>
             </div>
           </div>
