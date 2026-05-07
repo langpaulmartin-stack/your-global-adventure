@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
@@ -305,6 +305,14 @@ const Index = () => {
                   />
                 </div>
                 <CardContent className="pt-4 space-y-3">
+                  {country.name === "USA" && (
+                    <div className="flex justify-center">
+                      <div className="inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
+                        <Flame className="h-3.5 w-3.5" />
+                        <span>Poslední volná místa</span>
+                      </div>
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold text-center">{country.name}</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2">
