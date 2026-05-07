@@ -192,7 +192,7 @@ const Programs = () => {
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img src={logoWhite} alt="Let's Go Abroad" className="h-40 w-auto" />
+            <img src={logoWhite} alt="Let's Go Abroad" className="h-40 w-auto invert brightness-0" style={{ filter: "brightness(0) invert(1)" }} />
           </div>
           <p className="text-primary-foreground/80 mb-6">
             Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3
