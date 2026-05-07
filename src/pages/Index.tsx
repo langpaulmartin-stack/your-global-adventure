@@ -244,7 +244,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Kulturní ponor</h3>
+                <h3 className="text-2xl font-bold text-primary">Poznej skutečný život</h3>
                 <p className="text-muted-foreground">
                   Žijte s hostitelskými rodinami a zažijte autentickou místní kulturu
                 </p>
