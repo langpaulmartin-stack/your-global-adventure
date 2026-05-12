@@ -8,7 +8,7 @@ import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
-import heroPrograms from "@/assets/hero-programs.jpg";
+import heroPrograms from "@/assets/hero-programs-menu.jpg";
 import japanImage from "@/assets/japan.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
 import usaImage from "@/assets/usa.jpg";
