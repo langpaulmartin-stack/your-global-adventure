@@ -150,7 +150,7 @@ const CountryDetail = () => {
                     Přihlásit se na program
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button onClick={() => navigate("/faq")} size="lg" variant="outline">
+                  <Button onClick={() => navigate(`/kontakt?country=${encodeURIComponent(country.name)}`)} size="lg" variant="outline">
                     Mám otázku
                   </Button>
                 </div>
