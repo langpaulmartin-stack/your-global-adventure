@@ -194,6 +194,40 @@ const CountryDetail = () => {
         </section>
       )}
 
+      {/* What is included */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden border-primary/20">
+              <CardContent className="p-8 md:p-10 space-y-6">
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">
+                    Co je v ceně
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold">Cena programu zahrnuje</h2>
+                </div>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    "Letenky do destinace a zpět",
+                    "Umístění do hostitelské rodiny",
+                    "Podporu partnerské organizace v průběhu pobytu",
+                    "Pojištění",
+                    "Možnost zapojit se do alumni klubu po návratu",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
+                        <Check className="h-4 w-4" />
+                      </span>
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Programs in this country */}
       {countryPrograms.length > 0 && (
         <section className="py-16 bg-muted/30">
