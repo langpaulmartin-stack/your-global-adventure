@@ -234,7 +234,7 @@ const Index = () => {
             key={i}
             src={s.image}
             alt={s.title}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${i === slide ? "opacity-100" : "opacity-0"}`}
           />
         ))}
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
