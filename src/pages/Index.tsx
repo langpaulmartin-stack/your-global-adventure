@@ -21,7 +21,7 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
-import heroImage from "@/assets/students-grass.webp";
+import heroImage from "@/assets/hero-traveler.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
