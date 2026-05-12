@@ -227,7 +227,7 @@ const CountryDetail = () => {
                           <span>Věk od {program.age} výše</span>
                         </div>
                       </div>
-                      <Button onClick={() => navigate("/apply")} className="w-full">
+                      <Button onClick={() => navigate(`/apply?program=${program.id}`)} className="w-full">
                         Přihlásit se
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

@@ -206,7 +206,7 @@ const ProgramsLanding = () => {
                           <Button
                             onClick={(e) => {
                               e.stopPropagation();
-                              navigate("/apply");
+                              navigate(`/apply?program=${program.id}`);
                             }}
                             className="w-full mt-2"
                           >
