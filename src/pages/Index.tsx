@@ -280,6 +280,16 @@ const Index = () => {
       </section>
 
       {/* Countries Section */}
+      <section className="relative h-[400px] md:h-[500px] overflow-hidden">
+        <img
+          src={studentsGrass}
+          alt="Studenti odpočívající v trávě"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </section>
+
+      {/* Countries Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
