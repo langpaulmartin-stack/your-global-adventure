@@ -14,6 +14,7 @@ import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroAbout from "@/assets/hero-about.jpg";
+import martinLangpaul from "@/assets/martin-langpaul.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -27,7 +28,7 @@ const consultants = [
     role: "Zakladatel",
     description: "Více než 20 let zkušeností s prací a studiem v zahraničí",
     initials: "ML",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+    image: martinLangpaul
   },
   {
     name: "Aneta Juránková",
