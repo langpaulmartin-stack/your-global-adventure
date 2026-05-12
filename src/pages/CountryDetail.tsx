@@ -118,7 +118,7 @@ const CountryDetail = () => {
       </section>
 
       {/* About the country */}
-      <section className="py-20">
+      <section className="pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">O zemi</h2>
@@ -131,8 +131,6 @@ const CountryDetail = () => {
         </div>
       </section>
 
-      {/* What is included */}
-      <section className="pb-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden border-primary/20">
