@@ -11,6 +11,7 @@ import { programs } from "./Programs";
 import NotFound from "./NotFound";
 import martinLangpaul from "@/assets/martin-langpaul.jpg";
 import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
+import katerinaCasco from "@/assets/katerina-casco.jpg";
 
 const consultantBySlug: Record<string, { name: string; role: string; image: string }> = {
   usa: { name: "Martin Langpaul", role: "Zakladatel a konzultant", image: martinLangpaul },
@@ -22,6 +23,8 @@ const consultantBySlug: Record<string, { name: string; role: string; image: stri
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
   },
   argentina: { name: "Kamila Saadatian", role: "Konzultantka", image: kamilaSaadatian },
+  "velka-britanie": { name: "Kateřina Casco", role: "Konzultantka pro Velkou Británii a Irsko", image: katerinaCasco },
+  irsko: { name: "Kateřina Casco", role: "Konzultantka pro Velkou Británii a Irsko", image: katerinaCasco },
 };
 
 const CountryDetail = () => {
