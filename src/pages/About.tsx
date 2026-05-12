@@ -59,10 +59,10 @@ const consultants = [
     image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop"
   },
   {
-    name: "Kateřina Labusová",
+    name: "Kateřina Casco",
     role: "Konzultantka pro Velkou Británii",
     description: "Pobyty ve Velké Británii",
-    initials: "KL",
+    initials: "KC",
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop"
   }
 ];
