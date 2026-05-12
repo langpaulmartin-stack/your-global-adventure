@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +9,7 @@ import { ArrowLeft } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
+import { programs } from "./Programs";
 
 const countries = [
   { value: "usa", label: "USA 🇺🇸", flag: "🇺🇸" },
@@ -19,10 +20,32 @@ const countries = [
   { value: "japan", label: "Japonsko 🇯🇵", flag: "🇯🇵" },
   { value: "new-zealand", label: "Nový Zéland 🇳🇿", flag: "🇳🇿" },
   { value: "argentina", label: "Argentina 🇦🇷", flag: "🇦🇷" },
+  { value: "uk", label: "Velká Británie 🇬🇧", flag: "🇬🇧" },
+  { value: "ireland", label: "Irsko 🇮🇪", flag: "🇮🇪" },
 ];
+
+const countryToSelectValue: Record<string, string> = {
+  USA: "usa",
+  Švýcarsko: "switzerland",
+  Německo: "germany",
+  Austrálie: "australia",
+  Estonsko: "estonia",
+  Japonsko: "japan",
+  "Nový Zéland": "new-zealand",
+  Argentina: "argentina",
+  "Velká Británie": "uk",
+  Irsko: "ireland",
+};
 
 const Apply = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const programId = searchParams.get("program");
+  const selectedProgram = useMemo(
+    () => (programId ? programs.find((p) => p.id === programId) : undefined),
+    [programId]
+  );
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,7 +55,8 @@ const Apply = () => {
     address: "",
     city: "",
     zipCode: "",
-    country: "",
+    country: selectedProgram ? countryToSelectValue[selectedProgram.country] ?? "" : "",
+    program: selectedProgram ? `${selectedProgram.country} – ${selectedProgram.type} (${selectedProgram.duration})` : "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -71,6 +95,25 @@ const Apply = () => {
             Začněte svou cestu k nezapomenutelným zážitkům v zahraničí
           </p>
         </div>
+
+        {selectedProgram && (
+          <div className="mb-6 rounded-2xl border border-primary/30 bg-primary/5 p-5 animate-fade-in">
+            <p className="text-xs uppercase tracking-widest text-primary font-medium mb-2">
+              Vybraný program
+            </p>
+            <div className="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <p className="text-lg font-semibold">
+                  {selectedProgram.country} – {selectedProgram.type}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {selectedProgram.duration} · Termín odletu: {selectedProgram.departure}
+                </p>
+              </div>
+              <p className="text-2xl font-bold text-primary">{selectedProgram.price}</p>
+            </div>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-2xl shadow-card animate-scale-in">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -184,6 +227,19 @@ const Apply = () => {
               </SelectContent>
             </Select>
           </div>
+
+          {selectedProgram && (
+            <div className="space-y-2">
+              <Label htmlFor="program">Vybraný program</Label>
+              <Input
+                id="program"
+                value={formData.program}
+                onChange={(e) => handleChange("program", e.target.value)}
+                readOnly
+                className="bg-muted"
+              />
+            </div>
+          )}
 
           <Button type="submit" size="lg" className="w-full text-lg">
             Odeslat přihlášku
