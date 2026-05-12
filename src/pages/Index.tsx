@@ -229,37 +229,56 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Young travelers" className="w-full h-full object-cover" />
-        </div>
+        {heroSlides.map((s, i) => (
+          <img
+            key={i}
+            src={s.image}
+            alt={s.title}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === slide ? "opacity-100" : "opacity-0"}`}
+          />
+        ))}
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
-          <div className="max-w-3xl space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
-              Tvoje dobrodružství
-              <span className="block mt-2">
-                začíná zde
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white max-w-2xl" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
-              Přidej se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                onClick={() => navigate("/apply")} 
-                size="lg" 
-                className="text-lg px-8 shadow-glow hover:shadow-glow transition-all duration-300"
-              >
-                Přihlas se dnes
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
-              >
-                Zjisti více
-              </Button>
+          {heroSlides.map((s, i) => (
+            <div
+              key={i}
+              className={`max-w-3xl space-y-8 transition-opacity duration-1000 ${i === slide ? "opacity-100 relative" : "opacity-0 absolute inset-x-0 px-4 pointer-events-none"}`}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
+                {s.title}
+                <span className="block mt-2">{s.titleLine2}</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white max-w-2xl" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
+                {s.subtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  onClick={() => navigate("/apply")}
+                  size="lg"
+                  className="text-lg px-8 shadow-glow hover:shadow-glow transition-all duration-300"
+                >
+                  Přihlas se dnes
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => navigate("/programs")}
+                  className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
+                >
+                  Zjisti více
+                </Button>
+              </div>
             </div>
+          ))}
+          <div className="relative z-10 flex gap-2 mt-8">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setSlide(i)}
+                aria-label={`Slide ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${i === slide ? "w-8 bg-white" : "w-2 bg-white/50 hover:bg-white/80"}`}
+              />
+            ))}
           </div>
         </div>
       </section>
