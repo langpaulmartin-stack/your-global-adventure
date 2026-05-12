@@ -21,7 +21,7 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
-import studentsGrass from "@/assets/students-grass.webp";
+import heroImage from "@/assets/students-grass.webp";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -276,16 +276,6 @@ const Index = () => {
             </Card>
           </div>
         </div>
-      </section>
-
-      {/* Countries Section */}
-      <section className="relative h-[400px] md:h-[500px] overflow-hidden">
-        <img
-          src={studentsGrass}
-          alt="Studenti odpočívající v trávě"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
       </section>
 
       {/* Countries Section */}
