@@ -131,6 +131,32 @@ const Index = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+  const heroSlides = [
+    {
+      image: heroImage,
+      title: "Tvoje dobrodružství",
+      titleLine2: "začíná zde",
+      subtitle: "Přidej se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny",
+    },
+    {
+      image: heroFriends,
+      title: "Studium v zahraničí",
+      titleLine2: "ti otevře nové možnosti",
+      subtitle: "Získej zkušenosti, které ti nikdo nevezme — a kamarády po celém světě",
+    },
+    {
+      image: heroStudentsCampus,
+      title: "Mezikulturní kompetence",
+      titleLine2: "jsou nesmírně cenné",
+      subtitle: "Rozšiř si obzory, nauč se jazyk a získej náskok pro budoucí studium i kariéru",
+    },
+  ];
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 6000);
+    return () => clearInterval(id);
+  }, [heroSlides.length]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
