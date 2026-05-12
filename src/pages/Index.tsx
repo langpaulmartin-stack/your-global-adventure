@@ -238,10 +238,12 @@ const Index = () => {
           />
         ))}
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
+          <div className="grid">
           {heroSlides.map((s, i) => (
             <div
               key={i}
-              className={`max-w-3xl space-y-8 transition-opacity duration-1000 ${i === slide ? "opacity-100 relative" : "opacity-0 absolute inset-x-0 px-4 pointer-events-none"}`}
+              style={{ gridArea: "1 / 1" }}
+              className={`max-w-3xl space-y-8 transition-opacity duration-1000 ease-in-out ${i === slide ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
               <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
                 {s.title}
@@ -270,6 +272,7 @@ const Index = () => {
               </div>
             </div>
           ))}
+          </div>
           <div className="relative z-10 flex gap-2 mt-8">
             {heroSlides.map((_, i) => (
               <button
