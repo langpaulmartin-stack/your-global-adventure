@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Clock, CalendarDays, GraduationCap, MapPin, Calendar, Users, Flame } from "lucide-react";
 import { Card as ProgramCard, CardContent as ProgramCardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { programs } from "./Programs";
+import { countrySlugByName } from "@/data/countries";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -156,7 +157,11 @@ const ProgramsLanding = () => {
                     {items.map((program) => (
                       <ProgramCard
                         key={program.id}
-                        className={`hover:shadow-glow transition-shadow duration-300 overflow-hidden relative ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}
+                        onClick={() => {
+                          const s = countrySlugByName[program.country];
+                          if (s) navigate(`/zeme/${s}`);
+                        }}
+                        className={`hover:shadow-glow transition-shadow duration-300 overflow-hidden relative cursor-pointer ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}
                       >
                         {program.country === "USA" && (
                           <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
@@ -198,7 +203,13 @@ const ProgramsLanding = () => {
                               <span>Věk od {program.age} výše</span>
                             </div>
                           </div>
-                          <Button onClick={() => navigate("/apply")} className="w-full mt-2">
+                          <Button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              navigate("/apply");
+                            }}
+                            className="w-full mt-2"
+                          >
                             Přihlásit se
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>
