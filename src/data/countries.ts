@@ -6,6 +6,8 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
+import ukImage from "@/assets/uk.jpg";
+import irelandImage from "@/assets/ireland.jpg";
 
 export interface CountryInfo {
   slug: string;
@@ -146,6 +148,38 @@ export const countries: CountryInfo[] = [
       "Studenti jsou umisťováni do dobrovolnických rodin po celé Argentině — od Buenos Aires po menší města ve vnitrozemí. Konkrétní region si nelze zvolit. Rodiny prochází výběrem místní partnerské organizace. Argentinské rodiny jsou velmi srdečné a otevřené, student se stává plnohodnotným členem domácnosti.",
     activities:
       "Místní koordinátor pořádá uvítací orientaci a víkendové výlety. Doporučujeme zapojit se do fotbalového klubu nebo tanečních kurzů — je to nejrychlejší cesta k novým přátelům. Argentina je rájem cestování — od vodopádů Iguazú po ledovec Perito Moreno.",
+  },
+  {
+    slug: "velka-britanie",
+    name: "Velká Británie",
+    tagline: "Tradice, kultura a rodný jazyk angličtiny",
+    image: ukImage,
+    intro: [
+      "Velká Británie je kolébkou anglického jazyka a jednou z kulturně nejbohatších zemí Evropy. Spojuje tisíciletou historii s pulzující současností — od Londýna přes Skotskou vysočinu až po malebné vesničky Cornwallu. Pro studenty je to ideální destinace, pokud chtějí angličtinu na opravdu vysoké úrovni.",
+      "Britský životní styl má své kouzlo: čaj o páté, fotbalové zápasy, country víkendy i společenské tradice. Po pobytu si odvezeš nejen výbornou angličtinu, ale i nadhled, smysl pro humor a evropský rozhled.",
+    ],
+    schoolSystem:
+      "Britské střední školy (secondary schools / sixth form) mají dlouhou tradici a vysoký standard. Studenti programu nejčastěji navštěvují státní školy, někdy i prestižní soukromé. Vyučovacím jazykem je angličtina, studenti si volí kombinaci povinných a volitelných předmětů. Důraz je kladen na akademickou kvalitu, samostatnost a osobní rozvoj.",
+    hostFamily:
+      "Studenti jsou umisťováni do prověřených hostitelských rodin po celé Velké Británii — často v menších městech Anglie, Walesu nebo Skotska. Konkrétní region si nelze zvolit. Rodiny jsou pečlivě vybrány partnerskou organizací a jsou se studentem v kontaktu po celou dobu pobytu. Student dostává vlastní pokoj nebo ho sdílí se sourozencem a respektuje pravidla rodiny.",
+    activities:
+      "Doporučujeme zapojit se do školních klubů (sport, drama, hudba, debate club) — je to typická součást britské školní kultury. Partnerská organizace pořádá orientační setkání i víkendové výlety, například do Londýna, Edinburghu nebo na pobřeží.",
+  },
+  {
+    slug: "irsko",
+    name: "Irsko",
+    tagline: "Smaragdový ostrov a srdečnost Keltů",
+    image: irelandImage,
+    intro: [
+      "Irsko je země zelených kopců, dramatického pobřeží a jedné z nejsrdečnějších kultur Evropy. Kombinuje moderní evropskou společnost s živou keltskou tradicí — hudba, příběhy a komunita patří k irskému životu stejně jako pinta v místním pubu. Pro studenty je to bezpečná, anglicky mluvící země s rodinnou atmosférou.",
+      "Irové jsou známí svou pohostinností a smyslem pro humor. Po pobytu si odvezeš výbornou angličtinu, irské přátele a lásku ke krajině, která vypadá jako z pohádky.",
+    ],
+    schoolSystem:
+      "Irské střední školy mají vynikající pověst a osobní přístup. Studenti programu navštěvují státní nebo polostátní školy, často menších rozměrů, kde je atmosféra rodinná. Vyučovacím jazykem je angličtina. Pro zahraniční studenty je oblíbený zejména tzv. Transition Year — speciální ročník zaměřený na osobní rozvoj, projekty a stáže.",
+    hostFamily:
+      "Hostitelské rodiny jsou vybírány po celém Irsku — od Dublinu po menší města a venkov. Konkrétní region si nelze zvolit. Rodiny prochází pečlivým výběrem partnerské organizace a jsou se studentem v kontaktu po celou dobu pobytu. Student je vítán jako součást rodiny, dostává vlastní pokoj a respektuje pravidla domácnosti.",
+    activities:
+      "Irské školy nabízejí bohatou nabídku sportovních a uměleckých klubů — gaelský fotbal, hurling, ragby, tradiční hudba. Partnerská organizace pořádá uvítací orientaci a víkendové výlety, například po Wild Atlantic Way nebo do Dublinu.",
   },
 ];
 
