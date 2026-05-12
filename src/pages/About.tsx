@@ -14,60 +14,13 @@ import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroAbout from "@/assets/hero-about.jpg";
-import martinLangpaul from "@/assets/martin-langpaul.jpg";
-import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
-import katerinaCasco from "@/assets/katerina-casco.jpg";
+import { consultants } from "@/data/consultants";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
   email: z.string().trim().email({ message: "Neplatná emailová adresa" }).max(255, { message: "Email musí mít maximálně 255 znaků" }),
   message: z.string().trim().min(1, { message: "Zpráva je povinná" }).max(1000, { message: "Zpráva musí mít maximálně 1000 znaků" })
 });
-
-const consultants = [
-  {
-    name: "Martin Langpaul",
-    role: "Zakladatel",
-    description: "Více než 20 let zkušeností s prací a studiem v zahraničí",
-    initials: "ML",
-    image: martinLangpaul
-  },
-  {
-    name: "Aneta Juránková",
-    role: "Konzultantka pro USA",
-    description: "Práce v USA, J-1 programy",
-    initials: "AJ",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
-  },
-  {
-    name: "Ondřej Chmelíř",
-    role: "Konzultant pro Oceánii",
-    description: "Práce na Novém Zélandu a v Kanadě",
-    initials: "OC",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
-  },
-  {
-    name: "Kamila Saadatian",
-    role: "Konzultantka",
-    description: "Studium a pobyty v zahraničí",
-    initials: "KS",
-    image: kamilaSaadatian
-  },
-  {
-    name: "Samra Muhić",
-    role: "Konzultantka pro Japonsko a Dálný východ",
-    description: "Pobyty v Japonsku a na Dálném východě",
-    initials: "SM",
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop"
-  },
-  {
-    name: "Kateřina Casco",
-    role: "Konzultantka pro Velkou Británii",
-    description: "Pobyty ve Velké Británii",
-    initials: "KC",
-    image: katerinaCasco
-  }
-];
 
 const About = () => {
   const navigate = useNavigate();
@@ -185,8 +138,12 @@ const About = () => {
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-center mb-12">Naši konzultanti</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {consultants.map((consultant, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              {consultants.map((consultant) => (
+                <Card
+                  key={consultant.slug}
+                  onClick={() => navigate(`/konzultant/${consultant.slug}`)}
+                  className="overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer"
+                >
                   <CardContent className="p-6">
                     <div className="flex flex-col items-center text-center space-y-4">
                       <Avatar className="h-32 w-32">
@@ -197,6 +154,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold mb-1">{consultant.name}</h3>
                         <p className="text-sm text-primary font-medium mb-3">{consultant.role}</p>
                         <p className="text-sm text-muted-foreground">{consultant.description}</p>
+                        <p className="text-sm text-primary mt-3 font-medium">Zobrazit profil →</p>
                       </div>
                     </div>
                   </CardContent>
