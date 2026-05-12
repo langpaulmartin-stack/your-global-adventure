@@ -47,7 +47,7 @@ export const countries: CountryInfo[] = [
       "Život ve Švýcarsku je úzce spjat s přírodou — víkendy v horách, lyžování, turistika a jezerní sporty patří k běžnému rytmu místních rodin. Zároveň poznáš silně zakořeněné tradice i moderní evropský životní styl jedné z nejstabilnějších zemí světa.",
     ],
     schoolSystem:
-      "Švýcarské střední školy jsou rozděleny podle jazykové oblasti — německé, francouzské nebo italské. Vzdělávání má vysoký standard a důraz na samostatnost a odpovědnost studentů. Volba předmětů je pestrá a studenti často studují tři až čtyři jazyky najednou. Výuka probíhá v jazyce dané kantonu.",
+      "Švýcarské střední školy jsou rozděleny podle jazykové oblasti — německé, francouzské nebo italské. Nabízíme studium v německy mluvící části této země. Vzdělávání má vysoký standard a důraz na samostatnost a odpovědnost studentů. Volba předmětů je pestrá a studenti často studují tři až čtyři jazyky najednou.",
     hostFamily:
       "Hostitelské rodiny jsou vybírány v menších městech a obcích po celém Švýcarsku, převážně v německy mluvících kantonech. Rodiny jsou prověřeny partnerskou organizací a do programu se hlásí dobrovolně. Student dostává vlastní pokoj a je vítán jako součást rodiny. Důraz je kladen na vzájemný respekt, přesnost a dodržování pravidel domácnosti.",
     activities:
