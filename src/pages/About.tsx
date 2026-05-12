@@ -15,6 +15,8 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroAbout from "@/assets/hero-about.jpg";
 import martinLangpaul from "@/assets/martin-langpaul.jpg";
+import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
+import katerinaCasco from "@/assets/katerina-casco.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -49,7 +51,7 @@ const consultants = [
     role: "Konzultantka",
     description: "Studium a pobyty v zahraničí",
     initials: "KS",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+    image: kamilaSaadatian
   },
   {
     name: "Samra Muhić",
@@ -63,7 +65,7 @@ const consultants = [
     role: "Konzultantka pro Velkou Británii",
     description: "Pobyty ve Velké Británii",
     initials: "KC",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop"
+    image: katerinaCasco
   }
 ];
 
