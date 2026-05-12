@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Apply from "./pages/Apply";
 import Programs from "./pages/Programs";
 import ProgramsLanding from "./pages/ProgramsLanding";
+import CountryDetail from "./pages/CountryDetail";
 import Work from "./pages/Work";
 import FAQ from "./pages/FAQ";
 import About from "./pages/About";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/programs" element={<ProgramsLanding />} />
+          <Route path="/zeme/:slug" element={<CountryDetail />} />
           <Route path="/kratke-programy" element={<Programs />} />
           <Route path="/semestralni-programy" element={<Programs />} />
           <Route path="/rocni-programy" element={<Programs />} />
