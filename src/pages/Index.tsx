@@ -206,13 +206,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-24 md:py-40 relative">
           <div className="max-w-3xl space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6)' }}>
-              Vaše dobrodružství
+              Tvoje dobrodružství
               <span className="block mt-2">
                 začíná zde
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-2xl" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
-              Připojte se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
+              Přidej se k tisícům mladých objevitelů, kteří poznávají svět prostřednictvím programů kulturní výměny
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
@@ -220,7 +220,7 @@ const Index = () => {
                 size="lg" 
                 className="text-lg px-8 shadow-glow hover:shadow-glow transition-all duration-300"
               >
-                Přihlaste se dnes
+                Přihlas se dnes
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
@@ -228,7 +228,7 @@ const Index = () => {
                 size="lg"
                 className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
               >
-                Zjistit více
+                Zjisti více
               </Button>
             </div>
           </div>
