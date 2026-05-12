@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
+import { countrySlugByName } from "@/data/countries";
 import heroPrograms from "@/assets/hero-programs.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
@@ -146,7 +147,14 @@ const Programs = () => {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {countryPrograms.map((program) => (
-                    <Card key={program.id} className={`hover:shadow-glow transition-shadow duration-300 overflow-hidden relative ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}>
+                    <Card
+                      key={program.id}
+                      onClick={() => {
+                        const slug = countrySlugByName[program.country];
+                        if (slug) navigate(`/zeme/${slug}`);
+                      }}
+                      className={`hover:shadow-glow transition-shadow duration-300 overflow-hidden relative cursor-pointer ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}
+                    >
                       {program.country === "USA" && (
                         <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
                           <Flame className="h-3.5 w-3.5" />
@@ -184,7 +192,10 @@ const Programs = () => {
                           </div>
                         </div>
                         <Button 
-                          onClick={() => navigate(`/apply?program=${program.id}`)} 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/apply?program=${program.id}`);
+                          }}
                           className="w-full mt-4"
                         >
                           Přihlásit se
