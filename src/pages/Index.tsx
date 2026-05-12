@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { countrySlugByName } from "@/data/countries";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -294,6 +295,10 @@ const Index = () => {
             {countries.map((country, index) => (
               <Card 
                 key={country.name}
+                onClick={() => {
+                  const s = countrySlugByName[country.name];
+                  if (s) navigate(`/zeme/${s}`);
+                }}
                 className="border-2 hover:border-primary transition-all duration-300 cursor-pointer group overflow-hidden animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
