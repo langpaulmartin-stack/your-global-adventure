@@ -131,7 +131,50 @@ const CountryDetail = () => {
         </div>
       </section>
 
-      {/* Info sections */}
+      {/* What is included */}
+      <section className="pb-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden border-primary/20">
+              <CardContent className="p-8 md:p-10 space-y-6">
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">
+                    Co je v ceně
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold">Cena programu zahrnuje</h2>
+                </div>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    "Letenky do destinace a zpět",
+                    "Umístění do hostitelské rodiny",
+                    "Podporu partnerské organizace v průběhu pobytu",
+                    "Pojištění",
+                    "Možnost zapojit se do alumni klubu po návratu",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
+                        <Check className="h-4 w-4" />
+                      </span>
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                  <Button onClick={() => navigate("/apply")} size="lg" className="bg-primary hover:bg-primary/90">
+                    Přihlásit se na program
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button onClick={() => navigate("/faq")} size="lg" variant="outline">
+                    Mám otázku
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About the country (continued: info sections) */}
       <section className="pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto space-y-6">
@@ -193,40 +236,6 @@ const CountryDetail = () => {
           </div>
         </section>
       )}
-
-      {/* What is included */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden border-primary/20">
-              <CardContent className="p-8 md:p-10 space-y-6">
-                <div>
-                  <p className="text-sm uppercase tracking-widest text-primary font-medium mb-2">
-                    Co je v ceně
-                  </p>
-                  <h2 className="text-2xl md:text-3xl font-bold">Cena programu zahrnuje</h2>
-                </div>
-                <ul className="grid sm:grid-cols-2 gap-4">
-                  {[
-                    "Letenky do destinace a zpět",
-                    "Umístění do hostitelské rodiny",
-                    "Podporu partnerské organizace v průběhu pobytu",
-                    "Pojištění",
-                    "Možnost zapojit se do alumni klubu po návratu",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
-                        <Check className="h-4 w-4" />
-                      </span>
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Programs in this country */}
       {countryPrograms.length > 0 && (
