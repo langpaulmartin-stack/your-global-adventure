@@ -184,7 +184,7 @@ const Programs = () => {
                           </div>
                         </div>
                         <Button 
-                          onClick={() => navigate("/apply")} 
+                          onClick={() => navigate(`/apply?program=${program.id}`)} 
                           className="w-full mt-4"
                         >
                           Přihlásit se
