@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
 import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
