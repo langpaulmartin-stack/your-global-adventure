@@ -15,6 +15,8 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
+import ukImage from "@/assets/uk.jpg";
+import irelandImage from "@/assets/ireland.jpg";
 
 interface Program {
   id: string;
@@ -49,6 +51,10 @@ export const programs: Program[] = [
   { id: "argentina-semester", country: "Argentina", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "175 000 Kč", age: "15 let", description: "Objevte latinskou Ameriku a naučte se španělsky", image: argentinaImage },
   { id: "argentina-year", country: "Argentina", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "320 000 Kč", age: "15 let", description: "Kompletní rok v Buenos Aires nebo venkovské Argentině", image: argentinaImage },
   { id: "argentina-semester-jan", country: "Argentina", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "175 000 Kč", age: "15 let", description: "Argentinský semestr s tango a gauchem", image: argentinaImage },
+  { id: "uk-semester", country: "Velká Británie", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "Cena na vyžádání", age: "15 let", description: "Semestr na britské střední škole s výukou v angličtině", image: ukImage },
+  { id: "uk-year", country: "Velká Británie", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "Cena na vyžádání", age: "15 let", description: "Celý školní rok ve Velké Británii", image: ukImage },
+  { id: "ireland-semester", country: "Irsko", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "Cena na vyžádání", age: "15 let", description: "Semestr na irské střední škole v zelené zemi keltské kultury", image: irelandImage },
+  { id: "ireland-year", country: "Irsko", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "Cena na vyžádání", age: "15 let", description: "Kompletní školní rok v Irsku", image: irelandImage },
 ];
 
 const Programs = () => {
