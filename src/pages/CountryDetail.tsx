@@ -9,6 +9,20 @@ import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import { getCountryBySlug } from "@/data/countries";
 import { programs } from "./Programs";
 import NotFound from "./NotFound";
+import martinLangpaul from "@/assets/martin-langpaul.jpg";
+import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
+
+const consultantBySlug: Record<string, { name: string; role: string; image: string }> = {
+  usa: { name: "Martin Langpaul", role: "Zakladatel a konzultant", image: martinLangpaul },
+  svycarsko: { name: "Martin Langpaul", role: "Zakladatel a konzultant", image: martinLangpaul },
+  nemecko: { name: "Martin Langpaul", role: "Zakladatel a konzultant", image: martinLangpaul },
+  "novy-zeland": {
+    name: "Ondřej Chmelíř",
+    role: "Konzultant pro Oceánii",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+  },
+  argentina: { name: "Kamila Saadatian", role: "Konzultantka", image: kamilaSaadatian },
+};
 
 const CountryDetail = () => {
   const navigate = useNavigate();
@@ -16,6 +30,8 @@ const CountryDetail = () => {
   const country = slug ? getCountryBySlug(slug) : undefined;
 
   if (!country) return <NotFound />;
+
+  const consultant = slug ? consultantBySlug[slug] : undefined;
 
   const countryPrograms = programs.filter((p) => p.country === country.name);
   const typeOrder = ["Školní rok", "Semestr", "Short term"];
