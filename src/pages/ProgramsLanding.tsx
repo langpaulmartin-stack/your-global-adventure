@@ -82,7 +82,7 @@ const ProgramsLanding = () => {
               Nabídka programů
             </h1>
             <p className="text-xl text-white" style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6)' }}>
-              Vyber si délku pobytu, která ti nejvíc vyhovuje
+              Vyber si vysněnou zemi a délku pobytu, která ti nejvíc vyhovuje
             </p>
           </div>
         </div>
