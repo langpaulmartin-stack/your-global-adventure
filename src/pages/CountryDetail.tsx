@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowRight, Calendar, Users, GraduationCap, Home, Sparkles, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Users, GraduationCap, Home, Sparkles, Clock, Check } from "lucide-react";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
