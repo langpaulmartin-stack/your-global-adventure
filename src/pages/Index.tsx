@@ -13,7 +13,6 @@ import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import { blogPosts } from "./Blog";
-import heroImage from "@/assets/hero-travel.jpg";
 import usaImage from "@/assets/usa.jpg";
 import switzerlandImage from "@/assets/switzerland.jpg";
 import germanyImage from "@/assets/germany.jpg";
