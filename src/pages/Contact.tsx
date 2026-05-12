@@ -25,8 +25,11 @@ const Contact = () => {
   const [params] = useSearchParams();
   const country = params.get("country");
   const program = params.get("program");
+  const consultant = params.get("consultant");
 
-  const subject = country
+  const subject = consultant
+    ? `Zpráva pro ${consultant}`
+    : country
     ? `Mám otázku k zemi ${country}`
     : program
     ? `Mám otázku k programu ${program}`
