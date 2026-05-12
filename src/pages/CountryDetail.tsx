@@ -158,6 +158,39 @@ const CountryDetail = () => {
         </div>
       </section>
 
+      {/* Consultant */}
+      {consultant && (
+        <section className="py-16 bg-muted/30 border-y border-border">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-sm uppercase tracking-widest text-muted-foreground text-center mb-6">
+                Tvůj konzultant pro {country.name}
+              </p>
+              <Card className="overflow-hidden">
+                <CardContent className="p-8 flex flex-col sm:flex-row items-center gap-6">
+                  <img
+                    src={consultant.image}
+                    alt={consultant.name}
+                    className="w-32 h-32 rounded-full object-cover border-4 border-primary/20 flex-shrink-0"
+                  />
+                  <div className="text-center sm:text-left space-y-2">
+                    <h3 className="text-2xl font-bold">{consultant.name}</h3>
+                    <p className="text-primary font-medium">{consultant.role}</p>
+                    <p className="text-muted-foreground">
+                      Ráda/rád ti zodpoví všechny otázky o programu v zemi {country.name}.
+                    </p>
+                    <Button onClick={() => navigate("/about")} variant="outline" size="sm" className="mt-2">
+                      Zobrazit profil
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Programs in this country */}
       {countryPrograms.length > 0 && (
         <section className="py-16 bg-muted/30">
