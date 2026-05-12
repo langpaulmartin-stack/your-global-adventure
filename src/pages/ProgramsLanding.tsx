@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Clock, CalendarDays, GraduationCap } from "lucide-react";
+import { ArrowRight, Clock, CalendarDays, GraduationCap, MapPin, Calendar, Users, Flame } from "lucide-react";
+import { Card as ProgramCard, CardContent as ProgramCardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { programs } from "./Programs";
 import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -40,6 +42,12 @@ const categories = [
 
 const ProgramsLanding = () => {
   const navigate = useNavigate();
+
+  const sections = [
+    { title: "Roční programy", type: "Školní rok" },
+    { title: "Semestrální programy", type: "Semestr" },
+    { title: "Krátké programy", type: "Short term" },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -115,6 +123,90 @@ const ProgramsLanding = () => {
                     </Button>
                   </CardContent>
                 </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Decorative divider */}
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto flex items-center gap-4 py-4">
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
+          <div className="w-2 h-2 rounded-full bg-primary/60" />
+          <div className="h-px w-24 bg-border" />
+          <div className="w-3 h-3 rounded-full bg-primary" />
+          <div className="h-px w-24 bg-border" />
+          <div className="w-2 h-2 rounded-full bg-primary/60" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
+        </div>
+      </div>
+
+      {/* All programs by category */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-16">
+            {sections.map((section) => {
+              const items = programs.filter((p) => p.type === section.type);
+              if (items.length === 0) return null;
+              return (
+                <div key={section.type} className="space-y-8">
+                  <h2 className="text-3xl md:text-4xl font-bold">{section.title}</h2>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {items.map((program) => (
+                      <ProgramCard
+                        key={program.id}
+                        className={`hover:shadow-glow transition-shadow duration-300 overflow-hidden relative ${program.country === "USA" ? "ring-2 ring-primary" : ""}`}
+                      >
+                        {program.country === "USA" && (
+                          <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
+                            <Flame className="h-3.5 w-3.5" />
+                            <span>Poslední volná místa</span>
+                          </div>
+                        )}
+                        <div className="relative h-44 overflow-hidden">
+                          <img
+                            src={program.image}
+                            alt={`${program.country} - ${program.type}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <CardHeader>
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
+                                <MapPin className="h-4 w-4 text-primary" />
+                                <span>{program.country}</span>
+                              </div>
+                              <CardTitle className="text-xl mb-1">{program.type}</CardTitle>
+                              <CardDescription>{program.duration}</CardDescription>
+                            </div>
+                            <div className="text-xl font-bold text-primary whitespace-nowrap">
+                              {program.price}
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <ProgramCardContent className="space-y-4">
+                          <p className="text-sm text-muted-foreground">{program.description}</p>
+                          <div className="space-y-2 text-sm">
+                            <div className="flex items-center gap-2">
+                              <Calendar className="h-4 w-4 text-primary" />
+                              <span>Termín odletu: {program.departure}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <Users className="h-4 w-4 text-primary" />
+                              <span>Věk od {program.age} výše</span>
+                            </div>
+                          </div>
+                          <Button onClick={() => navigate("/apply")} className="w-full mt-2">
+                            Přihlásit se
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </ProgramCardContent>
+                      </ProgramCard>
+                    ))}
+                  </div>
+                </div>
               );
             })}
           </div>
