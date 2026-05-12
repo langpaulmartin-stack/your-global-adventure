@@ -23,6 +23,10 @@ export const ProgramsDropdown = ({ isActive = false }: ProgramsDropdownProps) =>
           variant="ghost"
           className={`text-base ${isActive ? "text-primary font-medium" : ""}`}
           onMouseEnter={() => setOpen(true)}
+          onClick={() => {
+            setOpen(false);
+            navigate("/programs");
+          }}
         >
           Nabídka programů
         </Button>
