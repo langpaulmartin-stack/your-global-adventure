@@ -28,7 +28,7 @@ interface Program {
   image: string;
 }
 
-const programs: Program[] = [
+export const programs: Program[] = [
   { id: "usa-semester", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "150 000 Kč", age: "15 let", description: "Prožijte nezapomenutelný semestr na americké škole", image: usaImage },
   { id: "usa-year", country: "USA", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "280 000 Kč", age: "15 let", description: "Celý školní rok v USA s plnou integrací do místní kultury", image: usaImage },
   { id: "usa-semester-jan", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "150 000 Kč", age: "15 let", description: "Jarní semestr na americké střední škole", image: usaImage },
