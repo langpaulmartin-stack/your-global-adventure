@@ -267,7 +267,7 @@ const Index = () => {
                   variant="outline"
                   size="lg"
                   onClick={() => navigate(i === 2 ? "/zeme/usa" : "/programs")}
-                  className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
+                  className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white !text-slate-900 dark:!text-slate-900"
                 >
                   Zjisti více
                 </Button>
