@@ -288,49 +288,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in border-primary/20">
-              <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary">Poznej skutečný život</h3>
-                <p className="text-muted-foreground">
-                  Žijte s hostitelskými rodinami a zažijte autentickou místní kulturu
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:100ms] border-primary/20">
-              <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
-                  <Plane className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary">Prověření partneři</h3>
-                <p className="text-muted-foreground">
-                  Budujte přátelství a spojení, která vydrží celý život
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:200ms] border-primary/20">
-              <CardContent className="pt-8 text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
-                  <Heart className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary">Životní zkušenost</h3>
-                <p className="text-muted-foreground">
-                  Rozvíjejte nezávislost, sebevědomí a nové perspektivy
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Countries Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -390,46 +347,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Co říkají naši studenti
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Přečtěte si zkušenosti těch, kteří již zažili dobrodružství svého života
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={testimonial.name}
-                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="pt-6 space-y-4">
-                  <Quote className="w-10 h-10 text-primary/40" />
-                  <p className="text-muted-foreground italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-border">
-                    <div className="text-3xl">{testimonial.image}</div>
-                    <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.country}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Latest News Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Nejnovější zprávy</h2>
@@ -481,6 +400,87 @@ const Index = () => {
               Zobrazit všechny články
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in border-primary/20">
+              <CardContent className="pt-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Poznej skutečný život</h3>
+                <p className="text-muted-foreground">
+                  Žijte s hostitelskými rodinami a zažijte autentickou místní kulturu
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:100ms] border-primary/20">
+              <CardContent className="pt-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Plane className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Prověření partneři</h3>
+                <p className="text-muted-foreground">
+                  Budujte přátelství a spojení, která vydrží celý život
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-card hover:shadow-glow transition-all duration-300 animate-scale-in [animation-delay:200ms] border-primary/20">
+              <CardContent className="pt-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-primary/20 rounded-2xl mx-auto flex items-center justify-center">
+                  <Heart className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary">Životní zkušenost</h3>
+                <p className="text-muted-foreground">
+                  Rozvíjejte nezávislost, sebevědomí a nové perspektivy
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Co říkají naši studenti
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Přečtěte si zkušenosti těch, kteří již zažili dobrodružství svého života
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card 
+                key={testimonial.name}
+                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="pt-6 space-y-4">
+                  <Quote className="w-10 h-10 text-primary/40" />
+                  <p className="text-muted-foreground italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border">
+                    <div className="text-3xl">{testimonial.image}</div>
+                    <div>
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.country}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
