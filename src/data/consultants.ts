@@ -1,6 +1,7 @@
 import martinLangpaul from "@/assets/martin-langpaul.jpg";
 import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
 import katerinaCasco from "@/assets/katerina-casco.jpg";
+import anetaJurankova from "@/assets/aneta-jurankova.jpg";
 
 export interface Consultant {
   slug: string;
@@ -30,12 +31,26 @@ export const consultants: Consultant[] = [
       "Věřím, že zkušenost ze zahraničí dokáže změnit život. Otevírá obzory, učí samostatnosti a buduje sebevědomí. Když vidím studenty, kteří se vrací proměnění, vím, proč to dělám.",
   },
   {
+    slug: "kamila-saadatian",
+    name: "Kamila Saadatian",
+    role: "Senior konzultantka",
+    description: "Studium a pobyty v zahraničí",
+    initials: "KS",
+    image: kamilaSaadatian,
+    about:
+      "Pracuji jako konzultantka pro studijní pobyty v Evropě a Latinské Americe. Studentům pomáhám s výběrem destinace, přípravou dokumentů i s tím, co je čeká po příletu.",
+    experience:
+      "Žila jsem několik let v Argentině a procestovala velkou část Jižní Ameriky. Mluvím plynně španělsky a mám zkušenost se životem v rodině i s místním školním systémem.",
+    motivation:
+      "Pobyt v zahraničí mi dal víc než jakákoli učebnice — jazyk, přátele a úplně nový pohled na svět. Tohle chci předávat dál.",
+  },
+  {
     slug: "aneta-jurankova",
     name: "Aneta Juránková",
     role: "Konzultantka pro USA",
     description: "Práce v USA, J-1 programy",
     initials: "AJ",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    image: anetaJurankova,
     about:
       "Mám na starosti programy v USA — od školního roku přes semestr až po pracovní programy J-1. Studentům pomáhám s výběrem programu, přípravou na pohovor i s vyřízením víza.",
     experience:
@@ -56,20 +71,6 @@ export const consultants: Consultant[] = [
       "Sám jsem strávil rok na Novém Zélandu na pracovním vízu a později několik měsíců cestoval po Kanadě. Znám místní reálie, pracovní trh i to, jak vypadá běžný den v hostitelské rodině.",
     motivation:
       "Oceánie není jen krásná příroda — je to životní styl, který tě naučí pokoře a vděčnosti. Chci, aby tuhle zkušenost zažilo co nejvíc mladých Čechů.",
-  },
-  {
-    slug: "kamila-saadatian",
-    name: "Kamila Saadatian",
-    role: "Konzultantka",
-    description: "Studium a pobyty v zahraničí",
-    initials: "KS",
-    image: kamilaSaadatian,
-    about:
-      "Pracuji jako konzultantka pro studijní pobyty v Evropě a Latinské Americe. Studentům pomáhám s výběrem destinace, přípravou dokumentů i s tím, co je čeká po příletu.",
-    experience:
-      "Žila jsem několik let v Argentině a procestovala velkou část Jižní Ameriky. Mluvím plynně španělsky a mám zkušenost se životem v rodině i s místním školním systémem.",
-    motivation:
-      "Pobyt v zahraničí mi dal víc než jakákoli učebnice — jazyk, přátele a úplně nový pohled na svět. Tohle chci předávat dál.",
   },
   {
     slug: "samra-muhic",
