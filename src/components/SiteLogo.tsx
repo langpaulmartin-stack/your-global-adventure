@@ -16,6 +16,7 @@ export const SiteLogo = ({ className = "" }: SiteLogoProps) => (
       src={logoWhite}
       alt="Let's Go Abroad"
       className={`${className} hidden dark:block`.trim()}
+      style={{ filter: "brightness(0) invert(1)" }}
     />
   </>
 );
