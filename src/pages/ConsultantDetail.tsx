@@ -51,7 +51,7 @@ const ConsultantDetail = () => {
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
               <Avatar className="h-40 w-40 flex-shrink-0">
-                <AvatarImage src={consultant.image} alt={consultant.name} />
+                <AvatarImage src={consultant.image} alt={consultant.name} className="object-cover" />
                 <AvatarFallback className="text-3xl">{consultant.initials}</AvatarFallback>
               </Avatar>
               <div className="text-center md:text-left">

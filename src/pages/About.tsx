@@ -147,7 +147,7 @@ const About = () => {
                   <CardContent className="p-6">
                     <div className="flex flex-col items-center text-center space-y-4">
                       <Avatar className="h-32 w-32">
-                        <AvatarImage src={consultant.image} alt={consultant.name} />
+                        <AvatarImage src={consultant.image} alt={consultant.name} className="object-cover" />
                         <AvatarFallback className="text-2xl">{consultant.initials}</AvatarFallback>
                       </Avatar>
                       <div>
