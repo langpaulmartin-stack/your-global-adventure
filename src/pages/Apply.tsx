@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { ArrowLeft } from "lucide-react";
-import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { programs } from "./Programs";
@@ -79,7 +78,7 @@ const Apply = () => {
             Zpět
           </Button>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
+            <SiteLogo className="h-24 w-auto" />
           </div>
           <MobileMenu />
         </div>

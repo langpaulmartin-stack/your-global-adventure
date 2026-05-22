@@ -9,7 +9,6 @@ import { Mail, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { z } from "zod";
-import logo from "@/assets/logo.png";
 import logoWhite from "@/assets/logo-white.png";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
@@ -74,7 +73,7 @@ const About = () => {
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
-            <img src={logo} alt="Let's Go Abroad" className="h-24 w-auto" />
+            <SiteLogo className="h-24 w-auto" />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-base">
             <ProgramsDropdown />
