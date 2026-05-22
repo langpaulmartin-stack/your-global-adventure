@@ -39,7 +39,12 @@ export const DarkModeToggle = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Switch id="dark-mode-toggle" checked={enabled} onCheckedChange={toggle} />
+      <Switch 
+        id="dark-mode-toggle" 
+        checked={enabled} 
+        onCheckedChange={toggle} 
+        className="border-primary-foreground/50 data-[state=unchecked]:bg-primary-foreground/30 data-[state=checked]:bg-primary-foreground/80 [&>span]:border-2 [&>span]:border-primary/40"
+      />
       <Label htmlFor="dark-mode-toggle" className="text-primary-foreground/90 cursor-pointer">
         Tmavý režim
       </Label>
