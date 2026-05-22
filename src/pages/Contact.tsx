@@ -128,7 +128,7 @@ const Contact = () => {
             <img src={logoWhite} alt="Let's Go Abroad" className="h-56 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
           </div>
           <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3.
+            © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3.
           </p>
         </div>
       </footer>

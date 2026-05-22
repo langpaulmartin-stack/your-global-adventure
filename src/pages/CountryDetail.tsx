@@ -305,7 +305,7 @@ const CountryDetail = () => {
           </div>
           <p className="italic text-primary-foreground/90 mb-6">Vydej se neprošlapanou cestou...</p>
           <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} Studuj v zahraničí. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
+            © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
           </p>
         </div>
       </footer>
