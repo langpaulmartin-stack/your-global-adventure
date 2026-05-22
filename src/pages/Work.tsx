@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Calendar, Users, Briefcase, DollarSign, Flame } from "lucide-react";
 import logoWhite from "@/assets/logo-white.png";
+import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import heroWork from "@/assets/hero-work.jpg";
