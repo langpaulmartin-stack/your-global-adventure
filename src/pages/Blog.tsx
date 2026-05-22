@@ -18,6 +18,18 @@ import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
+import blog4 from "@/assets/blog-4.jpg";
+import blog5 from "@/assets/blog-5.jpg";
+import phFriends from "@/assets/hero-friends.jpg";
+import phCampus from "@/assets/hero-students-campus.jpg";
+import phTravel from "@/assets/hero-travel.jpg";
+import phTraveler from "@/assets/hero-traveler.jpg";
+import phWork from "@/assets/hero-work.jpg";
+import phAbout from "@/assets/hero-about.jpg";
+import phPrograms from "@/assets/hero-programs.jpg";
+import phGrass from "@/assets/students-grass.webp";
+import phFaq from "@/assets/hero-faq.jpg";
+import phProgramsMenu from "@/assets/hero-programs-menu.jpg";
 import heroBlog from "@/assets/hero-blog.jpg";
 
 export interface BlogPost {
