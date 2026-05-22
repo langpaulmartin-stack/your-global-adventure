@@ -29,7 +29,7 @@ const workPrograms: WorkProgram[] = [
     duration: "3-4 měsíce",
     departure: "Květen - Červen 2026",
     price: "45 000 Kč",
-    age: "18 let",
+    age: "18-30 let",
     description: "Pracujte v USA během letních prázdnin a poznejte americkou kulturu",
     features: [
       "Práce v hotelech, restauracích nebo zábavních parcích",
@@ -44,7 +44,7 @@ const workPrograms: WorkProgram[] = [
     duration: "6-12 měsíců",
     departure: "Průběžně",
     price: "35 000 Kč",
-    age: "18 let",
+    age: "18-30 let",
     description: "Získejte pracovní zkušenosti v jedné z nejkrásnějších zemí světa",
     features: [
       "Working Holiday vízum na 12 měsíců",
@@ -59,7 +59,7 @@ const workPrograms: WorkProgram[] = [
     duration: "6-12 měsíců",
     departure: "Průběžně",
     price: "38 000 Kč",
-    age: "18 let",
+    age: "18-30 let",
     description: "Pracovní zkušenosti v Kanadě s možností zdokonalení angličtiny",
     features: [
       "Working Holiday vízum na 12 měsíců",
@@ -161,6 +161,24 @@ const Work = () => {
                     ))}
                   </div>
 
+                  <div className="space-y-2 text-sm">
+                    <p className="font-semibold text-primary">Cena zahrnuje:</p>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Zprostředkování kontaktu s potenciálními zaměstnavateli</li>
+                      <li>• Podklady pro vízum</li>
+                      <li>• Konzultace před odjezdem</li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-2 text-sm">
+                    <p className="font-semibold text-destructive">Cena nezahrnuje:</p>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Mezinárodní letenky</li>
+                      <li>• Garanci pracovní smlouvy</li>
+                      <li>• Víza na dlouhodobý pobyt</li>
+                    </ul>
+                  </div>
+
                   <div className="space-y-2 text-sm border-t border-border pt-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4 text-primary" />
@@ -172,7 +190,7 @@ const Work = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Users className="h-4 w-4 text-primary" />
-                      <span>Věk od {program.age} výše</span>
+                      <span>Věk: {program.age}</span>
                     </div>
                   </div>
 
