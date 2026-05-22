@@ -12,6 +12,7 @@ import NotFound from "./NotFound";
 import martinLangpaul from "@/assets/martin-langpaul.jpg";
 import kamilaSaadatian from "@/assets/kamila-saadatian.jpg";
 import katerinaCasco from "@/assets/katerina-casco.jpg";
+import { Footer } from "@/components/Footer";
 
 const consultantBySlug: Record<string, { name: string; role: string; image: string }> = {
   usa: { name: "Martin Langpaul", role: "Zakladatel a konzultant", image: martinLangpaul },
@@ -298,17 +299,7 @@ const CountryDetail = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12 border-t border-primary-foreground/10">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <img src={logoWhite} alt="Let's Go Abroad" className="h-56 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
-          </div>
-          <p className="italic text-primary-foreground/90 mb-6">Vydej se neprošlapanou cestou...</p>
-          <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

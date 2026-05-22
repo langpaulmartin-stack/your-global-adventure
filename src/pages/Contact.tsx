@@ -12,6 +12,7 @@ import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
 import { useToast } from "@/hooks/use-toast";
+import { Footer } from "@/components/Footer";
 
 const schema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100),
@@ -122,16 +123,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <footer className="bg-primary text-primary-foreground py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <img src={logoWhite} alt="Let's Go Abroad" className="h-56 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
-          </div>
-          <p className="text-sm text-primary-foreground/80">
-            © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
