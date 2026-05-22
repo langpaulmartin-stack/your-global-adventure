@@ -265,7 +265,7 @@ const Index = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  onClick={() => navigate("/programs")}
+                  onClick={() => navigate(i === 2 ? "/zeme/usa" : "/programs")}
                   className="text-lg px-8 bg-white/90 backdrop-blur-sm hover:bg-white border-white text-foreground"
                 >
                   Zjisti více
