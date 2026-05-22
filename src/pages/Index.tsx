@@ -25,6 +25,7 @@ import argentinaImage from "@/assets/argentina.jpg";
 import heroImage from "@/assets/hero-traveler.jpg";
 import heroFriends from "@/assets/hero-friends.jpg";
 import heroStudentsCampus from "@/assets/hero-students-campus.jpg";
+import heroUsaHighschool from "@/assets/hero-usa-highschool.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -145,10 +146,10 @@ const Index = () => {
       subtitle: "Získej zkušenosti, které ti nikdo nevezme — a kamarády po celém světě",
     },
     {
-      image: heroStudentsCampus,
-      title: "Mezikulturní kompetence",
-      titleLine2: "jsou nesmírně cenné",
-      subtitle: "Rozšiř si obzory, nauč se jazyk a získej náskok pro budoucí studium i kariéru",
+      image: heroUsaHighschool,
+      title: "Studuj na střední",
+      titleLine2: "škole v USA",
+      subtitle: "Přijímáme přihlášky ke studijnímu pobytu v USA ve školním roce 2026/27",
     },
   ];
   const [slide, setSlide] = useState(0);
