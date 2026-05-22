@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     date: "8. 1. 2025",
     author: "Martin Langpaul",
     perex: "Setkání s jinou kulturou může být ohromující. Naučte se, jak se přizpůsobit a získat maximum ze své zahraniční zkušenosti.",
-    image: blog1
+    image: blog4
   },
   {
     id: "hostitelske-rodiny",
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
     date: "5. 1. 2025",
     author: "Aneta Juránková",
     perex: "Hostitelská rodina je klíčovou částí vaší zkušenosti. Zjistěte, jak budovat dobré vztahy a jak se vyhnout nedorozuměním.",
-    image: blog2
+    image: blog5
   },
   {
     id: "jazykova-priprava",
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     date: "3. 1. 2025",
     author: "Ondřej Chmelíř",
     perex: "Dobrá znalost jazyka je základem úspěšného pobytu. Objevte nejlepší způsoby, jak si jazyk vylepšit před odjezdem.",
-    image: blog3
+    image: phFriends
   },
   {
     id: "financni-planovani",
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
     date: "1. 1. 2025",
     author: "Martin Langpaul",
     perex: "Studium v zahraničí vyžaduje dobré finanční plánování. Podívejte se na tipy, jak spravovat rozpočet a šetřit peníze.",
-    image: blog1
+    image: phCampus
   },
   {
     id: "viza-a-dokumenty",
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     date: "28. 12. 2024",
     author: "Aneta Juránková",
     perex: "Vyřizování víz může být složité. Připravili jsme pro vás krok za krokem návod, jak získat všechny potřebné dokumenty.",
-    image: blog2
+    image: phTravel
   },
   {
     id: "prvni-dny-v-cizi-zemi",
@@ -112,7 +112,7 @@ export const blogPosts: BlogPost[] = [
     date: "25. 12. 2024",
     author: "Ondřej Chmelíř",
     perex: "První dny v zahraničí mohou být náročné. Připravte se na to, co vás čeká, a jak se rychle zabydlet na novém místě.",
-    image: blog3
+    image: phTraveler
   },
   {
     id: "zdravotni-pojisteni",
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
     date: "22. 12. 2024",
     author: "Martin Langpaul",
     perex: "Zdravotní pojištění je nezbytné pro jakýkoliv pobyt v zahraničí. Zjistěte, jaké možnosti máte a co je nejlepší volba.",
-    image: blog1
+    image: phWork
   },
   {
     id: "komunikace-s-rodinou",
@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
     date: "20. 12. 2024",
     author: "Aneta Juránková",
     perex: "Udržování kontaktu s blízkými je důležité. Objevte nejlepší způsoby komunikace a jak zvládat stesk po domově.",
-    image: blog2
+    image: phAbout
   },
   {
     id: "prace-na-dovolene",
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
     date: "18. 12. 2024",
     author: "Ondřej Chmelíř",
     perex: "Práce v zahraničí neznamená, že nemůžete cestovat. Naučte se, jak skloubit pracovní povinnosti s poznáváním nových míst.",
-    image: blog3
+    image: phPrograms
   },
   {
     id: "bezpecnost-v-zahranici",
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
     date: "15. 12. 2024",
     author: "Martin Langpaul",
     perex: "Bezpečnost je priorita. Přečtěte si naše doporučení, jak zůstat v bezpečí během pobytu v cizí zemi.",
-    image: blog1
+    image: phGrass
   },
   {
     id: "prace-s-detmi",
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
     date: "12. 12. 2024",
     author: "Aneta Juránková",
     perex: "Au pair program je skvělá příležitost pro mladé lidi. Zjistěte, co vás čeká a jak se na tuto zkušenost připravit.",
-    image: blog2
+    image: phFaq
   },
   {
     id: "navrat-domu",
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     date: "10. 12. 2024",
     author: "Ondřej Chmelíř",
     perex: "Návrat domů může být překvapivě náročný. Přečtěte si, jak se znovu aklimatizovat a jak využít získané zkušenosti.",
-    image: blog3
+    image: phProgramsMenu
   }
 ];
 
