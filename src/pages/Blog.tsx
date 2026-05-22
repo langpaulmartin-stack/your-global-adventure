@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "jak-se-pripravit-na-studium",
     title: "Jak se připravit na studium v zahraničí",
-    date: "15. 1. 2025",
+    date: "15. 5. 2026",
     author: "Martin Langpaul",
     perex: "Studium v zahraničí je jedinečná příležitost. Zjistěte, jak se na něj správně připravit a co vše budete potřebovat.",
     image: blog1
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "prace-v-usa-zkusenosti",
     title: "Práce v USA: Zkušenosti našich účastníků",
-    date: "12. 1. 2025",
+    date: "8. 5. 2026",
     author: "Aneta Juránková",
     perex: "Přečtěte si skutečné příběhy mladých lidí, kteří absolvovali pracovní program v USA a získali cenné zkušenosti.",
     image: blog2
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "priprava-na-odlet",
     title: "Příprava na odlet: Co si zabalit",
-    date: "10. 1. 2025",
+    date: "28. 4. 2026",
     author: "Ondřej Chmelíř",
     perex: "Balení na delší pobyt v zahraničí může být výzva. Podívejte se na náš seznam nezbytností, které by vám neměly chybět.",
     image: blog3
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "kulturni-rozdily",
     title: "Kulturní rozdíly a jak je zvládat",
-    date: "8. 1. 2025",
+    date: "15. 4. 2026",
     author: "Martin Langpaul",
     perex: "Setkání s jinou kulturou může být ohromující. Naučte se, jak se přizpůsobit a získat maximum ze své zahraniční zkušenosti.",
     image: blog4
@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "hostitelske-rodiny",
     title: "Život s hostitelskou rodinou",
-    date: "5. 1. 2025",
+    date: "2. 4. 2026",
     author: "Aneta Juránková",
     perex: "Hostitelská rodina je klíčovou částí vaší zkušenosti. Zjistěte, jak budovat dobré vztahy a jak se vyhnout nedorozuměním.",
     image: blog5
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "jazykova-priprava",
     title: "Jazyková příprava před odjezdem",
-    date: "3. 1. 2025",
+    date: "20. 3. 2026",
     author: "Ondřej Chmelíř",
     perex: "Dobrá znalost jazyka je základem úspěšného pobytu. Objevte nejlepší způsoby, jak si jazyk vylepšit před odjezdem.",
     image: phFriends
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "financni-planovani",
     title: "Finanční plánování pro studium v zahraničí",
-    date: "1. 1. 2025",
+    date: "5. 3. 2026",
     author: "Martin Langpaul",
     perex: "Studium v zahraničí vyžaduje dobré finanční plánování. Podívejte se na tipy, jak spravovat rozpočet a šetřit peníze.",
     image: phCampus
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "viza-a-dokumenty",
     title: "Víza a dokumenty: Kompletní průvodce",
-    date: "28. 12. 2024",
+    date: "20. 2. 2026",
     author: "Aneta Juránková",
     perex: "Vyřizování víz může být složité. Připravili jsme pro vás krok za krokem návod, jak získat všechny potřebné dokumenty.",
     image: phTravel
@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "prvni-dny-v-cizi-zemi",
     title: "První dny v cizí zemi: Co očekávat",
-    date: "25. 12. 2024",
+    date: "5. 2. 2026",
     author: "Ondřej Chmelíř",
     perex: "První dny v zahraničí mohou být náročné. Připravte se na to, co vás čeká, a jak se rychle zabydlet na novém místě.",
     image: phTraveler
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "zdravotni-pojisteni",
     title: "Zdravotní pojištění pro pobyt v zahraničí",
-    date: "22. 12. 2024",
+    date: "22. 1. 2026",
     author: "Martin Langpaul",
     perex: "Zdravotní pojištění je nezbytné pro jakýkoliv pobyt v zahraničí. Zjistěte, jaké možnosti máte a co je nejlepší volba.",
     image: phWork
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "komunikace-s-rodinou",
     title: "Jak zůstat v kontaktu s rodinou",
-    date: "20. 12. 2024",
+    date: "10. 1. 2026",
     author: "Aneta Juránková",
     perex: "Udržování kontaktu s blízkými je důležité. Objevte nejlepší způsoby komunikace a jak zvládat stesk po domově.",
     image: phAbout
@@ -134,7 +134,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "prace-na-dovolene",
     title: "Práce a dovolená: Jak najít rovnováhu",
-    date: "18. 12. 2024",
+    date: "28. 12. 2025",
     author: "Ondřej Chmelíř",
     perex: "Práce v zahraničí neznamená, že nemůžete cestovat. Naučte se, jak skloubit pracovní povinnosti s poznáváním nových míst.",
     image: phPrograms
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "bezpecnost-v-zahranici",
     title: "Bezpečnost v zahraničí: Tipy a rady",
-    date: "15. 12. 2024",
+    date: "15. 12. 2025",
     author: "Martin Langpaul",
     perex: "Bezpečnost je priorita. Přečtěte si naše doporučení, jak zůstat v bezpečí během pobytu v cizí zemi.",
     image: phGrass
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "prace-s-detmi",
     title: "Práce s dětmi: Au pair programy",
-    date: "12. 12. 2024",
+    date: "5. 12. 2025",
     author: "Aneta Juránková",
     perex: "Au pair program je skvělá příležitost pro mladé lidi. Zjistěte, co vás čeká a jak se na tuto zkušenost připravit.",
     image: phFaq
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "navrat-domu",
     title: "Návrat domů po zahraniční zkušenosti",
-    date: "10. 12. 2024",
+    date: "25. 11. 2025",
     author: "Ondřej Chmelíř",
     perex: "Návrat domů může být překvapivě náročný. Přečtěte si, jak se znovu aklimatizovat a jak využít získané zkušenosti.",
     image: phProgramsMenu
