@@ -334,20 +334,24 @@ const Index = () => {
                 </div>
                 <CardContent className="pt-4 space-y-3">
                   <h3 className="text-xl font-bold text-center">{country.name}</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Cena od {country.price}</span>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Cena od {country.price}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Termín odletu {country.departure}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Návrat: {country.return}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Věk: {country.age}</span>
+                      </div>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Termín odletu {country.departure}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Věk: {country.age}</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
