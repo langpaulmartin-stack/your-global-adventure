@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 
 const Privacy = () => {
   const navigate = useNavigate();
