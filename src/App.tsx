@@ -15,6 +15,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import ConsultantDetail from "./pages/ConsultantDetail";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/konzultant/:slug" element={<ConsultantDetail />} />
+          <Route path="/zasady-ochrany-osobnich-udaju" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
