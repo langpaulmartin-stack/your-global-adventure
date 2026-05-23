@@ -40,64 +40,72 @@ const countries = [
     description: "Zažijte americký sen", 
     image: usaImage,
     price: "11 800 USD",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Švýcarsko", 
     description: "Objevte alpskou krásu", 
     image: switzerlandImage,
     price: "180 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Německo", 
     description: "Prozkoumejte bohatou historii a kulturu", 
     image: germanyImage,
     price: "145 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Austrálie", 
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
     price: "220 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Estonsko", 
     description: "Centrum digitálních inovací", 
     image: estoniaImage,
     price: "120 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Japonsko", 
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
     price: "195 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Nový Zéland", 
     description: "Dechberoucí příroda a dobrodružství", 
     image: newZealandImage,
     price: "210 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
   { 
     name: "Argentina", 
     description: "Vášeň, kultura a přírodní diverzita", 
     image: argentinaImage,
     price: "175 000 Kč",
-    departure: "Srpen 2026",
-    age: "15 let"
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
   },
 ];
 
@@ -326,20 +334,24 @@ const Index = () => {
                 </div>
                 <CardContent className="pt-4 space-y-3">
                   <h3 className="text-xl font-bold text-center">{country.name}</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Cena od {country.price}</span>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Cena od {country.price}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Termín odletu {country.departure}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Návrat: {country.return}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span className="text-muted-foreground">Věk: {country.age}</span>
+                      </div>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Termín odletu {country.departure}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Věk od {country.age} výše</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}

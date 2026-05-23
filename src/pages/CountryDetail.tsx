@@ -303,9 +303,15 @@ const CountryDetail = () => {
                           <Calendar className="h-4 w-4 text-primary" />
                           <span>Termín odletu: {program.departure}</span>
                         </div>
+                        {program.return && (
+                          <div className="flex items-center gap-2">
+                            <Calendar className="h-4 w-4 text-primary" />
+                            <span>Návrat: {program.return}</span>
+                          </div>
+                        )}
                         <div className="flex items-center gap-2">
                           <Users className="h-4 w-4 text-primary" />
-                          <span>Věk od {program.age} výše</span>
+                          <span>Věk: {program.age}</span>
                         </div>
                       </div>
                       <Button onClick={() => navigate(`/apply?program=${program.id}`)} className="w-full">
