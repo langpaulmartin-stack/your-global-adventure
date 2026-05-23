@@ -174,6 +174,7 @@ const Apply = () => {
               <Label htmlFor="firstName">Jméno</Label>
               <Input
                 id="firstName"
+                name="Jmeno"
                 required
                 value={formData.firstName}
                 onChange={(e) => handleChange("firstName", e.target.value)}
