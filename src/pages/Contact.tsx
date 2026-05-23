@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { z } from "zod";
 import { Send } from "lucide-react";
@@ -125,6 +125,13 @@ const Contact = () => {
                     {submitting ? "Odesílám..." : "Odeslat dotaz"}
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Odesláním formuláře vyjadřujete souhlas se zpracováním osobních údajů dle{" "}
+                    <Link to="/zasady-ochrany-osobnich-udaju" className="text-primary underline hover:no-underline">
+                      Zásad ochrany osobních údajů
+                    </Link>
+                    .
+                  </p>
                 </form>
               </CardContent>
             </Card>
