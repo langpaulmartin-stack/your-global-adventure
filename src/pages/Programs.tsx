@@ -26,6 +26,7 @@ interface Program {
   type: string;
   duration: string;
   departure: string;
+  return?: string;
   price: string;
   age: string;
   description: string;
