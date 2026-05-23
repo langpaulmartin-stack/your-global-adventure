@@ -80,6 +80,8 @@ const Apply = () => {
     city: "",
     zipCode: "",
     country: resolvedCountryValue,
+    country2: "",
+    duration: "",
     program: selectedProgram
       ? `${selectedProgram.country} – ${selectedProgram.type} (${selectedProgram.duration})`
       : queryTitle && queryCountry
@@ -254,6 +256,36 @@ const Apply = () => {
                     {country.label}
                   </SelectItem>
                 ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="country2">Země (2.volba):</Label>
+            <Select value={formData.country2} onValueChange={(value) => handleChange("country2", value)}>
+              <SelectTrigger id="country2">
+                <SelectValue placeholder="Vyberte zemi" />
+              </SelectTrigger>
+              <SelectContent>
+                {countries.map((country) => (
+                  <SelectItem key={country.value} value={country.value}>
+                    {country.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="duration">Délka programu</Label>
+            <Select value={formData.duration} onValueChange={(value) => handleChange("duration", value)} required>
+              <SelectTrigger id="duration">
+                <SelectValue placeholder="Vyberte délku programu" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="kratky">Krátký</SelectItem>
+                <SelectItem value="semestralni">Semestrální</SelectItem>
+                <SelectItem value="rocni">Roční</SelectItem>
               </SelectContent>
             </Select>
           </div>
