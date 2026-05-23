@@ -183,16 +183,22 @@ const Programs = () => {
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <p className="text-muted-foreground">{program.description}</p>
-                        <div className="space-y-2 text-sm">
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="h-4 w-4 text-primary" />
+                          <span>Termín odletu: {program.departure}</span>
+                        </div>
+                        {program.return && (
                           <div className="flex items-center gap-2">
                             <Calendar className="h-4 w-4 text-primary" />
-                            <span>Termín odletu: {program.departure}</span>
+                            <span>Návrat: {program.return}</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Users className="h-4 w-4 text-primary" />
-                            <span>Věk od {program.age} výše</span>
-                          </div>
+                        )}
+                        <div className="flex items-center gap-2">
+                          <Users className="h-4 w-4 text-primary" />
+                          <span>Věk: {program.age}</span>
                         </div>
+                      </div>
                         <Button 
                           onClick={(e) => {
                             e.stopPropagation();
