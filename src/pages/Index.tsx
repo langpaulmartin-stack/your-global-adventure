@@ -39,7 +39,7 @@ const countries = [
     name: "USA", 
     description: "Zažijte americký sen", 
     image: usaImage,
-    price: "256 000 Kč",
+    price: "11 800 USD",
     departure: "Srpen 2026",
     age: "15 let"
   },
