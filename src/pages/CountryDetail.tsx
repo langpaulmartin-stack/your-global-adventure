@@ -184,7 +184,7 @@ const CountryDetail = () => {
                   </>
                 )}
                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <Button onClick={() => navigate("/apply")} size="lg" className="bg-primary hover:bg-primary/90">
+                  <Button onClick={() => navigate(`/apply?country=${encodeURIComponent(country.name)}`)} size="lg" className="bg-primary hover:bg-primary/90">
                     Přihlásit se na program
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -328,7 +328,7 @@ const CountryDetail = () => {
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
             Ozvi se nám a společně najdeme program, který ti sedne nejlépe.
           </p>
-          <Button onClick={() => navigate("/apply")} size="lg" variant="secondary">
+          <Button onClick={() => navigate(`/apply?country=${encodeURIComponent(country.name)}`)} size="lg" variant="secondary">
             Přihlásit se
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
