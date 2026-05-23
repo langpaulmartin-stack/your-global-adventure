@@ -131,21 +131,58 @@ const CountryDetail = () => {
                   <h2 className="text-2xl md:text-3xl font-bold">Cena programu zahrnuje</h2>
                 </div>
                 <ul className="grid sm:grid-cols-2 gap-4">
-                  {[
-                    "Letenky do destinace a zpět",
-                    "Umístění do hostitelské rodiny",
-                    "Podporu partnerské organizace v průběhu pobytu",
-                    "Pojištění",
-                    "Možnost zapojit se do alumni klubu po návratu",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
-                        <Check className="h-4 w-4" />
-                      </span>
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
+                  {slug === "usa"
+                    ? [
+                        "Umístění do hostitelské rodiny",
+                        "Podporu partnerské organizace v průběhu pobytu",
+                        "Pojištění",
+                        "Možnost zapojit se do alumni klubu po návratu",
+                        "Podklady pro získání víza typu J-1",
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
+                            <Check className="h-4 w-4" />
+                          </span>
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))
+                    : [
+                        "Letenky do destinace a zpět",
+                        "Umístění do hostitelské rodiny",
+                        "Podporu partnerské organizace v průběhu pobytu",
+                        "Pojištění",
+                        "Možnost zapojit se do alumni klubu po návratu",
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 mt-0.5 bg-primary/10 text-primary rounded-full p-1">
+                            <Check className="h-4 w-4" />
+                          </span>
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
                 </ul>
+                {slug === "usa" && (
+                  <>
+                    <div className="border-t border-border pt-6">
+                      <h3 className="text-xl font-bold mb-4">Cena programu nezahrnuje</h3>
+                      <ul className="grid sm:grid-cols-2 gap-4">
+                        {[
+                          "Mezinárodní letenka do destinace a zpět",
+                          "Poplatky za vízum",
+                        ].map((item) => (
+                          <li key={item} className="flex items-start gap-3">
+                            <span className="flex-shrink-0 mt-0.5 bg-destructive/10 text-destructive rounded-full p-1">
+                              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </span>
+                            <span className="text-muted-foreground">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <Button onClick={() => navigate("/apply")} size="lg" className="bg-primary hover:bg-primary/90">
                     Přihlásit se na program
