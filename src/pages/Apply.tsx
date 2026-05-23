@@ -90,10 +90,30 @@ const Apply = () => {
         : queryTitle || "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Přihláška úspěšně odeslána! Brzy se vám ozveme.");
-    setTimeout(() => navigate("/"), 2000);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    data.append("_replyto", formData.email);
+    data.append("_subject", "Nová přihláška – EduVentures");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwvzqkaq", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        toast.success("Přihláška úspěšně odeslána! Brzy se vám ozveme.");
+        setTimeout(() => navigate("/"), 2000);
+      } else {
+        toast.error("Odeslání se nezdařilo. Zkuste to prosím znovu.");
+      }
+    } catch {
+      toast.error("Odeslání se nezdařilo. Zkuste to prosím znovu.");
+    }
   };
 
   const handleChange = (field: string, value: string) => {
