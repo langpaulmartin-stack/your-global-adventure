@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { ArrowLeft } from "lucide-react";
 import logoWhite from "@/assets/logo-white.png";
@@ -242,6 +243,20 @@ const Apply = () => {
                 placeholder="11000"
               />
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="duration">Délka programu</Label>
+            <Select value={formData.duration} onValueChange={(value) => handleChange("duration", value)} required>
+              <SelectTrigger id="duration">
+                <SelectValue placeholder="Vyberte délku programu" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="kratky">Krátký</SelectItem>
+                <SelectItem value="semestralni">Semestrální</SelectItem>
+                <SelectItem value="rocni">Roční</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="space-y-2">
