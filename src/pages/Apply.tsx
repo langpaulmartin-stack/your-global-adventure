@@ -291,20 +291,6 @@ const Apply = () => {
             </Select>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="duration">Délka programu</Label>
-            <Select value={formData.duration} onValueChange={(value) => handleChange("duration", value)} required>
-              <SelectTrigger id="duration">
-                <SelectValue placeholder="Vyberte délku programu" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="kratky">Krátký</SelectItem>
-                <SelectItem value="semestralni">Semestrální</SelectItem>
-                <SelectItem value="rocni">Roční</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
           {(selectedProgram || queryTitle) && (
             <div className="space-y-2">
               <Label htmlFor="program">Vybraný program</Label>
@@ -321,6 +307,14 @@ const Apply = () => {
           <Button type="submit" size="lg" className="w-full text-lg">
             Odeslat přihlášku
           </Button>
+
+          <p className="text-xs text-muted-foreground text-center">
+            Odesláním formuláře vyjadřujete souhlas se zpracováním osobních údajů dle{" "}
+            <Link to="/zasady-ochrany-osobnich-udaju" className="text-primary underline hover:no-underline">
+              Zásad ochrany osobních údajů
+            </Link>
+            .
+          </p>
         </form>
       </div>
     </div>
