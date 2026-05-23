@@ -33,9 +33,9 @@ interface Program {
 }
 
 export const programs: Program[] = [
-  { id: "usa-semester", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "256 000 Kč", age: "15 let", description: "Prožijte nezapomenutelný semestr na americké škole", image: usaImage },
-  { id: "usa-year", country: "USA", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "274 000 Kč", age: "15 let", description: "Celý školní rok v USA s plnou integrací do místní kultury", image: usaImage },
-  { id: "usa-semester-jan", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "256 000 Kč", age: "15 let", description: "Jarní semestr na americké střední škole", image: usaImage },
+  { id: "usa-semester", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "11 800 USD", age: "15 let", description: "Prožijte nezapomenutelný semestr na americké škole", image: usaImage },
+  { id: "usa-year", country: "USA", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "13 200 USD", age: "15 let", description: "Celý školní rok v USA s plnou integrací do místní kultury", image: usaImage },
+  { id: "usa-semester-jan", country: "USA", type: "Semestr", duration: "5 měsíců", departure: "Leden 2027", price: "11 800 USD", age: "15 let", description: "Jarní semestr na americké střední škole", image: usaImage },
   { id: "switzerland-semester", country: "Švýcarsko", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "180 000 Kč", age: "15 let", description: "Studium v srdci Evropy s výukou v němčině nebo francouzštině", image: switzerlandImage },
   { id: "switzerland-year", country: "Švýcarsko", type: "Školní rok", duration: "10 měsíců", departure: "Srpen 2026", price: "320 000 Kč", age: "15 let", description: "Kompletní rok na švýcarské škole s alpským životním stylem", image: switzerlandImage },
   { id: "germany-semester", country: "Německo", type: "Semestr", duration: "5 měsíců", departure: "Srpen 2026", price: "145 000 Kč", age: "15 let", description: "Zlepšete němčinu a poznejte německou kulturu", image: germanyImage },
