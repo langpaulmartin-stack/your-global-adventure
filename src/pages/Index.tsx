@@ -41,6 +41,7 @@ const countries = [
     image: usaImage,
     price: "11 800 USD",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -49,6 +50,7 @@ const countries = [
     image: switzerlandImage,
     price: "180 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -57,6 +59,7 @@ const countries = [
     image: germanyImage,
     price: "145 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -65,6 +68,7 @@ const countries = [
     image: australiaImage,
     price: "220 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -73,6 +77,7 @@ const countries = [
     image: estoniaImage,
     price: "120 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -81,6 +86,7 @@ const countries = [
     image: japanImage,
     price: "195 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -89,6 +95,7 @@ const countries = [
     image: newZealandImage,
     price: "210 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
   { 
@@ -97,6 +104,7 @@ const countries = [
     image: argentinaImage,
     price: "175 000 Kč",
     departure: "srpen/září 2026",
+    return: "červen 2027",
     age: "15-18 let"
   },
 ];
