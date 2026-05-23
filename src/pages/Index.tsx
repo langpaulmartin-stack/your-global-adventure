@@ -337,7 +337,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-start gap-2">
                       <span className="text-primary font-medium">•</span>
-                      <span className="text-muted-foreground">Věk od {country.age} výše</span>
+                      <span className="text-muted-foreground">Věk: {country.age}</span>
                     </div>
                   </div>
                 </CardContent>
