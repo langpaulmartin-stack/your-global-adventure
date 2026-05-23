@@ -140,10 +140,10 @@ const Apply = () => {
       <div className="container mx-auto px-4 py-12 max-w-2xl">
         <div className="mb-8 text-center animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            Přihlaste se dnes
+            ​Online přihláška
           </h1>
           <p className="text-muted-foreground text-lg">
-            Začněte svou cestu k nezapomenutelným zážitkům v zahraničí
+            Vydej se neprošlapanou cestou za nezapomenutelnými zážitky v zahraničí
           </p>
         </div>
 
