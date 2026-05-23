@@ -46,7 +46,7 @@ const Contact = () => {
     if (errors[name]) setErrors((p) => ({ ...p, [name]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = schema.safeParse(data);
     if (!result.success) {
@@ -58,11 +58,20 @@ const Contact = () => {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
+    try {
+      const res = await fetch("https://formspree.io/f/mdajdobb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...data, _subject: subject }),
+      });
+      if (!res.ok) throw new Error("Network error");
       toast({ title: "Děkujeme za zprávu!", description: "Ozveme se ti co nejdříve." });
       setData({ name: "", email: "", message: "" });
+    } catch {
+      toast({ title: "Něco se pokazilo", description: "Zkus to prosím znovu.", variant: "destructive" });
+    } finally {
       setSubmitting(false);
-    }, 600);
+    }
   };
 
   return (
