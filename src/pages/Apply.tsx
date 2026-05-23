@@ -46,6 +46,30 @@ const Apply = () => {
     [programId]
   );
 
+  const queryCountry = searchParams.get("country") ?? "";
+  const queryTitle = searchParams.get("title") ?? "";
+  const queryPrice = searchParams.get("price") ?? "";
+
+  const resolvedCountryValue = selectedProgram
+    ? countryToSelectValue[selectedProgram.country] ?? ""
+    : queryCountry
+      ? countryToSelectValue[queryCountry] ?? (countries.some((c) => c.value === queryCountry) ? queryCountry : "")
+      : "";
+
+  const contextLabel = selectedProgram
+    ? `${selectedProgram.country} – ${selectedProgram.type}`
+    : queryTitle && queryCountry
+      ? `${queryCountry} – ${queryTitle}`
+      : queryTitle || (queryCountry || "");
+
+  const contextMeta = selectedProgram
+    ? `${selectedProgram.duration} · Termín odletu: ${selectedProgram.departure}`
+    : "";
+
+  const contextPrice = selectedProgram?.price || queryPrice;
+
+  const showContext = Boolean(selectedProgram || queryTitle || queryCountry);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -55,8 +79,12 @@ const Apply = () => {
     address: "",
     city: "",
     zipCode: "",
-    country: selectedProgram ? countryToSelectValue[selectedProgram.country] ?? "" : "",
-    program: selectedProgram ? `${selectedProgram.country} – ${selectedProgram.type} (${selectedProgram.duration})` : "",
+    country: resolvedCountryValue,
+    program: selectedProgram
+      ? `${selectedProgram.country} – ${selectedProgram.type} (${selectedProgram.duration})`
+      : queryTitle && queryCountry
+        ? `${queryCountry} – ${queryTitle}`
+        : queryTitle || "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -96,7 +124,7 @@ const Apply = () => {
           </p>
         </div>
 
-        {selectedProgram && (
+        {showContext && (
           <div className="mb-6 rounded-2xl border border-primary/30 bg-primary/5 p-5 animate-fade-in">
             <p className="text-xs uppercase tracking-widest text-primary font-medium mb-2">
               Vybraný program
@@ -104,13 +132,15 @@ const Apply = () => {
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <div>
                 <p className="text-lg font-semibold">
-                  {selectedProgram.country} – {selectedProgram.type}
+                  {contextLabel}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  {selectedProgram.duration} · Termín odletu: {selectedProgram.departure}
-                </p>
+                {contextMeta && (
+                  <p className="text-sm text-muted-foreground">{contextMeta}</p>
+                )}
               </div>
-              <p className="text-2xl font-bold text-primary">{selectedProgram.price}</p>
+              {contextPrice && (
+                <p className="text-2xl font-bold text-primary">{contextPrice}</p>
+              )}
             </div>
           </div>
         )}
@@ -228,7 +258,7 @@ const Apply = () => {
             </Select>
           </div>
 
-          {selectedProgram && (
+          {(selectedProgram || queryTitle) && (
             <div className="space-y-2">
               <Label htmlFor="program">Vybraný program</Label>
               <Input

@@ -195,7 +195,11 @@ const Work = () => {
                   </div>
 
                   <Button 
-                    onClick={() => navigate("/apply")} 
+                    onClick={() =>
+                      navigate(
+                        `/apply?country=${encodeURIComponent(program.country)}&title=${encodeURIComponent(program.type)}&price=${encodeURIComponent(program.price)}`
+                      )
+                    }
                     className="w-full mt-auto"
                   >
                     Přihlásit se
