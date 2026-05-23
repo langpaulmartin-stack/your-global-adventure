@@ -199,6 +199,7 @@ const Apply = () => {
             <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
+                name="Email"
                 type="email"
                 required
                 value={formData.email}
@@ -212,6 +213,7 @@ const Apply = () => {
               <Label htmlFor="phone">Telefonní číslo</Label>
               <Input
                 id="phone"
+                name="Telefon"
                 type="tel"
                 required
                 value={formData.phone}
@@ -224,6 +226,7 @@ const Apply = () => {
               <Label htmlFor="dateOfBirth">Datum narození</Label>
               <Input
                 id="dateOfBirth"
+                name="Datum narozeni"
                 type="date"
                 required
                 value={formData.dateOfBirth}
@@ -236,6 +239,7 @@ const Apply = () => {
             <Label htmlFor="address">Adresa</Label>
             <Input
               id="address"
+              name="Adresa"
               required
               value={formData.address}
               onChange={(e) => handleChange("address", e.target.value)}
@@ -248,6 +252,7 @@ const Apply = () => {
               <Label htmlFor="city">Město</Label>
               <Input
                 id="city"
+                name="Mesto"
                 required
                 value={formData.city}
                 onChange={(e) => handleChange("city", e.target.value)}
@@ -259,6 +264,7 @@ const Apply = () => {
               <Label htmlFor="zipCode">PSČ</Label>
               <Input
                 id="zipCode"
+                name="PSC"
                 required
                 value={formData.zipCode}
                 onChange={(e) => handleChange("zipCode", e.target.value)}
@@ -269,6 +275,7 @@ const Apply = () => {
 
           <div className="space-y-2">
             <Label htmlFor="duration">Délka programu</Label>
+            <input type="hidden" name="Delka programu" value={formData.duration} />
             <Select value={formData.duration} onValueChange={(value) => handleChange("duration", value)} required>
               <SelectTrigger id="duration">
                 <SelectValue placeholder="Vyberte délku programu" />
@@ -283,6 +290,7 @@ const Apply = () => {
 
           <div className="space-y-2">
             <Label htmlFor="country">Země (1.volba):</Label>
+            <input type="hidden" name="Zeme 1" value={formData.country} />
             <Select value={formData.country} onValueChange={(value) => handleChange("country", value)} required>
               <SelectTrigger id="country">
                 <SelectValue placeholder="Vyberte zemi" />
@@ -299,6 +307,7 @@ const Apply = () => {
 
           <div className="space-y-2">
             <Label htmlFor="country2">Země (2.volba):</Label>
+            <input type="hidden" name="Zeme 2" value={formData.country2} />
             <Select value={formData.country2} onValueChange={(value) => handleChange("country2", value)}>
               <SelectTrigger id="country2">
                 <SelectValue placeholder="Vyberte zemi" />
@@ -318,6 +327,7 @@ const Apply = () => {
               <Label htmlFor="program">Vybraný program</Label>
               <Input
                 id="program"
+                name="Program"
                 value={formData.program}
                 onChange={(e) => handleChange("program", e.target.value)}
                 readOnly
