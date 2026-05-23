@@ -186,6 +186,7 @@ const Apply = () => {
               <Label htmlFor="lastName">Příjmení</Label>
               <Input
                 id="lastName"
+                name="Prijmeni"
                 required
                 value={formData.lastName}
                 onChange={(e) => handleChange("lastName", e.target.value)}
