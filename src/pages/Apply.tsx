@@ -243,7 +243,7 @@ const Apply = () => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="country">Země určení</Label>
+            <Label htmlFor="country">Země (1.volba):</Label>
             <Select value={formData.country} onValueChange={(value) => handleChange("country", value)} required>
               <SelectTrigger id="country">
                 <SelectValue placeholder="Vyberte zemi" />
