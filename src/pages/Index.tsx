@@ -384,6 +384,50 @@ const Index = () => {
       </section>
 
       {/* Latest News Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Kalendář akcí</h2>
+            <p className="text-xl text-muted-foreground">
+              Připravované infoschůzky a prezentace
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <Card
+                key={event.title}
+                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="pt-6 space-y-4">
+                  <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
+                    <Calendar className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">{event.title}</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-primary" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-primary" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{event.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
