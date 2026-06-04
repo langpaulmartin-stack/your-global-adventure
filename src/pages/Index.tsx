@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, MapPin, Clock } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 import { z } from "zod";
