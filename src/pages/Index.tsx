@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 import { z } from "zod";
@@ -128,6 +128,30 @@ const testimonials = [
     text: "Austrálie mi otevřela oči. Úžasní lidé, krásná příroda a nezapomenutelné zážitky. Nikdy nezapomenu na čas strávený v Sydney.",
     image: "👩"
   }
+];
+
+const upcomingEvents = [
+  {
+    title: "Infoschůzka o studiu v USA",
+    date: "15. ledna 2026",
+    time: "17:00",
+    location: "Praha, kancelář Studuj v zahraničí",
+    description: "Dozvíte se vše o ročním studijním pobytu na americké střední škole — průběh programu, ceny, termíny i podmínky přijetí.",
+  },
+  {
+    title: "Infoschůzka o studiu v zahraničí",
+    date: "29. ledna 2026",
+    time: "17:30",
+    location: "Online (Zoom)",
+    description: "Představíme všechny destinace, programy a možnosti studia v zahraničí pro středoškoláky. Prostor pro vaše dotazy.",
+  },
+  {
+    title: "Prezentace na Gymnáziu Voděradská",
+    date: "12. února 2026",
+    time: "10:00",
+    location: "Gymnázium Voděradská, Praha 10",
+    description: "Přijdeme přímo do školy a studentům představíme příležitosti pro studium v zahraničí během středoškolských let.",
+  },
 ];
 
 const Index = () => {
@@ -352,6 +376,50 @@ const Index = () => {
                         <span className="text-muted-foreground">Věk: {country.age}</span>
                       </div>
                     </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Kalendář akcí</h2>
+            <p className="text-xl text-muted-foreground">
+              Připravované infoschůzky a prezentace
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <Card
+                key={event.title}
+                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="pt-6 space-y-4">
+                  <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
+                    <Calendar className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">{event.title}</h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-primary" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-primary" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">{event.description}</p>
                 </CardContent>
               </Card>
             ))}
