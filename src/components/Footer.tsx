@@ -27,7 +27,7 @@ export const Footer = () => {
             className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
             onClick={() => navigate("/programs")}
           >
-            Nabídka programů
+            Studium v zahraničí
           </Button>
           <Button
             variant="ghost"
@@ -35,6 +35,13 @@ export const Footer = () => {
             onClick={() => navigate("/work")}
           >
             Práce v zahraničí
+          </Button>
+          <Button
+            variant="ghost"
+            className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+            onClick={() => navigate("/kalendar")}
+          >
+            Kalendář
           </Button>
           <Button
             variant="ghost"
