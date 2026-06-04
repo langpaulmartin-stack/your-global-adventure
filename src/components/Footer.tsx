@@ -61,25 +61,25 @@ export const Footer = () => {
         <div className="flex justify-center mb-6">
           <DarkModeToggle />
         </div>
-        <div className="flex flex-wrap justify-center gap-4 mb-4 text-sm">
+        <p className="text-sm text-primary-foreground/80">
+          © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 mt-2 text-xs text-primary-foreground/60">
           <button
             type="button"
             onClick={() => navigate("/zasady-ochrany-osobnich-udaju")}
-            className="text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-2"
+            className="hover:text-primary-foreground underline underline-offset-2"
           >
             Zásady ochrany osobních údajů
           </button>
           <button
             type="button"
             onClick={openCookieSettings}
-            className="text-primary-foreground/90 hover:text-primary-foreground underline underline-offset-2"
+            className="hover:text-primary-foreground underline underline-offset-2"
           >
             Nastavení cookies
           </button>
         </div>
-        <p className="text-sm text-primary-foreground/80">
-          © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
-        </p>
       </div>
     </footer>
   );
