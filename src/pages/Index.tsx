@@ -27,6 +27,7 @@ import heroFriends from "@/assets/hero-friends.jpg";
 import heroStudentsCampus from "@/assets/hero-students-campus.jpg";
 import heroUsaHighschool from "@/assets/hero-usa-highschool.jpg";
 import { Footer } from "@/components/Footer";
+import { events, tagColors } from "@/data/events";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -128,30 +129,6 @@ const testimonials = [
     text: "Austrálie mi otevřela oči. Úžasní lidé, krásná příroda a nezapomenutelné zážitky. Nikdy nezapomenu na čas strávený v Sydney.",
     image: "👩"
   }
-];
-
-const upcomingEvents = [
-  {
-    title: "Infoschůzka o studiu v USA",
-    date: "15. ledna 2026",
-    time: "17:00",
-    location: "Praha, kancelář Studuj v zahraničí",
-    description: "Dozvíte se vše o ročním studijním pobytu na americké střední škole — průběh programu, ceny, termíny i podmínky přijetí.",
-  },
-  {
-    title: "Infoschůzka o studiu v zahraničí",
-    date: "29. ledna 2026",
-    time: "17:30",
-    location: "Online (Zoom)",
-    description: "Představíme všechny destinace, programy a možnosti studia v zahraničí pro středoškoláky. Prostor pro vaše dotazy.",
-  },
-  {
-    title: "Prezentace na Gymnáziu Voděradská",
-    date: "12. února 2026",
-    time: "10:00",
-    location: "Gymnázium Voděradská, Praha 10",
-    description: "Přijdeme přímo do školy a studentům představíme příležitosti pro studium v zahraničí během středoškolských let.",
-  },
 ];
 
 const Index = () => {
