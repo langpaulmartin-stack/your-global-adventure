@@ -33,6 +33,7 @@ const ConsultantDetail = () => {
           <nav className="hidden md:flex items-center gap-6 text-base">
             <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>Práce v zahraničí</Button>
+            <Button variant="ghost" onClick={() => navigate("/kalendar")}>Kalendář</Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>FAQ</Button>
             <Button variant="ghost" onClick={() => navigate("/about")} className="text-primary font-medium">O nás</Button>
             <Button variant="ghost" onClick={() => navigate("/blog")}>Blog</Button>

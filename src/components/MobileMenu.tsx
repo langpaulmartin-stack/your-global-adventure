@@ -38,7 +38,7 @@ export const MobileMenu = () => {
             className="justify-between text-2xl font-semibold py-7"
             onClick={() => setProgramsOpen((v) => !v)}
           >
-            <span>Nabídka programů</span>
+            <span>Studium v zahraničí</span>
             <ChevronDown className={`h-6 w-6 transition-transform ${programsOpen ? "rotate-180" : ""}`} />
           </Button>
           {programsOpen && (
@@ -79,6 +79,13 @@ export const MobileMenu = () => {
             onClick={() => handleNavigation("/work")}
           >
             Práce v zahraničí
+          </Button>
+          <Button
+            variant="ghost"
+            className="justify-start text-2xl py-7"
+            onClick={() => handleNavigation("/kalendar")}
+          >
+            Kalendář
           </Button>
           <Button
             variant="ghost"

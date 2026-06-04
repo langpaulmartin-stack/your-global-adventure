@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useNavigate } from "react-router-dom";
-import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, MapPin, Clock } from "lucide-react";
+import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 import { z } from "zod";
@@ -27,6 +27,7 @@ import heroFriends from "@/assets/hero-friends.jpg";
 import heroStudentsCampus from "@/assets/hero-students-campus.jpg";
 import heroUsaHighschool from "@/assets/hero-usa-highschool.jpg";
 import { Footer } from "@/components/Footer";
+import { events, tagColors } from "@/data/events";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Jméno je povinné" }).max(100, { message: "Jméno musí mít maximálně 100 znaků" }),
@@ -130,30 +131,6 @@ const testimonials = [
   }
 ];
 
-const upcomingEvents = [
-  {
-    title: "Infoschůzka o studiu v USA",
-    date: "15. ledna 2026",
-    time: "17:00",
-    location: "Praha, kancelář Studuj v zahraničí",
-    description: "Dozvíte se vše o ročním studijním pobytu na americké střední škole — průběh programu, ceny, termíny i podmínky přijetí.",
-  },
-  {
-    title: "Infoschůzka o studiu v zahraničí",
-    date: "29. ledna 2026",
-    time: "17:30",
-    location: "Online (Zoom)",
-    description: "Představíme všechny destinace, programy a možnosti studia v zahraničí pro středoškoláky. Prostor pro vaše dotazy.",
-  },
-  {
-    title: "Prezentace na Gymnáziu Voděradská",
-    date: "12. února 2026",
-    time: "10:00",
-    location: "Gymnázium Voděradská, Praha 10",
-    description: "Přijdeme přímo do školy a studentům představíme příležitosti pro studium v zahraničí během středoškolských let.",
-  },
-];
-
 const Index = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -244,6 +221,7 @@ const Index = () => {
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/kalendar")}>Kalendář</Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
@@ -383,7 +361,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Latest News Section */}
+      {/* Calendar Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
@@ -393,26 +371,33 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {events.slice(0, 3).map((event) => (
               <Card
-                key={event.title}
-                className="border-primary/20 hover:shadow-glow transition-all duration-300 animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                key={event.id}
+                onClick={() => navigate("/kalendar")}
+                className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
               >
-                <CardContent className="pt-6 space-y-4">
-                  <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
-                    <Calendar className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold">{event.title}</h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <span
+                    className={`absolute top-3 left-3 inline-flex items-center text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg ${tagColors[event.tag]}`}
+                  >
+                    {event.tag}
+                  </span>
+                </div>
+                <CardContent className="pt-6 space-y-3">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                    {event.title}
+                  </h3>
+                  <div className="space-y-1.5 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4 text-primary" />
                       <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      <span>{event.time}</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
@@ -423,6 +408,13 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Button onClick={() => navigate("/kalendar")} size="lg" variant="outline">
+              Zobrazit všechny akce
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>

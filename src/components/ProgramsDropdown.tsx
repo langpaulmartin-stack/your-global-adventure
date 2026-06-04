@@ -28,7 +28,7 @@ export const ProgramsDropdown = ({ isActive = false }: ProgramsDropdownProps) =>
             navigate("/programs");
           }}
         >
-          Nabídka programů
+          Studium v zahraničí
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

@@ -238,6 +238,7 @@ const BlogPost = () => {
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/kalendar")}>Kalendář</Button>
             <Button variant="ghost" onClick={() => navigate("/faq")}>
               FAQ
             </Button>
@@ -363,7 +364,7 @@ const BlogPost = () => {
                   variant="outline"
                   size="lg"
                 >
-                  Nabídka programů
+                  Studium v zahraničí
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button 
