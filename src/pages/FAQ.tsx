@@ -93,6 +93,7 @@ const FAQ = () => {
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
             </Button>
+            <Button variant="ghost" onClick={() => navigate("/kalendar")}>Kalendář</Button>
             <Button variant="ghost" onClick={() => navigate("/faq")} className="text-primary font-medium">
               FAQ
             </Button>
