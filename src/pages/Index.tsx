@@ -304,7 +304,7 @@ const Index = () => {
               Vyberte si destinaci
             </h2>
             <p className="text-xl text-muted-foreground">
-              Osm úžasných zemí na vás čeká
+              Vybíráme pro tebe ty nejlepší destinace po celém světě. 
             </p>
           </div>
 
