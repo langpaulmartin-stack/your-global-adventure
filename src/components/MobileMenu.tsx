@@ -71,6 +71,13 @@ export const MobileMenu = () => {
             >
               Roční programy
             </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-xl py-6"
+              onClick={() => handleNavigation("/faq")}
+            >
+              Časté dotazy
+            </Button>
           </div>
           )}
           <Button
