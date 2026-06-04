@@ -85,9 +85,6 @@ const Work = () => {
             <Button variant="ghost" onClick={() => navigate("/work")} className="text-primary font-medium">
               Práce v zahraničí
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/faq")}>
-              FAQ
-            </Button>
             <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
             </Button>

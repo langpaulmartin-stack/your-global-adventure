@@ -26,7 +26,6 @@ const Events = () => {
             <Button variant="ghost" className="text-primary font-medium" onClick={() => navigate("/kalendar")}>
               Kalendář
             </Button>
-            <Button variant="ghost" onClick={() => navigate("/faq")}>FAQ</Button>
             <Button variant="ghost" onClick={() => navigate("/about")}>O nás</Button>
             <Button variant="ghost" onClick={() => navigate("/blog")}>Blog</Button>
             <Button onClick={() => navigate("/apply")} size="sm" className="bg-primary hover:bg-primary/90">

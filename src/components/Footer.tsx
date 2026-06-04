@@ -46,13 +46,6 @@ export const Footer = () => {
           <Button
             variant="ghost"
             className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-            onClick={() => navigate("/faq")}
-          >
-            FAQ
-          </Button>
-          <Button
-            variant="ghost"
-            className="text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
             onClick={() => navigate("/about")}
           >
             O nás

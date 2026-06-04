@@ -71,6 +71,13 @@ export const MobileMenu = () => {
             >
               Roční programy
             </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-xl py-6"
+              onClick={() => handleNavigation("/faq")}
+            >
+              Časté dotazy
+            </Button>
           </div>
           )}
           <Button
@@ -86,13 +93,6 @@ export const MobileMenu = () => {
             onClick={() => handleNavigation("/kalendar")}
           >
             Kalendář
-          </Button>
-          <Button
-            variant="ghost"
-            className="justify-start text-2xl py-7"
-            onClick={() => handleNavigation("/faq")}
-          >
-            Časté dotazy
           </Button>
           <Button
             variant="ghost"

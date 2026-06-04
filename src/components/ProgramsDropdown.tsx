@@ -54,6 +54,12 @@ export const ProgramsDropdown = ({ isActive = false }: ProgramsDropdownProps) =>
         >
           Roční programy
         </DropdownMenuItem>
+        <DropdownMenuItem
+          className="cursor-pointer text-sm py-2"
+          onClick={() => navigate("/faq")}
+        >
+          Časté dotazy
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
