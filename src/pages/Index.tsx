@@ -222,9 +222,6 @@ const Index = () => {
               Práce v zahraničí
             </Button>
             <Button variant="ghost" onClick={() => navigate("/kalendar")}>Kalendář</Button>
-            <Button variant="ghost" onClick={() => navigate("/faq")}>
-              FAQ
-            </Button>
             <Button variant="ghost" onClick={() => navigate("/about")}>
               O nás
             </Button>
