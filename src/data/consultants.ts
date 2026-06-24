@@ -26,7 +26,7 @@ export const consultants: Consultant[] = [
     about:
       "Jsem zakladatelem projektu Studuj v zahraničí. Studijním a pracovním pobytům v zahraničí se věnuji už více než dvacet let a za tu dobu jsem pomohl stovkám mladých lidí vyrazit za hranice. Vedu tým konzultantů a stojím za výběrem partnerských organizací, se kterými spolupracujeme.",
     experience:
-      "Sám jsem vyjel do USA, kde jsem strávil školní rok na střední škole, a později jsem cestoval a pracoval v Evropě i v zámoří. Díky tomu znám obě strany — vím, jak se cítí student při odjezdu i jak fungují hostitelské rodiny a partnerské školy.",
+      "Sám jsem několikrát studoval v zahraničí - ve Velké Británii, ve Švýcarsku, kde jsem strávil školní rok na střední škole, později také v Německu. Studjními pobyty v zahraničí se zabývám od roku 2005. Mohu říct, že znám studium v zahraničí ze všech úhlů pohledu - jak jako student, tak jako organizátor, zástupce hostitelských rodin, nebo i jako učitel.\u00a0",
     motivation:
       "Věřím, že zkušenost ze zahraničí dokáže změnit život. Otevírá obzory, učí samostatnosti a buduje sebevědomí. Když vidím studenty, kteří se vrací proměnění, vím, proč to dělám.",
   },
