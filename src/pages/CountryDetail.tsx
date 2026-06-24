@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowRight, Calendar, Users, GraduationCap, Home, Sparkles, Clock, Check } from "lucide-react";
-import logoWhite from "@/assets/logo-white.png";
+
 import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
