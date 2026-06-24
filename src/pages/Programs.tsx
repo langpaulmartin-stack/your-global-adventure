@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowRight, MapPin, Calendar, Users, Flame } from "lucide-react";
-import logoWhite from "@/assets/logo-white.png";
+
 import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";

@@ -5,7 +5,7 @@ import { ArrowRight, Clock, CalendarDays, GraduationCap, MapPin, Calendar, Users
 import { Card as ProgramCard, CardContent as ProgramCardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { programs } from "./Programs";
 import { countrySlugByName } from "@/data/countries";
-import logoWhite from "@/assets/logo-white.png";
+
 import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";

@@ -9,7 +9,7 @@ import { Plane, Users, Heart, ArrowRight, Quote, Send, Calendar, User, Flame, Ma
 import { useToast } from "@/hooks/use-toast";
 import { useState, useEffect } from "react";
 import { z } from "zod";
-import logoWhite from "@/assets/logo-white.png";
+
 import { SiteLogo } from "@/components/SiteLogo";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ProgramsDropdown } from "@/components/ProgramsDropdown";
