@@ -9,14 +9,15 @@ export const SiteLogo = ({ className = "" }: SiteLogoProps) => (
   <>
     <img
       src={logo}
-      alt="Let's Go Abroad"
+      alt="Studuj v zahraničí"
       className={`${className} dark:hidden`.trim()}
     />
     <img
       src={logoWhite}
-      alt="Let's Go Abroad"
+      alt="Studuj v zahraničí"
       className={`${className} hidden dark:block`.trim()}
       style={{ filter: "brightness(0) invert(1)" }}
     />
   </>
 );
+
