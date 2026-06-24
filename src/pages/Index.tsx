@@ -85,7 +85,7 @@ const countries = [
     name: "Japonsko", 
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
-    price: "195 000 Kč",
+    price: "274 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
