@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="flex items-center justify-center gap-3 mb-4">
           <img
             src={logoWhite}
-            alt="Let's Go Abroad"
+            alt="Studuj v zahraničí"
             className="h-56 w-auto"
             style={{ filter: "brightness(0) invert(1)" }}
           />
