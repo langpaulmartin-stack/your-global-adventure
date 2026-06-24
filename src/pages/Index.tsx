@@ -58,7 +58,7 @@ const countries = [
     name: "Německo", 
     description: "Prozkoumejte bohatou historii a kulturu", 
     image: germanyImage,
-    price: "145 000 Kč",
+    price: "245 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -76,7 +76,7 @@ const countries = [
     name: "Estonsko", 
     description: "Centrum digitálních inovací", 
     image: estoniaImage,
-    price: "120 000 Kč",
+    price: "219 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
