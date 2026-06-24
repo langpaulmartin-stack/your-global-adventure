@@ -15,7 +15,6 @@ export const Footer = () => {
             src={logoWhite}
             alt="Studuj v zahraničí"
             className="h-56 w-auto"
-            style={{ filter: "brightness(0) invert(1)" }}
           />
         </div>
         <p className="italic text-primary-foreground/90 mb-6">
