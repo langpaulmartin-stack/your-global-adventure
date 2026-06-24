@@ -67,7 +67,7 @@ const countries = [
     name: "Austrálie", 
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
-    price: "220 000 Kč",
+    price: "374 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
