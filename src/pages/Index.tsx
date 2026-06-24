@@ -67,7 +67,7 @@ const countries = [
     name: "Austrálie", 
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
-    price: "220 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -76,7 +76,7 @@ const countries = [
     name: "Estonsko", 
     description: "Centrum digitálních inovací", 
     image: estoniaImage,
-    price: "120 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -85,7 +85,7 @@ const countries = [
     name: "Japonsko", 
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
-    price: "195 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -94,7 +94,7 @@ const countries = [
     name: "Nový Zéland", 
     description: "Dechberoucí příroda a dobrodružství", 
     image: newZealandImage,
-    price: "210 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -103,7 +103,7 @@ const countries = [
     name: "Argentina", 
     description: "Vášeň, kultura a přírodní diverzita", 
     image: argentinaImage,
-    price: "175 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -336,7 +336,9 @@ const Index = () => {
                     <div className="space-y-2 text-sm">
                       <div className="flex items-start gap-2">
                         <span className="text-primary font-medium">•</span>
-                        <span className="text-muted-foreground">Cena od {country.price}</span>
+                        <span className="text-muted-foreground">
+                          {country.price === "na vyžádání" ? "Cena na vyžádání" : `Cena od ${country.price}`}
+                        </span>
                       </div>
                       <div className="flex items-start gap-2">
                         <span className="text-primary font-medium">•</span>
