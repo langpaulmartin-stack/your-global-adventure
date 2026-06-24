@@ -49,7 +49,7 @@ const countries = [
     name: "Švýcarsko", 
     description: "Objevte alpskou krásu", 
     image: switzerlandImage,
-    price: "180 000 Kč",
+    price: "275 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -67,7 +67,7 @@ const countries = [
     name: "Austrálie", 
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
-    price: "na vyžádání",
+    price: "220 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -76,7 +76,7 @@ const countries = [
     name: "Estonsko", 
     description: "Centrum digitálních inovací", 
     image: estoniaImage,
-    price: "na vyžádání",
+    price: "120 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -85,7 +85,7 @@ const countries = [
     name: "Japonsko", 
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
-    price: "na vyžádání",
+    price: "195 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -94,7 +94,7 @@ const countries = [
     name: "Nový Zéland", 
     description: "Dechberoucí příroda a dobrodružství", 
     image: newZealandImage,
-    price: "na vyžádání",
+    price: "210 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -103,7 +103,7 @@ const countries = [
     name: "Argentina", 
     description: "Vášeň, kultura a přírodní diverzita", 
     image: argentinaImage,
-    price: "na vyžádání",
+    price: "175 000 Kč",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
