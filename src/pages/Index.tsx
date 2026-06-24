@@ -336,7 +336,9 @@ const Index = () => {
                     <div className="space-y-2 text-sm">
                       <div className="flex items-start gap-2">
                         <span className="text-primary font-medium">•</span>
-                        <span className="text-muted-foreground">Cena od {country.price}</span>
+                        <span className="text-muted-foreground">
+                          {country.price === "na vyžádání" ? "Cena na vyžádání" : `Cena od ${country.price}`}
+                        </span>
                       </div>
                       <div className="flex items-start gap-2">
                         <span className="text-primary font-medium">•</span>
