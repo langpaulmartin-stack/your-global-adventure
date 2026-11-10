@@ -22,6 +22,9 @@ import estoniaImage from "@/assets/estonia.jpg";
 import japanImage from "@/assets/japan.jpg";
 import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
+import canadaImage from "@/assets/canada.jpg";
+import spainImage from "@/assets/spain.jpg";
+import franceImage from "@/assets/france.jpg";
 import heroImage from "@/assets/hero-traveler.jpg";
 import heroFriends from "@/assets/hero-friends.jpg";
 import heroStudentsCampus from "@/assets/hero-students-campus.jpg";
@@ -67,7 +70,7 @@ const countries = [
     name: "Austrálie", 
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
-    price: "374 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -85,7 +88,7 @@ const countries = [
     name: "Japonsko", 
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
-    price: "274 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -94,7 +97,7 @@ const countries = [
     name: "Nový Zéland", 
     description: "Dechberoucí příroda a dobrodružství", 
     image: newZealandImage,
-    price: "210 000 Kč",
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"
@@ -104,6 +107,33 @@ const countries = [
     description: "Vášeň, kultura a přírodní diverzita", 
     image: argentinaImage,
     price: "175 000 Kč",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Kanada", 
+    description: "Divoká příroda a přátelská komunita", 
+    image: canadaImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Španělsko", 
+    description: "Slunce, jazyk a mediteránský rytmus", 
+    image: spainImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Francie", 
+    description: "Kultura, gastronomie a francouzština", 
+    image: franceImage,
+    price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
     age: "15-18 let"

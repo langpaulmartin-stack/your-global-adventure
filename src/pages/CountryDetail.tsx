@@ -331,7 +331,7 @@ const CountryDetail = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">
-            {["Austrálie", "Argentina", "Velká Británie"].includes(country.name)
+            {["Austrálie", "Argentina", "Velká Británie", "Kanada", "Francie"].includes(country.name)
               ? `Zaujala tě ${country.name}, nebo přemýšlíš o jiné zemi?`
               : `Zaujalo tě ${country.name}, nebo přemýšlíš o jiné zemi?`}
           </h2>
