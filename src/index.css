@@ -151,7 +151,7 @@ All colors MUST be HSL.
 }
 
 /* Desktop header menu: uniform, larger item type (1.5x of the previous 14px) */
-header nav > button,
-header nav > a {
+.header-nav > button,
+.header-nav > a {
   font-size: 1.3125rem;
 }
