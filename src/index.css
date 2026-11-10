@@ -149,3 +149,9 @@ All colors MUST be HSL.
     @apply text-primary hover:text-primary-glow transition-colors underline;
   }
 }
+
+/* Desktop header menu: uniform, larger item type (1.5x of the previous 14px) */
+.header-nav > button,
+.header-nav > a {
+  font-size: 1.3125rem;
+}

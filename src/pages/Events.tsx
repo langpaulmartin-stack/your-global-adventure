@@ -20,7 +20,7 @@ const Events = () => {
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate("/")}>
             <SiteLogo className="h-24 w-auto" />
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-base">
+          <nav className="header-nav hidden md:flex items-center gap-6 text-base">
             <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>Práce v zahraničí</Button>
             <Button variant="ghost" className="text-primary font-medium" onClick={() => navigate("/kalendar")}>

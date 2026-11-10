@@ -266,7 +266,7 @@ const Index = () => {
           <div className="flex items-center gap-3">
             <SiteLogo className="h-24 w-auto" />
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-base">
+          <nav className="header-nav hidden md:flex items-center gap-6 text-base">
             <ProgramsDropdown />
             <Button variant="ghost" onClick={() => navigate("/work")}>
               Práce v zahraničí
