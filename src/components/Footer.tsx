@@ -61,7 +61,7 @@ export const Footer = () => {
           <DarkModeToggle />
         </div>
         <p className="text-sm text-primary-foreground/80">
-          © {new Date().getFullYear()} Studuj v zahraničí. FLAG Intl. Czech Republic. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
+          © {new Date().getFullYear()} Studuj v zahraničí. Platforma porozumění, z.s. EduVentures, s.r.o. Bořivojova 17, 130 00 Praha 3. Všechna práva vyhrazena.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-2 text-xs text-primary-foreground/60">
           <button
