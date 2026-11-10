@@ -8,6 +8,9 @@ import newZealandImage from "@/assets/new-zealand.jpg";
 import argentinaImage from "@/assets/argentina.jpg";
 import ukImage from "@/assets/uk.jpg";
 import irelandImage from "@/assets/ireland.jpg";
+import canadaImage from "@/assets/canada.jpg";
+import spainImage from "@/assets/spain.jpg";
+import franceImage from "@/assets/france.jpg";
 
 export interface CountryInfo {
   slug: string;
@@ -180,6 +183,54 @@ export const countries: CountryInfo[] = [
       "Hostitelské rodiny jsou vybírány po celém Irsku — od Dublinu po menší města a venkov. Konkrétní region si nelze zvolit. Rodiny prochází pečlivým výběrem partnerské organizace a jsou se studentem v kontaktu po celou dobu pobytu. Student je vítán jako součást rodiny, dostává vlastní pokoj a respektuje pravidla domácnosti.",
     activities:
       "Irské školy nabízejí bohatou nabídku sportovních a uměleckých klubů — gaelský fotbal, hurling, ragby, tradiční hudba. Partnerská organizace pořádá uvítací orientaci a víkendové výlety, například po Wild Atlantic Way nebo do Dublinu.",
+  },
+  {
+    slug: "kanada",
+    name: "Kanada",
+    tagline: "Divoká příroda a přátelská komunita",
+    image: canadaImage,
+    intro: [
+      "Kanada je druhou největší zemí světa — země obrovských jezer, horských štítů, pralesů i pulzujících multikulturních měst. Spojuje severoamerický styl života s klidnějším, velmi vstřícným způsobem soužití a patří k nejbezpečnějším destinacím pro studium v zahraničí.",
+      "Kanadská společnost je hrdá na svou rozmanitost — potkáš lidi z celého světa a angličtina (případně francouzština v Québecu) je všudypřítomná. Po pobytu si odvezeš plynulý jazyk, samostatnost a lásku k přírodě, jakou jinde nenajdeš.",
+    ],
+    schoolSystem:
+      "Kanadské střední školy (secondary schools) jsou veřejné a navštěvují je studenti přibližně od 12 do 18 let. Osnovy se mírně liší podle provincie, všude ale platí široká nabídka volitelných předmětů — od věd přes umění až po podnikání. Studenti si sestavují vlastní rozvrh a součástí školy je i bohatý sportovní a klubový život.",
+    hostFamily:
+      "Studenti jsou umisťováni do dobrovolnických hostitelských rodin v různých provinciích — konkrétní město ani region si nelze zvolit. Rodiny prochází důkladným prověřením místní partnerské organizace a koordinátor je studentovi k dispozici po celou dobu pobytu. Student má vlastní pokoj a stává se plnohodnotným členem rodiny.",
+    activities:
+      "Kanadské školy jsou známé sportem — lední hokej, lakros, fotbal i alpské lyžování. Místní organizace pořádá uvítací setkání, výlety do národních parků a poznávací akce ve městech. Zapojení do školního týmu nebo klubu je nejrychlejší cesta k kamarádům.",
+  },
+  {
+    slug: "spanelsko",
+    name: "Španělsko",
+    tagline: "Slunce, jazyk a mediteránský rytmus",
+    image: spainImage,
+    intro: [
+      "Španělsko je země dlouhých letních večerů, tapas, flamenga a historických měst plných života. Španělština je jedním z nejrozšířenějších jazyků světa a studium ve Španělsku je ten nejrychlejší způsob, jak se jí naučit mluvit gerçekten a s přirozeností.",
+      "Španělský životní styl je vřelý a společenský — rodina, přátelé a jídlo tvoří střed dne. Po pobytu si odvezeš nejen výbornou španělštinu, ale i nadhled, otevřenost a přátele, se kterými kontakt neskončí na letišti.",
+    ],
+    schoolSystem:
+      "Španělské střední školy (instituto / colegio) přijímají studenty ve věku zhruba 12–18 let. Výuka je založená na společných základech a volitelných předmětech, důraz se klade na cizí jazyky, humanitní obory a umění. Atmosféra je uvolněná, učitelé osobní a třídy často menší než ve střední Evropě.",
+    hostFamily:
+      "Studenti jsou umisťováni do dobrovolnických španělských rodin po celé zemi — konkrétní město si nelze zvolit. Rodiny prochází výběrem místní partnerské organizace a jsou s koordinátorem v pravidelném kontaktu. Španělské rodiny jsou mimořádně vřelé, student se rychle stane součástí běžného rodinného dne.",
+    activities:
+      "Školy nabízí sportovní kluby, taneční a hudební kroužky i jazykové výměny. Místní organizace pořádá orientační setkání a víkendové výlety — od pláží po historická města. Doporučujeme zapojit se do fotbalového týmu nebo tanečních kurzů, je to nejrychlejší cesta k místním přátelům.",
+  },
+  {
+    slug: "francie",
+    name: "Francie",
+    tagline: "Kultura, jazyk a styl每一步",
+    image: franceImage,
+    intro: [
+      "Francie je zemí, kde se historie, umění a gastronomie potkávají s běžným každodenním životem. Od pařížských bulvárů přes Loire s zámky až po pobřeží Provence — studium ve Francii znamená denně se učit francouzštinu v prostředí, které ji vytvořilo.",
+      "Francouzský způsob života má svůj rytmus: jídlo jako společenská událost, zájem o kulturu, diskuse a čtení. Po pobytu si odvezeš francouzštinu, sebevědomí v cizím jazyce a pohled na svět, který ti zůstane navždy.",
+    ],
+    schoolSystem:
+      "Francouzské střední školy (collège a lycée) jsou veřejné a velmi dobře organizované. Výuka je strukturovaná, s pevným rozvrhem, silným důrazem na francouzský jazyk, filozofii, historii a vědy. Zahraniční studenti dostávají podporu při výuce francouzštiny a často i výměnné hodiny konverzace.",
+    hostFamily:
+      "Studenti jsou umisťováni do dobrovolnických francouzských rodin po celé zemi — konkrétní region si nelze zvolit. Rodiny prochází pečlivým výběrem partnerské organizace a student má vlastní pokoj. Francouzské rodiny kladou důraz na společná jídla, zdvořilost a respekt k pravidlům domácnosti.",
+    activities:
+      "Francouzské školy nabízí sportovní asociace (UNSS), divadelní, hudební a filmové kroužky. Místní organizace pořádá uvítací setkání a výlety do okolních měst. Doporučujeme využít i jazykové výměny a dobrovolnictví — nejlépe se tak naučíš mluvit jako domácí.",
   },
 ];
 

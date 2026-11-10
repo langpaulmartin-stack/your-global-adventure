@@ -23,6 +23,9 @@ const countries = [
   { value: "argentina", label: "Argentina 🇦🇷", flag: "🇦🇷" },
   { value: "uk", label: "Velká Británie 🇬🇧", flag: "🇬🇧" },
   { value: "ireland", label: "Irsko 🇮🇪", flag: "🇮🇪" },
+  { value: "canada", label: "Kanada 🇨🇦", flag: "🇨🇦" },
+  { value: "spain", label: "Španělsko 🇪🇸", flag: "🇪🇸" },
+  { value: "france", label: "Francie 🇫🇷", flag: "🇫🇷" },
 ];
 
 const countryToSelectValue: Record<string, string> = {
@@ -36,6 +39,9 @@ const countryToSelectValue: Record<string, string> = {
   Argentina: "argentina",
   "Velká Británie": "uk",
   Irsko: "ireland",
+  Kanada: "canada",
+  Španělsko: "spain",
+  Francie: "france",
 };
 
 const Apply = () => {
