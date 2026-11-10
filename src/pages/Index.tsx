@@ -111,6 +111,33 @@ const countries = [
     return: "červen 2027",
     age: "15-18 let"
   },
+  { 
+    name: "Kanada", 
+    description: "Divoká příroda a přátelská komunita", 
+    image: canadaImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Španělsko", 
+    description: "Slunce, jazyk a mediteránský rytmus", 
+    image: spainImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Francie", 
+    description: "Kultura, gastronomie a francouzština", 
+    image: franceImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
 ];
 
 const testimonials = [

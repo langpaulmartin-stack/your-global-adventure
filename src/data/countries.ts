@@ -219,7 +219,7 @@ export const countries: CountryInfo[] = [
   {
     slug: "francie",
     name: "Francie",
-    tagline: "Kultura, jazyk a styl每一步",
+    tagline: "Kultura, jazyk a životní styl",
     image: franceImage,
     intro: [
       "Francie je zemí, kde se historie, umění a gastronomie potkávají s běžným každodenním životem. Od pařížských bulvárů přes Loire s zámky až po pobřeží Provence — studium ve Francii znamená denně se učit francouzštinu v prostředí, které ji vytvořilo.",
