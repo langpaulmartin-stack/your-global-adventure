@@ -10,7 +10,7 @@ export interface FlagPost { id: string; title: string; date: string; author: str
 export const flagPosts: FlagPost[] = [
   {
     id: "chceme-ukazat-ameriku-takovou-jaka-je",
-    title: "Chceme studentům Ameriku ukázat takovou, jaká je. Je to země velmi pestrá a stojí za to, ji poznat.",
+    title: "Chceme studentům Ameriku ukázat takovou, jaká je. Je to země velmi pestrá a stojí za to ji poznat.",
     date: "4. 11. 2026",
     author: "Martin Langpaul",
     perex: "Martin Langpaul, zakladatel FLAG Czech Republic: Proč stojí za to vyrazit do Ameriky už na střední.",
