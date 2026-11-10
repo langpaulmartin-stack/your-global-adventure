@@ -10,6 +10,7 @@ import blog1 from "@/assets/blog-1.jpg";
 import blog2 from "@/assets/blog-2.jpg";
 import blog3 from "@/assets/blog-3.jpg";
 import { Footer } from "@/components/Footer";
+import { flagPosts } from "@/data/flagPosts";
 
 interface BlogPost {
   id: string;
@@ -21,6 +22,7 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
+  ...flagPosts.map(({ content, ...p }) => p),
   {
     id: "jak-se-pripravit-na-studium",
     title: "Jak se připravit na studium v zahraničí",
@@ -48,6 +50,7 @@ const blogPosts: BlogPost[] = [
 ];
 
 const blogPostsData: Record<string, any> = {
+  ...Object.fromEntries(flagPosts.map((p) => [p.id, p])),
   "jak-se-pripravit-na-studium": {
     title: "Jak se připravit na studium v zahraničí",
     date: "15. 1. 2025",

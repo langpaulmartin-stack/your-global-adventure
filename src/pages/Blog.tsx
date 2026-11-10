@@ -32,6 +32,7 @@ import phFaq from "@/assets/hero-faq.jpg";
 import phProgramsMenu from "@/assets/hero-programs-menu.jpg";
 import heroBlog from "@/assets/hero-blog.jpg";
 import { Footer } from "@/components/Footer";
+import { flagPosts } from "@/data/flagPosts";
 
 export interface BlogPost {
   id: string;
@@ -43,6 +44,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...flagPosts.map(({ content, ...p }) => p),
   {
     id: "jak-se-pripravit-na-studium",
     title: "Jak se připravit na studium v zahraničí",
