@@ -25,6 +25,8 @@ import argentinaImage from "@/assets/argentina.jpg";
 import canadaImage from "@/assets/canada.jpg";
 import spainImage from "@/assets/spain.jpg";
 import franceImage from "@/assets/france.jpg";
+import ukImage from "@/assets/uk.jpg";
+import irelandImage from "@/assets/ireland.jpg";
 import heroImage from "@/assets/hero-traveler.jpg";
 import heroFriends from "@/assets/hero-friends.jpg";
 import heroStudentsCampus from "@/assets/hero-students-campus.jpg";
@@ -133,6 +135,24 @@ const countries = [
     name: "Francie", 
     description: "Kultura, gastronomie a francouzština", 
     image: franceImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Velká Británie", 
+    description: "Klasické britské školy a angličtina naplno", 
+    image: ukImage,
+    price: "na vyžádání",
+    departure: "srpen/září 2026",
+    return: "červen 2027",
+    age: "15-18 let"
+  },
+  { 
+    name: "Irsko", 
+    description: "Přátelská zelená země keltské kultury", 
+    image: irelandImage,
     price: "na vyžádání",
     departure: "srpen/září 2026",
     return: "červen 2027",
