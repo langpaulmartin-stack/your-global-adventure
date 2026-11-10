@@ -27,7 +27,7 @@ const workPrograms: WorkProgram[] = [
     country: "USA",
     type: "Work and Travel",
     duration: "3-4 měsíce",
-    departure: "Květen - Červen 2026",
+    departure: "Květen - Červen 2027",
     price: "45 000 Kč",
     age: "18-30 let",
     description: "Pracujte v USA během letních prázdnin a poznejte americkou kulturu",

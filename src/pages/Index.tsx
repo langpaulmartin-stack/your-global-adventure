@@ -46,8 +46,8 @@ const countries = [
     description: "Zažijte americký sen", 
     image: usaImage,
     price: "11 800 USD",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -55,8 +55,8 @@ const countries = [
     description: "Objevte alpskou krásu", 
     image: switzerlandImage,
     price: "275 000 Kč",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -64,8 +64,8 @@ const countries = [
     description: "Prozkoumejte bohatou historii a kulturu", 
     image: germanyImage,
     price: "245 000 Kč",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -73,8 +73,8 @@ const countries = [
     description: "Dobrodružství na opačné straně světa", 
     image: australiaImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -82,8 +82,8 @@ const countries = [
     description: "Centrum digitálních inovací", 
     image: estoniaImage,
     price: "219 000 Kč",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -91,8 +91,8 @@ const countries = [
     description: "Fascinující spojení tradice a modernosti", 
     image: japanImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -100,8 +100,8 @@ const countries = [
     description: "Dechberoucí příroda a dobrodružství", 
     image: newZealandImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -109,8 +109,8 @@ const countries = [
     description: "Vášeň, kultura a přírodní diverzita", 
     image: argentinaImage,
     price: "175 000 Kč",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -118,8 +118,8 @@ const countries = [
     description: "Divoká příroda a přátelská komunita", 
     image: canadaImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -127,8 +127,8 @@ const countries = [
     description: "Slunce, jazyk a mediteránský rytmus", 
     image: spainImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -136,8 +136,8 @@ const countries = [
     description: "Kultura, gastronomie a francouzština", 
     image: franceImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -145,8 +145,8 @@ const countries = [
     description: "Klasické britské školy a angličtina naplno", 
     image: ukImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
   { 
@@ -154,8 +154,8 @@ const countries = [
     description: "Přátelská zelená země keltské kultury", 
     image: irelandImage,
     price: "na vyžádání",
-    departure: "srpen/září 2026",
-    return: "červen 2027",
+    departure: "srpen/září 2027",
+    return: "červen 2028",
     age: "15-18 let"
   },
 ];
@@ -209,7 +209,7 @@ const Index = () => {
       image: heroUsaHighschool,
       title: "Studuj na střední",
       titleLine2: "škole v USA",
-      subtitle: "Přijímáme přihlášky ke studijnímu pobytu v USA ve školním roce 2026/27",
+      subtitle: "Přijímáme přihlášky ke studijnímu pobytu v USA ve školním roce 2027/28",
     },
   ];
   const [slide, setSlide] = useState(0);
