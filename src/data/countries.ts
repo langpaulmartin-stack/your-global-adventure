@@ -206,7 +206,7 @@ export const countries: CountryInfo[] = [
     tagline: "Slunce, jazyk a mediteránský rytmus",
     image: spainImage,
     intro: [
-      "Španělsko je země dlouhých letních večerů, tapas, flamenga a historických měst plných života. Španělština je jedním z nejrozšířenějších jazyků světa a studium ve Španělsku je ten nejrychlejší způsob, jak se jí naučit mluvit gerçekten a s přirozeností.",
+      "Španělsko je země dlouhých letních večerů, tapas, flamenga a historických měst plných života. Španělština je jedním z nejrozšířenějších jazyků světa a studium ve Španělsku je ten nejrychlejší způsob, jak se jí naučit mluvit skutečně a s přirozeností.",
       "Španělský životní styl je vřelý a společenský — rodina, přátelé a jídlo tvoří střed dne. Po pobytu si odvezeš nejen výbornou španělštinu, ale i nadhled, otevřenost a přátele, se kterými kontakt neskončí na letišti.",
     ],
     schoolSystem:
@@ -222,7 +222,7 @@ export const countries: CountryInfo[] = [
     tagline: "Kultura, jazyk a životní styl",
     image: franceImage,
     intro: [
-      "Francie je zemí, kde se historie, umění a gastronomie potkávají s běžným každodenním životem. Od pařížských bulvárů přes Loire s zámky až po pobřeží Provence — studium ve Francii znamená denně se učit francouzštinu v prostředí, které ji vytvořilo.",
+      "Francie je zemí, kde se historie, umění a gastronomie potkávají s běžným každodenním životem. Od pařížských bulvárů přes Loire se zámky až po pobřeží Provence — studium ve Francii znamená denně se učit francouzštinu v prostředí, které ji vytvořilo.",
       "Francouzský způsob života má svůj rytmus: jídlo jako společenská událost, zájem o kulturu, diskuse a čtení. Po pobytu si odvezeš francouzštinu, sebevědomí v cizím jazyce a pohled na svět, který ti zůstane navždy.",
     ],
     schoolSystem:
